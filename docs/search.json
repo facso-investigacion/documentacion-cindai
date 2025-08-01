@@ -1,0 +1,12 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual de Uso",
+    "section": "",
+    "text": "Introducción\nLa Base Integrada de Datos de Investigación de la Facultad de Ciencias Sociales recopila información sobre proyectos de investigación postulados y adjudicados por el cuerpo académico de la Facultad de Ciencias Sociales. Fue construida a partir de fuentes como SEPA-VID, ANID y la Oficina de Personal de la Facultad. Esta base incluye proyectos en los que los académicos actualmente afiliados a la Facultad participan como investigadores principales o co-investigadores.La base incluye información sobre los académicos, sus trayectorias académicas y los proyectos en los que han participado.\nLa Base Integrada representa el principal producto en un esfuerzo por desarrollar un sistema local e integrado de gestión y visualización de información científica en la Facultad de Ciencias Sociales. Este sistema tiene como objetivo consolidar, actualizar y utilizar estratégicamente los daots de los proyectos de investigación, garantizando que sean encontrables, accesibles y reutilizables, mejorando la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.\nEste documento es un Manual de Uso dirigido a los miembros del equipo de la Dirección de Investigación y Publicaciones de la Facultad de Ciencias Sociales (DIP-FACSO). Su propósito es describir la ubicación, acceso y estructura de la base de datos, así como dar guía para su mantención y actualización.\nEn primer lugar, se indicará el repositorio donde se aloja la Base Integrada y sus condiciones de acceso. En seguida se describirá la estructura de la base de datos, su construcción y las variables que la componen. Luego, se explicará el sistema de consultas propuesto. Finalmente, se describirá el flujo de trabajo para la actualización, mantenimiento y solución de problemas de la base.",
+    "crumbs": [
+      "Introducción"
+    ]
+  }
+]

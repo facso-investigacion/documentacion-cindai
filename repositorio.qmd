@@ -1,0 +1,3 @@
+## Repositorio y Acceso
+
+La Base Integrada se encuentra alojada en un [repositorio en Github]() perteneciente a la DIP. 

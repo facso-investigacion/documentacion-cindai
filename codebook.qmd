@@ -1,0 +1,32 @@
+---
+title: "Codebook"
+format: html
+editor: visual
+---
+
+Libro de códigos base principal
+
+```{r}
+library(pacman)
+p_load(tidyverse,
+       sjPlot,
+       sjmisc)
+
+# Cargar bases
+
+load("input/data/data-general.rdata")
+load("input/data/retirados.rdata")
+load("input/data/colab_instituciones.rdata")
+load("input/data/cois.rdata")
+```
+
+
+
+```{r}
+view_df(data)
+```
+
+```{r}
+frq(data)
+```
+
