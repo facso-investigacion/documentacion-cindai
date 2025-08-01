@@ -8,5 +8,15 @@
     "crumbs": [
       "Introducción"
     ]
+  },
+  {
+    "objectID": "repositorio.html",
+    "href": "repositorio.html",
+    "title": "1  Repositorios y Acceso",
+    "section": "",
+    "text": "1.1 Repositorios de la Dirección de Investigación y Publicaciones\nEn la siguiente sección se describe un entorno\nLos repositorios vinculados a la gestión de datos DIP se encuentran alojados en la Organización de la Dirección en Github. En concreto, DAI-FACSO se compone de 4 repositorios:\n1. DAI-FACSO\nEste repositorio está destinado al público externo y tiene como propósito dar a conocer de manera general el diagnóstico, los objetivos y productos de DAI-FACSO. Esta información se puede encontrar en el siguiente Documento de Trabajo.\n2. bases-datos-dip\nEste es un repositorio privado que contiene el procesamiento de las bases originales de SEPA-VID, ANID, personal FACSO entre otras.\nEn la carpeta outputse encuentran las bases de datos procesadas en en formato .rdata y .csv. Estas bases no se encuentran anonimizadas, ya que contienen el rut de los investigadores. Por ello, este repositorio es exclusivamente para uso interno de equipo DIP\n3. datos-abiertos-dip\nEste repositorio contendrá las bases anonimizadas en formato .rdata y .csv. El repositorio será público. Sin embargo, la branch principal se encontrará protegida, de modo que cualquier modificación se pueda realizar solo tras el visto bueno del Equipo DIP.\n4. documentos-dai\nEste repositorio contendrá documentación para el uso correcto de los datos de la Dirección de Investigación, incluyendo libros de códigos y este manual de uso.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Repositorios y Acceso</span>"
+    ]
   }
 ]
