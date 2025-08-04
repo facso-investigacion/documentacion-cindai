@@ -1,0 +1,77 @@
+rm(list = ls())
+
+## Cargar librerias y bases ----
+
+library(pacman)
+p_load(tidyverse,
+       digest,
+       readxl,
+       janitor,
+       haven)
+
+load("input/data/procesadas/acads-historico.rdata")
+load("input/data/procesadas/data-general.rdata")
+
+## Procesar base ----
+
+acad <- academicos_historico |>
+  mutate(rut_hash = sapply(rut_investigador, function(x) digest(x, algo = "xxhash32")),
+         fecha_mod = ifelse(!is.na(fech_ratif_jerarquia), year(fech_ratif_jerarquia), retiro)) |>
+  select(rut_investigador,
+         rut_hash,
+         reparticion,
+         fecha_mod)
+  
+
+# Define codigos para cada repartición
+codigo_reparticion <- c(
+  "Postgrado" = "11",
+  "Educación" = "12",
+  "Antropología" = "21",
+  "Sociología" = "31",
+  "Psicología" = "41",
+  "Trabajo social" = "22"
+)
+
+acad <- acad |>
+  mutate(
+    reparticion_codigo = recode(reparticion, !!!codigo_reparticion)
+  ) |>
+  arrange(reparticion_codigo, fecha_mod) |>
+  group_by(reparticion_codigo) |>
+  mutate(
+    correlativo = row_number(),
+    correlativo = sprintf("%03d", correlativo),  # Rellenar con ceros
+    id = paste0(reparticion_codigo, correlativo)
+  ) |>
+  ungroup() |>
+  select(rut_investigador,
+         rut_hash,
+         id)
+
+## Merge con la base principal ----
+
+data <- merge(data, acad, by.x="rut_investigador")
+
+data <- data |>
+  select(id,
+         rut_hash,
+         everything(),
+         -rut_investigador)
+
+
+## Exportar ----
+
+
+write.csv(data, "output/data-general-anon.csv", row.names = F, fileEncoding = "UTF-8")
+
+# retirados <-
+#   data |>
+#   filter(!is.na(retiro))
+# 
+# write.csv(retirados, "output/retirados.csv", row.names = F, fileEncoding = "UTF-8")
+
+
+## Guardar key de ids
+
+write.csv(acad, "output/key.csv", row.names = F, fileEncoding = "UTF-8")

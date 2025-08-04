@@ -1,7 +1,0 @@
-[1,"==> quarto preview repositorio.qmd --to html --no-watch-inputs --no-browse\n\n"]
-[1,"pandoc \n  to: html\n  output-file: repositorio.html\n  standalone: true\n  toc: true\n  number-sections: true\n  title-prefix: Manual de Uso\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  number-offset:\n    - 1\n  \nmetadata\n  crossref:\n    chapters: true\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  theme: cosmo\n  hide-description: true\n  title: \"[1]{.chapter-number}\\_ [Repositorios y Accesso]{.chapter-title}\"\n  \n"]
-[1,"Output created: docs\\repositorio.html\n\n"]
-[1,"Terminating existing preview server...."]
-[1,"DONE\n\nPreparing to preview\n"]
-[1,"\nWatching files for changes\nBrowse at http://localhost:7413/repositorio.html\n"]
-[1,"GET: /repositorio.html\n"]

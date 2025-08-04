@@ -1,0 +1,5 @@
+"0","load(""input/data-general.rdata"")
+"
+"2","Error en readChar(con, 5L, useBytes = TRUE): 
+  no se puede abrir la conexión
+"
