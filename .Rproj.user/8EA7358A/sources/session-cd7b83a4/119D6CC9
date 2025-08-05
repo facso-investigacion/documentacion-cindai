@@ -1,26 +1,24 @@
 {
-    "id": "B4095284",
-    "path": "~/GitHub/DIP/DAI-FACSO/propuesta.qmd",
+    "id": "119D6CC9",
+    "path": "~/GitHub/DIP/bases-datos-dip/output/data-general.csv",
     "project_path": null,
-    "type": "quarto_markdown",
-    "hash": "0",
+    "type": "text",
+    "hash": "2848773529",
     "contents": "",
     "dirty": false,
-    "created": 1754327058687.0,
+    "created": 1754344391297.0,
     "source_on_save": false,
     "relative_order": 10,
     "properties": {
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "20,510",
-        "scrollLine": "0"
+        "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1754073019,
+    "lastKnownWriteTime": 1754073174,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1754073019,
+    "last_content_update": 1754073174,
     "read_only": false,
     "read_only_alternatives": []
 }

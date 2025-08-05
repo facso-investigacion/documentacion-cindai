@@ -20,6 +20,7 @@ book:
     - repositorio.qmd
     - estructura.qmd
     - consultas.qmd
+    - actualizacion.qmd
 
     
 # bibliography: ocs.bib
@@ -27,5 +28,8 @@ book:
 format:
   html:
     theme: journal
+    mermaid: 
+      theme: neutral
+
   # pdf:
   #   documentclass: scrreprt

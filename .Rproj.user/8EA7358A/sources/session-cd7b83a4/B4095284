@@ -1,27 +1,26 @@
 {
-    "id": "0BA78CE0",
-    "path": "~/GitHub/DIP/documentos-dai/consultas.qmd",
-    "project_path": "consultas.qmd",
+    "id": "B4095284",
+    "path": "~/GitHub/DIP/DAI-FACSO/propuesta.qmd",
+    "project_path": null,
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1754323227412.0,
+    "created": 1754327058687.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 10,
     "properties": {
-        "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,0",
-        "scrollLine": "0"
+        "cursorPosition": "47,277",
+        "scrollLine": "39"
     },
     "folds": "",
-    "lastKnownWriteTime": 1754323296,
+    "lastKnownWriteTime": 1754073019,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1754323296967,
+    "last_content_update": 1754073019,
     "read_only": false,
     "read_only_alternatives": []
 }

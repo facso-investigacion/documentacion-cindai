@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Repositorios de la Dirección de Investigación y Publicaciones – Base Integrada de Datos de Investigación</title>
+<title>4&nbsp; Actualización y Mantenimiento – Base Integrada de Datos de Investigación</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./estructura.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./consultas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./repositorio.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Repositorios de la Dirección de Investigación y Publicaciones</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./actualizacion.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -120,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./repositorio.html" class="sidebar-item-text sidebar-link active">
+  <a href="./repositorio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Repositorios de la Dirección de Investigación y Publicaciones</span></span></a>
   </div>
 </li>
@@ -138,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./actualizacion.html" class="sidebar-item-text sidebar-link">
+  <a href="./actualizacion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span></a>
   </div>
 </li>
@@ -147,15 +180,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#actualizaciones-metadatos-y-control-de-versiones" id="toc-actualizaciones-metadatos-y-control-de-versiones" class="nav-link active" data-scroll-target="#actualizaciones-metadatos-y-control-de-versiones"><span class="header-section-number">4.1</span> Actualizaciones Metadatos y control de versiones</a></li>
+  <li><a href="#metadatos-y-control-de-versiones" id="toc-metadatos-y-control-de-versiones" class="nav-link" data-scroll-target="#metadatos-y-control-de-versiones"><span class="header-section-number">4.2</span> Metadatos y control de versiones</a></li>
+  <li><a href="#ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento" id="toc-ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento" class="nav-link" data-scroll-target="#ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento"><span class="header-section-number">4.3</span> Ejemplo de flujo de trabajo para actualización y versionamiento</a>
+  <ul class="collapse">
+  <li><a href="#flujo-para-actualización-y-versionamiento-de-postulaciones-fondecyt" id="toc-flujo-para-actualización-y-versionamiento-de-postulaciones-fondecyt" class="nav-link" data-scroll-target="#flujo-para-actualización-y-versionamiento-de-postulaciones-fondecyt"><span class="header-section-number">4.3.1</span> Flujo para actualización y versionamiento de postulaciones FONDECYT</a></li>
+  </ul></li>
+  <li><a href="#solución-de-problemas" id="toc-solución-de-problemas" class="nav-link" data-scroll-target="#solución-de-problemas"><span class="header-section-number">4.4</span> Solución de problemas</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Repositorios de la Dirección de Investigación y Publicaciones</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></h1>
 </div>
 
 
@@ -172,18 +217,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la <a href="https://github.com/facso-investigacion">Organización de la Dirección en Github</a>. En concreto, DAI-FACSO se compone de 4 repositorios:</p>
-<p><a href="https://github.com/facso-investigacion/DAI-FACSO"><strong>1. DAI-FACSO</strong></a> <i class="bi bi-link-45deg"></i></p>
-<p>Este repositorio está destinado al público externo y tiene como propósito dar a conocer de manera general el diagnóstico, los objetivos y productos de DAI-FACSO. Esta información se puede encontrar en el siguiente <a href="https://facso-investigacion.github.io/DAI-FACSO/index.html">Documento de Trabajo</a>.</p>
-<p><a href="https://github.com/facso-investigacion/bases-datos-dip"><strong>2. bases-datos-dip</strong></a> <i class="bi bi-link-45deg"></i></p>
-<p>Este es un repositorio privado que contiene el procesamiento de las bases originales de SEPA-VID, ANID, personal FACSO entre otras.</p>
-<p>En la carpeta <code>output</code>se encuentran las bases de datos procesadas en en formato <code>.rdata</code> y <code>.csv</code>. Estas bases no se encuentran anonimizadas, ya que contienen el rut de los investigadores. Por ello, este repositorio es <strong>exclusivamente para uso interno de equipo DIP</strong></p>
-<p><a href="https://github.com/facso-investigacion/datos-abiertos-dip"><strong>3. datos-abiertos-dip</strong></a> <i class="bi bi-link-45deg"></i></p>
-<p>Este repositorio contendrá las bases anonimizadas en formato <code>.rdata</code> y <code>.csv</code>. El repositorio será público. Sin embargo, la branch principal se encontrará protegida, de modo que cualquier modificación se pueda realizar solo tras el visto bueno del Equipo DIP.</p>
-<p><a href="https://github.com/facso-investigacion/documentos-dai"><strong>4. documentos-dai</strong></a> <i class="bi bi-link-45deg"></i></p>
-<p>Este repositorio contendrá documentación para el uso correcto de los datos de la Dirección de Investigación, incluyendo libros de códigos y este manual de uso.</p>
+<section id="actualizaciones-metadatos-y-control-de-versiones" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="actualizaciones-metadatos-y-control-de-versiones"><span class="header-section-number">4.1</span> Actualizaciones Metadatos y control de versiones</h2>
+<p>Las actualizaciones se llevaran a cabo periódicamente mediante commits a los repositorios <code>bases-datos-dip</code> y <code>datos-abiertos-dip</code>. Al ser una base pública, la branch principal de <code>datos-abiertos-dip</code> se mantendrá bajo protección y solo podrá ser actualizada por pull-requests revisados y aprobados por el Equipo DIP antes de ser fusionados con la rama principal.</p>
+</section>
+<section id="metadatos-y-control-de-versiones" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="metadatos-y-control-de-versiones"><span class="header-section-number">4.2</span> Metadatos y control de versiones</h2>
+<p>Se llevará un registro de los metadatos de las bases de datos en formato <code>.yml</code>. A continuación, se muestra un ejemplo básico de metadata contenida en los repositorios</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Datos de Investigación de la Facultad de Ciencias Sociales"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">creator</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dirección de Investigación y Publicaciones, Facultad de Ciencias Sociales, Universidad de Chile"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">identifier</span><span class="kw">:</span><span class="at"> </span><span class="st">"TBD"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/facso-investigacion/bases-datos-dip"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">: </span><span class="ch">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  Esta propuesta tiene como objetivo desarrollar un sistema local e integrado de gestión y visualización de información científica</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  en la Facultad de Ciencias Sociales. Este sistema permitirá consolidar, actualizar y utilizar estratégicamente los datos de los</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  proyectos de investigación, garantizando que sean encontrables, accesibles, interoperables y reutilizables. Con ello, se busca </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  mejorar la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">subject</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gestión de Información Científica"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="st">".csv"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="st">".rdata"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">license</span><span class="kw">:</span><span class="at"> </span><span class="st">"TBD"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="at"> </span><span class="st">"es"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">relationship</span><span class="kw">:</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="st">"isPartOf"</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://github.com/facso-investigacion"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Parte de la Organización de la Dirección de Investigación en Github"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span><span class="kw">:</span><span class="at"> </span><span class="st">"Los datos fueron recopilados a partir de datos de SEPA-VID, ANID y FACSO"</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">contact</span><span class="kw">:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dirección de Investigación FACSO"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">email</span><span class="kw">:</span><span class="at"> </span><span class="st">"asistenteinvestigacion@facso.cl"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">phone</span><span class="kw">:</span><span class="at"> </span><span class="st">"+56 2 2978 9728"</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Historial de versiones -- Cambiar antes de cada commit.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">versions</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.1.0"</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">last_updated</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025-08-04"</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">updated_by</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gabriel Cortés"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">update_note</span><span class="kw">:</span><span class="at"> </span><span class="st">"Crea documento YAML para el almacenamiento interoperable de metadatos"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="st">"0.2.0"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">last_updated</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025-08-05"</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">updated_by</span><span class="kw">:</span><span class="at"> </span><span class="st">"Gabriel Cortés"</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">update_note</span><span class="kw">:</span><span class="at"> </span><span class="st">"Agrega postulaciones a proyectos FONDECYT 2026 de IR-FACSO"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Parte importante del registro de metadatos es que permite llevar un seguimiento exhaustivo, accesible e interoperable del historial de versiones de las bases de datos y repositorios. Se propone que se debe registrar, antes de cada commit, los siguientes campos:</p>
+<ol type="1">
+<li><code>id</code> Número de versión siguiendo el estándar <code>MAJOR.MINOR.PATCH</code>, esto es:</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Número</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MAJOR</td>
+<td>Cambios que rompen compatibilidad con versiones anteriores</td>
+</tr>
+<tr class="even">
+<td>MINOR</td>
+<td>Cabios que agregan funcionalidades o datos sin romper compatibilidad</td>
+</tr>
+<tr class="odd">
+<td>PATCH</td>
+<td>Correciones menores y ajustes cosméticos</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><code>last_updated</code>: fecha de modificación</li>
+<li><code>updated_by</code>: Autor de la modificación.</li>
+<li><code>update_note</code>: Comentario explicativo de los cambios.</li>
+</ol>
+</section>
+<section id="ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento"><span class="header-section-number">4.3</span> Ejemplo de flujo de trabajo para actualización y versionamiento</h2>
+<p>(LA idea es ir incorporando nuevos flujos a medidas a que vayamos viendo nuevas necesidades)</p>
+<section id="flujo-para-actualización-y-versionamiento-de-postulaciones-fondecyt" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="flujo-para-actualización-y-versionamiento-de-postulaciones-fondecyt"><span class="header-section-number">4.3.1</span> Flujo para actualización y versionamiento de postulaciones FONDECYT</h3>
+<ol type="1">
+<li><p>Subir base RPI y planilla VID de patrocinios a <code>bases-datos-dip/input/data/original/</code></p></li>
+<li><p>Correr el script <code>bases-datos-dip/proc/actualizacion.R</code> para integrar nuevos proyectos de investigación. Esto actualizará la base de datos <code>base-datos_dip/input/data/procesadas/proyectos-merge.rdata</code></p></li>
+<li><p>Correr el script <code>bases-datos-dip/proc/proc-jerarquias.R</code> para agregar información sobre las trayectorias académicas de los nuevos académicos. Esto actualizará la base de datos <code>base-datos-dip/input/data/procesadas/data-general.rdata</code> y <code>base-datos-dip/output/data-general.csv</code></p></li>
+<li><p>Correr el script <code>bases-datos-dip/proc/anonimizacion.R</code> para anonimizar rut de los académicos. Esto actualizará el <code>bases-datos-dip/output/data-general-anon.csv</code></p></li>
+<li><p>Modificar información de la versión en la <code>bases-datos-dip/_metadata.yml</code></p></li>
+<li><p>Hacer commit en la branch principal del repositorio <code>base-datos-dip</code> y hacer pull al repositorio en Github.</p></li>
+<li><p>Copiar las nuevas versiones de <code>bases-datos-dip/output/data-general-anon.csv</code> y <code>base-datos-dip/output/data-general.rdata</code> y reemplazar las bases en <code>datos-abiertos-dip/Base Integrada</code></p></li>
+<li><p>Modificar información en <code>datos-abiertos-dip/Base Integrada/_metadata.yml</code>.</p></li>
+<li><p>Hacer commit en la brach <code>actualizaciones</code> y abrir un pull-request. El pull-request debe ser aceptado por… (<strong>definir roles</strong>)</p></li>
+</ol>
+</section>
+</section>
+<section id="solución-de-problemas" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="solución-de-problemas"><span class="header-section-number">4.4</span> Solución de problemas</h2>
+<p>Si encuentras un error en el procesamiento de las bases datos, o tienes ideas, comentarios y sugerencias, estos deben comentarse en los <code>Issues</code> del repositorios correspondiente.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -605,14 +742,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introducción">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducción</span>
+      <a href="./consultas.html" class="pagination-link" aria-label="Consultas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Consultas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./estructura.html" class="pagination-link" aria-label="Estructura de la base datos">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estructura de la base datos</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
