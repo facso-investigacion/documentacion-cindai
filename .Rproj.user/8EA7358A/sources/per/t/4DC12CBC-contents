@@ -70,21 +70,17 @@ Parte importante del registro de metadatos es que permite llevar un seguimiento 
 
 1.  Subir base RPI y planilla VID de patrocinios a `bases-datos-dip/input/data/original/`
 
-2.  Correr el script `bases-datos-dip/proc/actualizacion.R` para integrar nuevos proyectos de investigación. Esto actualizará la base de datos `base-datos_dip/input/data/procesadas/proyectos-merge.rdata`
+2.  Correr el masterscript del repositorio (`bases-datos-dip/master-script.R`)
 
-3.  Correr el script `bases-datos-dip/proc/proc-jerarquias.R` para agregar información sobre las trayectorias académicas de los nuevos académicos. Esto actualizará la base de datos `base-datos-dip/input/data/procesadas/data-general.rdata` y `base-datos-dip/output/data-general.csv`
+3.  Modificar información de la versión en la `bases-datos-dip/_metadata.yml`
 
-4.  Correr el script `bases-datos-dip/proc/anonimizacion.R` para anonimizar rut de los académicos. Esto actualizará el `bases-datos-dip/output/data-general-anon.csv`
+4.  Hacer commit en la branch principal del repositorio `base-datos-dip` y hacer pull al repositorio en Github.
 
-5.  Modificar información de la versión en la `bases-datos-dip/_metadata.yml`
+5.  Copiar las nuevas versiones de `bases-datos-dip/output/data-general-anon.csv` y `base-datos-dip/output/data-general.rdata` y reemplazar las bases en `datos-abiertos-dip/Base Integrada`
 
-6.  Hacer commit en la branch principal del repositorio `base-datos-dip` y hacer pull al repositorio en Github.
+6.  Modificar información en `datos-abiertos-dip/Base Integrada/_metadata.yml`.
 
-7.  Copiar las nuevas versiones de `bases-datos-dip/output/data-general-anon.csv` y `base-datos-dip/output/data-general.rdata` y reemplazar las bases en `datos-abiertos-dip/Base Integrada`
-
-8.  Modificar información en `datos-abiertos-dip/Base Integrada/_metadata.yml`.
-
-9.  Hacer commit en la brach `actualizaciones` y abrir un pull-request. El pull-request debe ser aceptado por... (**definir roles**)
+7.  Hacer commit en la branch `actualizaciones` y abrir un pull-request. El pull-request debe ser aceptado por... (**definir roles**)
 
 
 ## Solución de problemas
