@@ -1,1 +1,1 @@
-[Manual de Uso](https://facso-investigacion.github.io/documentos-dai/)
+[Manual de Uso](https://facso-investigacion.github.io/documentacion-cindai/)
