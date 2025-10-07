@@ -1,0 +1,233 @@
+## Base de datos Integrada
+
+## Estructura
+
+Es la base procesada sin anonimizar que se encuentra en el repositorio privado [`base-datos-dip`](https://github.com/facso-investigacion/bases-datos-dip). Recopila información sobre proyectos de investigación postulados y adjudicados por el cuerpo académico de la Facultad de Ciencias Sociales. Fue construida a partir de fuentes como SEPA-VID, ANID y la Oficina de Personal de la Facultad. Incluye proyectos en los que los académicos actualmente afiliados a la Facultad participan como investigadores principales o co-investigadores.
+
+Las variables contenidas en la base se organizan en tres grandes grupos: a) Información sobre los académicos; b) Información sobre los proyectos; y c) Datos sobre la trayectoria académica de los investigadores.
+
+### Información sobre los académicos
+
+-   **Rut del Investigador**: Identificador único para investigadores
+
+-   **Nombre del Investigador**: Nombre completo del investigador
+
+-   **Género del investigador**
+
+-   **Edad del investigador**
+
+-   **Departamento del Investigador**
+
+-   **Jornada del Investigador**, en horas.
+
+-   **Jerarquía actual del investigador**, según información actualizada a mayo del 2025.
+
+### Información sobre el Proyecto:
+
+-   **Código del proyecto**: Identificador único para el proyecto. En casos de proyectos externos ANID, se mantiene el código de esa institución para facilitar el cruce de datos
+
+-   **Título del proyecto**
+
+-   **Institución** que financia el proyecto
+
+-   **Concurso**: Nombre del concurso al que se postula
+
+-   **Instrumento**: Nombre del instrumento específico al que se postula
+
+-   **Proyecto Asociativo**: Indica si el proyecto corresponde a concursos de la Subdirección de Centros e Investigación Asociativa de ANID, incluyendo Anillos de Investigación, Centros de Investigación e Iniciativas Milenio.
+
+-   **Investigación Aplicada**: Indica si el proyecto corresponde a concursos de la Subdirección de Investigación Aplicada e Innovación de ANID, incluyendo instrumentos como el FONIS, el FONIDE y los IDeA.
+
+-   **Rol del Investigador**: Rol del Investigador FACSO en el proyecto (Investigador Responsable o Coinvestigador)
+
+-   **Estado del Proyecto**: Se refiere a si el proyecto se encuentra en estado de postulación, ejecución o finalización, o bien en otro estado.
+
+-   **Proyecto adjudicado**: Recodificado a partir de **Estado del Proyecto**. Se considera que le proyecto fue adjudicado si se encuentra *en ejecución* o *finalizado*
+
+-   **Proyecto en ejecución**: Indica que si el proyecto ha sido finalizado o si se encuentra actualmente en ejecución.
+
+-   **Duración del proyecto**: Duración del proyecto en meses
+
+-   **Año del concurso**: Año del concurso postulado
+
+-   **Inicio del proyecto**: Fecha de inicio del proyecto
+
+-   **Término del proyecto**: Fecha de término del proyecto
+
+-   **Palabras claves**: Palabras claves del proyectos informadas a ANID. Solo disponibles para proyectos posteriores a 2016.
+
+-   **Monto adjudicado**: Monto adjudicado al proyecto, en miles de pesos (M\$)
+
+### Datos sobre la trayectoria académica del investigador
+
+-   **Jerarquización: Instructor**: Año en que el académico accedió a la jerarquía académica de Instructor.
+
+-   **Jerarquización: Asistente**: Año en que el académico accedió a la jerarquía académica de Asistente.
+
+-   **Jerarquización: Asociado**: Año en que el académico accedió a la jerarquía académica de Asociado.
+
+-   **Jerarquización: Titular**: Año en que el académico accedió a la jerarquía académica de Titular.
+
+-   **Jerarquía en el Proyecto**: Jerarquía del acadadémico en el momento en que postuló o se adjudicó el proyecto
+
+### Resumen
+
+La siguiente tabla resume las variables, códigos y etiquetas de la base de datos.
+
+```{r}
+#| label: Resumen variables
+
+library(summarytools)
+library(dplyr)
+library(haven)
+
+load("input/data/data-general.rdata")
+
+data <- data %>%
+  mutate(across(where(~inherits(.x, "haven_labelled")), as_factor))
+
+print(dfSummary(data,
+          headings=FALSE,
+          style = "multiline",
+          plain.ascii = FALSE,
+          tmp.img.dir = 'tmp',
+          varnumbers = FALSE,
+          silent= TRUE,
+          split.by = NULL),
+      max.tbl.height = 500,
+      method = 'render',
+      # css.class = 'table',
+      silent = TRUE,
+      footnote = NA)
+```
+
+## Construcción y Actualización
+
+La construcción y actualización de la Base Integrada se hace a través de la ejecución del **Masterscript** ubicado en `bases-datos-dip/proc/master-script.R`. Este documento actúan com un guión que organiza y ejecuta, en el orden correcto, los distintos pases para producir la Base Integrada, de manera limpia, ordenada y reproducible.
+
+Los scripts que componen el Masterscript se resumen a continuación:
+
+### Procesamiento General de Proyectos
+
+El script `proc/procesamiento.R` se encarga fundamentalmente de procesar y estandarizar la información de proyectos contenida en SEPA-VID.
+
+La base de datos de SEPA-VID es descargada y guardada en `input/data/proyectos.xlsx`. Para integrar actualizaciones contenidas en SEPA-VID, basta con reemplazar este archivo con datos más recientes.
+
+El output de este script se encuentra en `input/data/procesadas/proyectos.rdata`, Una base *long* que tiene como unidad de análisis académicos-proyectos.
+
+### Procesamiento de Información sobre Académicos
+
+El script `proc/acads.R` permite procesar información sobre académicos de la Facultad. Esto se hace a partir de la base de datos de académicos gestionada por Dirección Académica, almacenada en `input/data/original/acad.xlsx`. La actualización de esta base, fundamental para integrar nuevos académicos y cambios de jerarquía, se hace reemplazando este archivo.
+
+Además, contiene una base histórica de académica, que permite tener acceso a académicos retirados y a cambios de jerarquía, almacenada en `input/data/original/retirados.xlsx`.
+
+Estos datos son unidos a `proyectos.rdata` para generar `input/data/procesadas/proyectos-merge.rdata`, que unifica datos de proyectos y datos de académicos en un único dataframe. Además, se puede consultar `input/data/procesadas/acads-historico.rdata` si se quiere solo información limpia de los académicos, sin datos de investigación.
+
+### Ingresar Nuevos Proyectos
+
+Los script contenidos en `proc/nueva-data/` permiten ingresar nuevos proyectos patrocinados por la Facultad. En el caso de proyectos ANID o Universidad de Chile, esta información es temporal, a la espera de la actualización de SEPA-VID. La información de los nuevos proyecto patrocinados proviene fundamentalmente de la Ficha RPI de la Dirección de Investigación. A continuación, se muestra un ejemplo de como integrar nuevos proyectos patrocinados:
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Se crea un dataframe vacio a partir de proyectos-merge.rdata
+load("input/data/procesadas/proyectos-merge.rdata")
+idea_2026 <- proyectos_merge |>
+  slice(0) |> select(1:27) |> add_row(.rows=4)
+
+
+
+# Se crean vectores con los ruts de los IR y los titulos de los proyectos
+ruts <- c("009968190K", 
+                       "0146199267", 
+                       "0139050150",
+                       "0124547768"
+                       )
+
+titulos <- c("Desarrollo de un modelo de capacitación para la implementación de programas ambulatorios de intervención reparatoria para niños, niñas y adolescentes que han sido vulnerados en sus derechos",
+             "GARANTE: Herramienta participativa autoaplicada por las comunidades educativas (usuarios finales) de los Servicios Locales de Educación Pública (usuarios intermedios) para conocer los costos de un funcionamiento de los establecimientos educacionales que asegure una calidad adecuada a los derechos humanos educativos, conforme a las leyes nacionales e internacionales",
+             "Desarrollo de un sistema integrado de educación financiera para jóvenes de 18 a 29 años",
+             "Diseño del programa CRESCENDO para el Desarrollo Profesional de Educadoras/es de Orquestas Infantiles desde una perspectiva constructivista e inclusiva")
+
+
+# Se rellena la información disponible. Todo lo que no se complete se recodificara temporalmente como NA. 
+idea_2026 <- idea_2026 |>
+  mutate(rut_investigador = ruts,
+         tipo_investigador = "Investigador responsable",
+         codigo_proyecto = paste0("temp_", "idea2026", "_", row_number()),
+         titulo= titulos,
+         institucion = "ANID",
+         concurso = "Subdirección de Investigación Aplicada",
+         instrumento= "Idea I+D",
+         asociativo = 0,
+         inv_aplicada = 1,
+         anio_concurso = 2026,
+         estado_proyecto = "Postulado")
+
+
+act <- left_join(act, academicos_historico, by="rut_investigador")
+
+# Se cruza con la información de los académicos y se hace en el bind a proyectos merge
+load("input/data/procesadas/acads-historico.rdata")
+act <- left_join(act, academicos_historico, by="rut_investigador")
+proyectos_merge <- bind_rows(proyectos_merge, act)
+
+```
+
+Es importante que en este paso se asigne un código para la identificación del proyecto. Se sugiere que este se componga de un titulo corto del concurso (ej: idea para el Concurso IDEA I+D), el año del concurso y un número correlativo. En caso de ser un código temporal, que es lo que corresponde para proyectos ANID y U.Chile, se recomienda incluir la etiqueta `temp_`.
+
+### Ingresar Núcleos de Asociatividad FACSO
+
+El script `núcleos.R` permite ingresar a la Base Integrada los proyectos amparados por la política de asociatividad FACSO. Esto se logra cruzando la información de la Dirección Académica sobre Núcleos de Investigación, contenida en en `input/data/original/asoc-facso.xlsx` con la información sobre académicos procesada en `acads-historico.rdata` y unida a `proyectos-merge.rdata`.
+
+### Trayectorias Académicas (Jerarquizaciones)
+
+El script `proc-jerarquias.R` integra a la base las trayectorias de jerarquizaciones de los académicos, permitiendo cruzar identificar la jerarquía de los investigadores al postular o adjudicarse un proyecto. Para esto, se procesa el archivo histórico de nombramiento, proporcionado por Dirección Académica, almacenado en `input/data/original/acad_jerarq.xlsx`.
+
+El output de este script es `data-general-facso.rdata`, que ya contiene información integrada sobre proyectos, académicos y sus trayectorias.
+
+### Proyectos anteriores al nombramiento
+
+Para integrar información sobre proyectos académicos anteriores al nombramiento se debe ejecutar `proy-prefacso.R`. Esto se logra a través de *fuzzy matchs* con las bases históricas de ANID. Estas bases están alojadas en `input/data/original/BDH_HISTORICA.xlsx`, para el caso de proyectos FONDECYT, y en `input/data/original/BDH_PROYECTOS_MILENIO.xlsx`, para el caso de proyectos Milenio.
+
+### Actualización proyectos finalizados
+
+`finalizados.R` es un script que recodifica como "Finalizado" los proyectos que tengan registrados como fecha de término después del último día del mes pasado. Tras este paso, ya se tiene una base integrada y actualizada de los proyectos de investigación de la Facultad, lista para exportar al repositorio abierto y para la construcción de la app de consultas.
+
+La base integrada queda almacenada en `output/data-general.csv` y en `output/data-general.rdata`. Además, se exporta para la construcción de la App de Consultas Internas de CINDAI en `app/data/data-general.rdata`
+
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | Script              | Descripción General                                                                                    | Input                                            | Output                                           | Actualización y mantenimiento                                                                                                                   | -->
+<!-- +=====================+========================================================================================================+==================================================+==================================================+=================================================================================================================================================+ -->
+<!-- | `procesamiento.R`   | Se encarga fundamentalmente de procesar y estandariza la información de proyectos contenida en SEPAVID | `input/data/proyectos.xlsx`                      | `input/data/procesadas/proyectos.rdata`          | Se debe descargar una base nueva de SEPA-VID y reemplazar `input/data/proyectos.xlsx`                                                           | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `acads.R`           | Procesa y estandariza información sobre los académicos de la Facultad                                  | `input/data/original/acad.xlsx`                  | `input/data/procesadas/proyectos-merge.rdata`    | Reemplazar `input/data/original/acad.xlsx` con la información actualizada por Dirección Académica                                               | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        | `input/data/original/retirados.xlsx`             | `input/data/procesadas/acads-historico.rdata`    |                                                                                                                                                 | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `proc/nueva-data/`  | Incluye nuevos proyectos patrocinados                                                                  | Ficha RPI                                        | `input/data/procesadas/proyectos-merge.rdata`    | Incluir nuevos patrocinios tras cierre de concursos                                                                                             | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        | `input/data/procesadas/proyectos-merge.rdata`    |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        | `input/data/procesadas/acads-historico.rdata`    |                                                  |                                                                                                                                                 | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `núcleos.R`         | Incluye Política de Asociatividad FACSO                                                                | `input/data/original/asoc-facso.xlsx`            | `input/data/procesadas/nucleos-facso.rdata`      | Consultar a Dirección Académica sobre cambios en la política y reemplazar `input/data/original/asoc-facso.xlsx`                                 | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        |                                                  | `input/data/procesadas/proyectos-merge.rdata`    |                                                                                                                                                 | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `proc-jerarquias.R` | Incluye historial de jerarquizaciones de los académicos                                                | `input/data/original/acad_jerarq.xlsx`           | `input/data/procesadas/data-general-facso.rdata` | Basta con ejecutar los scripts anteriores en `master-script.R`                                                                                  | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `proy-prefacso.R`   | Agregar proyectos anteriores al nombramiento                                                           | `input/data/original/BDH_HISTORICA.xlsx`         | `input/data/procesadas/data-general.rdata`       | Se debe reemplazar las bases ANID una vez se actualicen los repositorios en <https://github.com/ANID-GITHUB/Historico-de-Proyectos-Adjudicados> | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        | `input/data/original/BDH_PROYECTOS_MILENIO.xlsx` |                                                  |                                                                                                                                                 | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+<!-- | `finalizados.R`     | Recodifica como "Finalizado" los proyectos cerrados                                                    | `input/data/procesadas/data-general.rdata`       | `output/data-general.csv`                        | Solo requiere ejecutar el script.                                                                                                               | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        |                                                  | `output/data-general.rdata`                      |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        |                                                  |                                                  |                                                                                                                                                 | -->
+<!-- |                     |                                                                                                        |                                                  | `app/data/data-general.rdata`                    |                                                                                                                                                 | -->
+<!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
+
+<!-- : Scripts Base Integrada -->
+

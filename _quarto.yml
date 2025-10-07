@@ -7,7 +7,7 @@ execute:
    warning: false
 
 book:
-  title: "Base Integrada de Datos de Investigación"
+  title: "Ciencia de Datos en Investigación -- CINDAI"
   subtitle: "Manual de Uso"
   author: "Dirección de Investigación y Publicaciones"
   repo-url: https://github.com/facso-investigacion
@@ -18,7 +18,7 @@ book:
   chapters:
     - index.qmd
     - repositorio.qmd
-    - estructura.qmd
+    - base-integrada.qmd
     - consultas.qmd
     - actualizacion.qmd
 

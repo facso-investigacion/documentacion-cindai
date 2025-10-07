@@ -83,6 +83,12 @@ Parte importante del registro de metadatos es que permite llevar un seguimiento 
 7.  Hacer commit en la branch `actualizaciones` y abrir un pull-request. El pull-request debe ser aceptado por... (**definir roles**)
 
 
+## Flujo para actualización de _metadata.yml
+
+1. Asegurarse de haber realizado un commit
+
+2. Exportar historial de commit 
+
 ## Solución de problemas
 
 Si encuentras un error en el procesamiento de las bases datos, o tienes ideas, comentarios y sugerencias, estos deben comentarse en los `Issues` del repositorios correspondiente. 

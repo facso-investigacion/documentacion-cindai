@@ -1,0 +1,31 @@
+## Base de datos anonimizada
+
+Esta versión de la base se encuentra en el repositorio público [`datos-abiertos-dip`](https://github.com/facso-investigacion/datos-abiertos-dip/tree/main/Base%20Integrada). Contiene la misma información que la Base Integrada, con la diferencia de que se resguarda el RUT de los investigadores.
+
+Los fueron anonimizados mediante la función `xxhash32`del paquete `digest`[(Eddelbuettel, 2024)](https://dirk.eddelbuettel.com/code/digest.html). El resultado es que cada RUT se transformó en una cadena de 32-bits (o 8 caracteres) único y no reversible.
+
+Además, para facilitar la identificación por Departamentos, se creo un ID númerico de 5 caracteres, donde los dos primeros representan el departamento al que está adscrito el académico, y los tres últimos son un correlativo. Los Departamentos fueron asignados como sigue:
+
+| Departamento   | Código |
+|----------------|--------|
+| Postgrado      | 11     |
+| Educación      | 12     |
+| Antropología   | 21     |
+| Trabajo Social | 22     |
+| Sociología     | 31     |
+| Psicoología    | 41     |
+
+
+La siguiente tabla ejemplifica el proceso de anonimización realizado.
+
+```{r}
+#| label: Anonimización e Identificación
+
+library(readr)
+library(knitr)
+
+key <- read_csv("input/data/key.csv")
+
+kable(head(key, 10), caption= "Proceso de anonimización datos de investigadores")
+
+```
