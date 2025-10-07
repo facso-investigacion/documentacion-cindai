@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Consultas – Ciencia de Datos en Investigación -- CINDAI</title>
+<title>3&nbsp; App de Consultas Internas – Ciencia de Datos en Investigación -- CINDAI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,17 +56,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -79,13 +79,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./consultas.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Consultas</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./consultas.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -102,13 +102,13 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Ciencia de Datos en Investigación – CINDAI</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/facso-investigacion" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/facso-investigacion" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./consultas.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Consultas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -148,15 +148,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#repositorio-construcción-y-publicación" id="toc-repositorio-construcción-y-publicación" class="nav-link active" data-scroll-target="#repositorio-construcción-y-publicación"><span class="header-section-number">3.1</span> Repositorio, Construcción y Publicación</a></li>
+  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso"><span class="header-section-number">3.2</span> Uso</a>
+  <ul class="collapse">
+  <li><a href="#pestaña-de-académicos" id="toc-pestaña-de-académicos" class="nav-link" data-scroll-target="#pestaña-de-académicos"><span class="header-section-number">3.2.1</span> Pestaña de Académicos</a></li>
+  <li><a href="#pestaña-de-proyectos" id="toc-pestaña-de-proyectos" class="nav-link" data-scroll-target="#pestaña-de-proyectos"><span class="header-section-number">3.2.2</span> Pestaña de Proyectos</a></li>
+  <li><a href="#reporte-de-problemas-y-sugerencias" id="toc-reporte-de-problemas-y-sugerencias" class="nav-link" data-scroll-target="#reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.3</span> Reporte de Problemas y Sugerencias</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Consultas</span></h1>
+<h1 class="title"><span id="sec-consultas" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span></h1>
 </div>
 
 
@@ -173,9 +185,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Crear dashboards</p>
+<p>Para facilitar la consulta y la generación de reportes sobre datos de investigación de la Facultad, CINDAI pone a disposición una app interna para realizar consultas de manera rápida y eficiente. La app está disponible en este <a href="https://dip-facso.shinyapps.io/consultas/#consulta-proyectos">enlace</a>.</p>
+<section id="repositorio-construcción-y-publicación" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="repositorio-construcción-y-publicación"><span class="header-section-number">3.1</span> Repositorio, Construcción y Publicación</h2>
+<p>La app se encuentra en el repositorio <code>bases-datos-dip/app</code>, el cual tiene la siguiente estructura.</p>
+<pre class="plaintext"><code>├── data/
+│   ├── data-general.rdata
+|   ├── data-proyectos.rdata
+├── consultas.qmd
+├── consultas.html
+├── consultas_files/
+├── deploy.R</code></pre>
+<p>Como se comentó en el <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>, el archivo <code>data-general.rdata</code> corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el <code>masterscript</code> del repositorio. Esta es una base <em>long</em> que tiene como unidad de análisis académicos-proyectos.</p>
+<p><code>data-proyectos.rdata</code> se crea a partir de la Base Integrada con un script integrado en <code>consultas.qmd</code>. Esta es una base <em>wide</em> que tiene como unidad de análisis los proyectos de investigación.</p>
+<p>El archivo <code>consultas.qmd</code> contiene el código que crea la app. Ésta fue construida en <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">R Shiny</a>, un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra <a href="https://quarto.org/docs/interactive/shiny/">integrado con Quarto</a>. Al renderizar este documento se crea el archivo <code>consultas.html</code> y la carpeta <code>consultas_files/</code>, que permiten previsualizar la app.</p>
+<p>Por último, el archivo <code>deploy.R</code> permite la publicación de la app en la web. La app se encuentra alojada en los servidores de <a href="https://www.shinyapps.io/">shinyapps</a>.</p>
+</section>
+<section id="uso" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="uso"><span class="header-section-number">3.2</span> Uso</h2>
+<section id="pestaña-de-académicos" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="pestaña-de-académicos"><span class="header-section-number">3.2.1</span> Pestaña de Académicos</h3>
+<p>En esta pestaña podrá ver los proyectos de investigación vinculados a cada académico de la Facultad, ya sea como Investigador Responsable o Coinvestigador. Para hacerlo, debe seguir los siguientes pasos:</p>
+<ol type="1">
+<li><p>Seleccionar a un académico o académica en la parte superior izquierda de la aplicación.</p></li>
+<li><p>Seleccionar los filtros deseados. Actualmente los filtros disponibles son: Año(s) del Concurso; Proyectos en que el académico participó como Investigador Responsable; Proyectos adjudicados; Proyectos en ejecución; proyectos asociativos; proyectos de investigación aplicada; institución, concurso e instrumento del proyecto; jerarquía del académico al adjudicarse el proyecto.</p></li>
+<li><p>Una vez realizados los pasos anteriores, se generará una tabla en la sección derecha de la aplicación. Esta tabla es exportable en formato excel o csv, según estime conveniente.</p></li>
+</ol>
+</section>
+<section id="pestaña-de-proyectos" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="pestaña-de-proyectos"><span class="header-section-number">3.2.2</span> Pestaña de Proyectos</h3>
+<p>En esta pestaña podrá acceder a la totalidad de los proyectos de investigación adjudicados por académicos de la Facultad, incluyendo información sobre investigadores responsables, coinvestigadores, financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.</p>
+<p>Para ello debe seleccionar los filtros deseados. De no seleccionar ninguno, se generará una tabla con la totalidad de los proyectos disponibles. Al igual que en la pestaña de académicos, esta tabla es exportable en formato excel y csv.</p>
+</section>
+<section id="reporte-de-problemas-y-sugerencias" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.3</span> Reporte de Problemas y Sugerencias</h3>
+<p>Para reportar algún problema, error en la información, o hacer sugerencias sobre funcionalidades de la app, existen dos alternativas:</p>
+<ol type="1">
+<li><p>Abrir un <a href="https://github.com/facso-investigacion/bases-datos-dip/issues">issue</a> en el repositorio de Github de la aplicación. Para hacerlo, necesita una cuenta en Github y acceso al repositorio.</p></li>
+<li><p>Por correo electrónico a <a href="mailto:asistenteinvestigacion@facso.cl">asistenteinvestigacion@facso.cl</a></p></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -203,12 +255,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

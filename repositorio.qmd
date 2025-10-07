@@ -1,4 +1,4 @@
-## Repositorios de la Dirección de Investigación y Publicaciones
+## Repositorios de la Dirección de Investigación y Publicaciones {#repo}
 
 Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la [Organización de la Dirección en Github](https://github.com/facso-investigacion). En concreto, CINDAI se compone de 4 repositorios:
 

@@ -1,4 +1,51 @@
-## Consultas
+# App de Consultas Internas {#sec-consultas}
 
-Crear dashboards
+Para facilitar la consulta y la generación de reportes sobre datos de investigación de la Facultad, CINDAI pone a disposición una app interna para realizar consultas de manera rápida y eficiente. La app está disponible en este [enlace](https://dip-facso.shinyapps.io/consultas/#consulta-proyectos).
 
+## Repositorio, Construcción y Publicación
+
+La app se encuentra en el repositorio `bases-datos-dip/app`, el cual tiene la siguiente estructura. 
+
+```plaintext
+├── data/
+│   ├── data-general.rdata
+|   ├── data-proyectos.rdata
+├── consultas.qmd
+├── consultas.html
+├── consultas_files/
+├── deploy.R
+```
+
+Como se comentó en el @sec-base, el archivo `data-general.rdata` corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el `masterscript` del repositorio. Esta es una base *long* que tiene como unidad de análisis académicos-proyectos. 
+
+`data-proyectos.rdata` se crea a partir de la Base Integrada con un script integrado en `consultas.qmd`. Esta es una base *wide* que tiene como unidad de análisis los proyectos de investigación. 
+
+El archivo `consultas.qmd` contiene el código que crea la app. Ésta fue construida en [R Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/), un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra [integrado con Quarto](https://quarto.org/docs/interactive/shiny/). Al renderizar este documento se crea el archivo `consultas.html` y la carpeta `consultas_files/`, que permiten previsualizar la app.
+
+Por último, el archivo `deploy.R` permite la publicación de la app en la web. La app se encuentra alojada en los servidores de [shinyapps](https://www.shinyapps.io/). 
+
+## Uso
+
+### Pestaña de Académicos
+
+En esta pestaña podrá ver los proyectos de investigación vinculados a cada académico de la Facultad, ya sea como Investigador Responsable o Coinvestigador. Para hacerlo, debe seguir los siguientes pasos:
+
+1) Seleccionar a un académico o académica en la parte superior izquierda de la aplicación.
+
+2) Seleccionar los filtros deseados. Actualmente los filtros disponibles son: Año(s) del Concurso; Proyectos en que el académico participó como Investigador Responsable; Proyectos adjudicados; Proyectos en ejecución; proyectos asociativos; proyectos de investigación aplicada; institución, concurso e instrumento del proyecto; jerarquía del académico al adjudicarse el proyecto.
+
+3) Una vez realizados los pasos anteriores, se generará una tabla en la sección derecha de la aplicación. Esta tabla es exportable en formato excel o csv, según estime conveniente.
+
+### Pestaña de Proyectos
+
+En esta pestaña podrá acceder a la totalidad de los proyectos de investigación adjudicados por académicos de la Facultad, incluyendo información sobre investigadores responsables, coinvestigadores, financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.
+
+Para ello debe seleccionar los filtros deseados. De no seleccionar ninguno, se generará una tabla con la totalidad de los proyectos disponibles. Al igual que en la pestaña de académicos, esta tabla es exportable en formato excel y csv.
+
+### Reporte de Problemas y Sugerencias
+
+Para reportar algún problema, error en la información, o hacer sugerencias sobre funcionalidades de la app, existen dos alternativas:
+
+1) Abrir un [issue](https://github.com/facso-investigacion/bases-datos-dip/issues) en el repositorio de Github de la aplicación. Para hacerlo, necesita una cuenta en Github y acceso al repositorio.
+
+2) Por correo electrónico a [asistenteinvestigacion@facso.cl](mailto:asistenteinvestigacion@facso.cl)

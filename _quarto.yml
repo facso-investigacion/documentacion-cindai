@@ -31,5 +31,7 @@ format:
     mermaid: 
       theme: neutral
 
+lang: es
+
   # pdf:
   #   documentclass: scrreprt

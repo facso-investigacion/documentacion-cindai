@@ -1,4 +1,4 @@
-## Base de datos Integrada
+## Base de datos Integrada {#sec-base}
 
 ## Estructura
 
@@ -193,7 +193,7 @@ Para integrar información sobre proyectos académicos anteriores al nombramient
 
 ### Actualización proyectos finalizados
 
-`finalizados.R` es un script que recodifica como "Finalizado" los proyectos que tengan registrados como fecha de término después del último día del mes pasado. Tras este paso, ya se tiene una base integrada y actualizada de los proyectos de investigación de la Facultad, lista para exportar al repositorio abierto y para la construcción de la app de consultas.
+`finalizados.R` es un script que recodifica como "Finalizado" los proyectos que tengan registrados como fecha de término después del último día del mes pasado. Tras este paso, ya se tiene una base integrada y actualizada de los proyectos de investigación de la Facultad, lista para exportar al repositorio abierto y para la construcción de la app de consultas, como se describe en el @sec-consultas.
 
 La base integrada queda almacenada en `output/data-general.csv` y en `output/data-general.rdata`. Además, se exporta para la construcción de la App de Consultas Internas de CINDAI en `app/data/data-general.rdata`
 
