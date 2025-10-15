@@ -18,7 +18,7 @@ La app se encuentra en el repositorio `bases-datos-dip/app`, el cual tiene la si
 
 Como se comentó en el @sec-base, el archivo `data-general.rdata` corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el `masterscript` del repositorio. Esta es una base *long* que tiene como unidad de análisis académicos-proyectos. 
 
-`data-proyectos.rdata` se crea a partir de la Base Integrada con un script integrado en `consultas.qmd`. Esta es una base *wide* que tiene como unidad de análisis los proyectos de investigación. 
+`data-proyectos.rdata` se crea a partir de la Base Integrada con el script `base-wide.R`, como se detalla en @sec-base. Esta es una base *wide* que tiene como unidad de análisis los proyectos de investigación. 
 
 El archivo `consultas.qmd` contiene el código que crea la app. Ésta fue construida en [R Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/), un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra [integrado con Quarto](https://quarto.org/docs/interactive/shiny/). Al renderizar este documento se crea el archivo `consultas.html` y la carpeta `consultas_files/`, que permiten previsualizar la app.
 
