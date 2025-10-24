@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,18 +30,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./actualizacion.html" rel="next">
+<link href="./datos-abiertos.html" rel="next">
 <link href="./base-integrada.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-069da80d366c4f2f9b8a500041250e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0ae80099085a0c62f8afb0bd4e0634f4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -56,7 +57,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -97,7 +98,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Ciencia de Datos en Investigación – CINDAI</a> 
@@ -139,8 +141,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./datos-abiertos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./actualizacion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span></a>
   </div>
 </li>
     </ul>
@@ -158,7 +166,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#pestaña-de-académicos" id="toc-pestaña-de-académicos" class="nav-link" data-scroll-target="#pestaña-de-académicos"><span class="header-section-number">3.2.1</span> Pestaña de Académicos</a></li>
   <li><a href="#pestaña-de-proyectos" id="toc-pestaña-de-proyectos" class="nav-link" data-scroll-target="#pestaña-de-proyectos"><span class="header-section-number">3.2.2</span> Pestaña de Proyectos</a></li>
-  <li><a href="#reporte-de-problemas-y-sugerencias" id="toc-reporte-de-problemas-y-sugerencias" class="nav-link" data-scroll-target="#reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.3</span> Reporte de Problemas y Sugerencias</a></li>
+  <li><a href="#libro-de-códigos" id="toc-libro-de-códigos" class="nav-link" data-scroll-target="#libro-de-códigos"><span class="header-section-number">3.2.3</span> Libro de Códigos</a></li>
+  <li><a href="#reporte-de-problemas-y-sugerencias" id="toc-reporte-de-problemas-y-sugerencias" class="nav-link" data-scroll-target="#reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.4</span> Reporte de Problemas y Sugerencias</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -195,11 +204,15 @@ ul.task-list li input[type="checkbox"] {
 ├── consultas.qmd
 ├── consultas.html
 ├── consultas_files/
-├── deploy.R</code></pre>
+├── deploy.R
+├── www/
+│   ├── codebook.qmd
+│   ├── codebook.html</code></pre>
 <p>Como se comentó en el <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>, el archivo <code>data-general.rdata</code> corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el <code>masterscript</code> del repositorio. Esta es una base <em>long</em> que tiene como unidad de análisis académicos-proyectos.</p>
-<p><code>data-proyectos.rdata</code> se crea a partir de la Base Integrada con un script integrado en <code>consultas.qmd</code>. Esta es una base <em>wide</em> que tiene como unidad de análisis los proyectos de investigación.</p>
+<p><code>data-proyectos.rdata</code> se crea a partir de la Base Integrada con el script <code>base-wide.R</code>, como se detalla en <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>. Esta es una base <em>wide</em> que tiene como unidad de análisis los proyectos de investigación.</p>
 <p>El archivo <code>consultas.qmd</code> contiene el código que crea la app. Ésta fue construida en <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">R Shiny</a>, un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra <a href="https://quarto.org/docs/interactive/shiny/">integrado con Quarto</a>. Al renderizar este documento se crea el archivo <code>consultas.html</code> y la carpeta <code>consultas_files/</code>, que permiten previsualizar la app.</p>
-<p>Por último, el archivo <code>deploy.R</code> permite la publicación de la app en la web. La app se encuentra alojada en los servidores de <a href="https://www.shinyapps.io/">shinyapps</a>.</p>
+<p>En la carpeta <code>www/</code> se puede encontrar el archivo <code>codebook.qmd</code>, que crea un libro de códigos para las variables de la aplicación.</p>
+<p>El archivo <code>deploy.R</code> permite la publicación de la app en la web. La app se encuentra alojada en los servidores de <a href="https://www.shinyapps.io/">shinyapps</a>.</p>
 </section>
 <section id="uso" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="uso"><span class="header-section-number">3.2</span> Uso</h2>
@@ -217,8 +230,12 @@ ul.task-list li input[type="checkbox"] {
 <p>En esta pestaña podrá acceder a la totalidad de los proyectos de investigación adjudicados por académicos de la Facultad, incluyendo información sobre investigadores responsables, coinvestigadores, financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.</p>
 <p>Para ello debe seleccionar los filtros deseados. De no seleccionar ninguno, se generará una tabla con la totalidad de los proyectos disponibles. Al igual que en la pestaña de académicos, esta tabla es exportable en formato excel y csv.</p>
 </section>
-<section id="reporte-de-problemas-y-sugerencias" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.3</span> Reporte de Problemas y Sugerencias</h3>
+<section id="libro-de-códigos" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="libro-de-códigos"><span class="header-section-number">3.2.3</span> Libro de Códigos</h3>
+<p>Puede consultar el libro de códigos de ambas pestañas <a href="https://dip-facso.shinyapps.io/consultas/_w_13f4a94ea5194a07abbd823f4c5537d2/www/codebook.html">aquí</a></p>
+</section>
+<section id="reporte-de-problemas-y-sugerencias" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.4</span> Reporte de Problemas y Sugerencias</h3>
 <p>Para reportar algún problema, error en la información, o hacer sugerencias sobre funcionalidades de la app, existen dos alternativas:</p>
 <ol type="1">
 <li><p>Abrir un <a href="https://github.com/facso-investigacion/bases-datos-dip/issues">issue</a> en el repositorio de Github de la aplicación. Para hacerlo, necesita una cuenta en Github y acceso al repositorio.</p></li>
@@ -281,13 +298,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -636,8 +654,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./actualizacion.html" class="pagination-link" aria-label="Actualización y Mantenimiento">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./datos-abiertos.html" class="pagination-link" aria-label="Datos Abiertos CINDAI">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

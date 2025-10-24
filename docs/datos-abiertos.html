@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dirección de Investigación y Publicaciones">
 
-<title>Ciencia de Datos en Investigación – CINDAI</title>
+<title>4&nbsp; Datos Abiertos CINDAI – Ciencia de Datos en Investigación -- CINDAI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./repositorio.html" rel="next">
+<link href="./actualizacion.html" rel="next">
+<link href="./consultas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introducción</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./datos-abiertos.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introducción</span></a>
   </div>
 </li>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datos-abiertos.html" class="sidebar-item-text sidebar-link">
+  <a href="./datos-abiertos.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span></a>
   </div>
 </li>
@@ -161,7 +161,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#base-de-datos-anonimizada" id="toc-base-de-datos-anonimizada" class="nav-link active" data-scroll-target="#base-de-datos-anonimizada"><span class="header-section-number">4.1</span> Base de datos anonimizada</a></li>
+  <li><a href="#libros-de-códigos" id="toc-libros-de-códigos" class="nav-link" data-scroll-target="#libros-de-códigos"><span class="header-section-number">4.2</span> Libros de Códigos</a></li>
+  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia"><span class="header-section-number">4.3</span> Licencia</a></li>
   </ul>
 </nav>
     </div>
@@ -170,27 +172,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ciencia de Datos en Investigación – CINDAI</h1>
-<p class="subtitle lead">Manual de Uso</p>
+<h1 class="title"><span id="sec-abiertos" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dirección de Investigación y Publicaciones </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">24 de octubre de 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -200,13 +189,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introducción" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="introducción">Introducción</h2>
-<p>Reescribir como introducción CINDAI</p>
-<!-- La Base Integrada de Datos de Investigación de la Facultad de Ciencias Sociales recopila información sobre proyectos de investigación postulados y adjudicados por el cuerpo académico de la Facultad de Ciencias Sociales. Fue construida a partir de fuentes como SEPA-VID, ANID y la Oficina de Personal de la Facultad. Esta base incluye proyectos en los que los académicos actualmente afiliados a la Facultad participan como investigadores principales o co-investigadores.La base incluye información sobre los académicos, sus trayectorias académicas y los proyectos en los que han participado.  -->
-<!-- La Base Integrada representa el principal producto en un esfuerzo por desarrollar un sistema local e integrado de gestión y visualización de información científica en la Facultad de Ciencias Sociales. Este sistema tiene como objetivo consolidar, actualizar y utilizar estratégicamente los daots de los proyectos de investigación, garantizando que sean encontrables, accesibles y reutilizables, mejorando  la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.  -->
-<!-- Este documento es un Manual de Uso dirigido a los miembros del equipo de la Dirección de Investigación y Publicaciones de la Facultad de Ciencias Sociales (DIP-FACSO). Su propósito es describir la ubicación, acceso y estructura de la base de datos, así como dar guía para su mantención y actualización. -->
-<!-- En primer lugar, se indicará el repositorio donde se aloja la Base Integrada y sus condiciones de acceso. En seguida se describirá la estructura de la base de datos, su construcción y las variables que la componen. Luego, se explicará el sistema de consultas propuesto. Finalmente, se describirá el flujo de trabajo para la actualización, mantenimiento y solución de problemas de la base.   -->
+<p>En esta sección se describe el repositorio de <a href="https://github.com/facso-investigacion/datos-abiertos-dip/tree/main">Datos Abiertos de CINDAI</a>. El propósito de este repositorio es poner a disposición de la comunidad datos relevantes sobre investigación en la Facultad de Ciencias Sociales de manera accesible y transparantes, respetando los datos personales de los investigadores. Así, a diferencia de los datos descritos en <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>, este repositorio se encuentra abierto para su descarga y utilización, bajo ciertas condiciones de uso.</p>
+<section id="base-de-datos-anonimizada" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="base-de-datos-anonimizada"><span class="header-section-number">4.1</span> Base de datos anonimizada</h2>
+<p>Contiene la misma información que la Base Integrada, con la diferencia de que se resguarda el RUT de los investigadores. La construcción y actualización de estos datos sigue el mismo flujo que la base sin anonimizar.</p>
+<p>Especificamente, el script <code>anonimizacion.R</code> aplica funciones para anonimizar la base y exportarla automáticamente a Datos Abiertos CINDAI. Es importante que para que este procedimiento funcione, es necesario tener clonado locamente tanto el repositorio <a href="https://github.com/facso-investigacion/bases-datos-dip"><code>base-datos-dip</code></a> como [<code>datos-abiertos-dip</code>]((https://github.com/facso-investigacion/datos-abiertos-dip).</p>
+<p>Para la anonimización se utilizó la función <code>xxhash32</code>del paquete <code>digest</code><a href="https://dirk.eddelbuettel.com/code/digest.html">(Eddelbuettel, 2024)</a>. El resultado es que cada RUT se transformó en una cadena de 32-bits (o 8 caracteres) único y no reversible.</p>
+<p>Además, para facilitar la identificación por Departamentos, se creo un ID númerico de 5 caracteres, donde los dos primeros representan el departamento al que está adscrito el académico, y los tres últimos son un correlativo. Los Departamentos fueron asignados como sigue:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Departamento</th>
+<th>Código</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Postgrado</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>Educación</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>Antropología</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>Trabajo Social</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>Sociología</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td>Psicología</td>
+<td>41</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente tabla ejemplifica el proceso de anonimización realizado.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Proceso de anonimización datos de investigadores</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">rut_investigador</th>
+<th style="text-align: left;">rut_hash</th>
+<th style="text-align: left;">id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0029311803</td>
+<td style="text-align: left;">dd715a7b</td>
+<td style="text-align: left;">11001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0053990622</td>
+<td style="text-align: left;">5778e5ce</td>
+<td style="text-align: left;">11002</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0048548652</td>
+<td style="text-align: left;">ee9c94b7</td>
+<td style="text-align: left;">11003</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0117376184</td>
+<td style="text-align: left;">33f09bb2</td>
+<td style="text-align: left;">11004</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0156399981</td>
+<td style="text-align: left;">b646c3f2</td>
+<td style="text-align: left;">11005</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0141201395</td>
+<td style="text-align: left;">73b38133</td>
+<td style="text-align: left;">11006</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4865693</td>
+<td style="text-align: left;">315b3e81</td>
+<td style="text-align: left;">12001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0021327255</td>
+<td style="text-align: left;">66e2a0e2</td>
+<td style="text-align: left;">12002</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">0047489253</td>
+<td style="text-align: left;">b5e8aa87</td>
+<td style="text-align: left;">12003</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0085274600</td>
+<td style="text-align: left;">a7814360</td>
+<td style="text-align: left;">12004</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="libros-de-códigos" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="libros-de-códigos"><span class="header-section-number">4.2</span> Libros de Códigos</h2>
+<p>Puede revisar el Libro de Código de las bases anonimizadas <a href="https://facso-investigacion.github.io/datos-abiertos-dip/codebook.html">aquí</a></p>
+</section>
+<section id="licencia" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="licencia"><span class="header-section-number">4.3</span> Licencia</h2>
+<p>Las bases de datos están protegidas por <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International Public License</a> (CC BY-NC 4.0). CC BY-NC 4.0 es una licencia abierta que permite compartir y adaptar los datos bajos las siguientes condiciones:</p>
+<p><strong>Atribución</strong>: Se debe dar crédito adecuado a la Dirección de Investigación y Publicaciones, de la siguiente forma. [<strong>agregar cita</strong>]</p>
+<p><strong>No comercial</strong>: No se puede usar el material con fines comercial, incluyendo usos directos e inderictos cuyo objetivo principal sea obtener un beneficio económico.</p>
 
 
 </section>
@@ -614,10 +714,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./consultas.html" class="pagination-link" aria-label="App de Consultas Internas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./repositorio.html" class="pagination-link" aria-label="Repositorios de la Dirección de Investigación y Publicaciones">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Repositorios de la Dirección de Investigación y Publicaciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./actualizacion.html" class="pagination-link" aria-label="Actualización y Mantenimiento">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

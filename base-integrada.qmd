@@ -191,23 +191,24 @@ El output de este script es `data-general-facso.rdata`, que ya contiene informac
 
 Para integrar información sobre proyectos académicos anteriores al nombramiento se debe ejecutar `proy-prefacso.R`. Esto se logra a través de *fuzzy matchs* con las bases históricas de ANID. Estas bases están alojadas en `input/data/original/BDH_HISTORICA.xlsx`, para el caso de proyectos FONDECYT, y en `input/data/original/BDH_PROYECTOS_MILENIO.xlsx`, para el caso de proyectos Milenio.
 
-### Etiquetas
-
-El script `etiquetas.R` se encarga de asignar etiquetas a las variables y los valores de la Base Integrada. 
-
 ### Actualización proyectos finalizados
 
 `finalizados.R` es un script que recodifica como "Finalizado" los proyectos que tengan registrados como fecha de término después del último día del mes pasado. Tras este paso, ya se tiene una base integrada y actualizada de los proyectos de investigación de la Facultad, lista para exportar al repositorio abierto y para la construcción de la app de consultas, como se describe en el @sec-consultas.
 
 La base integrada queda almacenada en `output/data-general.csv` y en `output/data-general.rdata`. Además, se exporta para la construcción de la App de Consultas Internas de CINDAI en `app/data/data-general.rdata`
 
-### Base Long
+### Etiquetas
 
-Al ejecutar `base-wide.R` se crear una base de datos ancha, con los proyecto de investigación como unidad de análisis. Esta base se exporta a `app/data/base_proyectos.rdata` y se utiliza en la App de Consultas Internas de CINDAI.
+El script `etiquetas.R` se encarga de asignar etiquetas a las variables y los valores de la Base Integrada. 
+
+
+### Base de Proyectos
+
+Al ejecutar `base-wide.R` se crea una base de proyectos, con la totalidad de los proyectos postulados registrados. Esta base se exporta a `app/data/base_proyectos.rdata` y se utiliza en la App de Consultas Internas de CINDAI.
 
 ### Anonimización
 
-`anonimizacion.R` es un script que permite anonimizar la base de datos integrada, eliminando variables sensibles. Más detalles sobre este proceso se revisaron en el @sec-x
+`anonimizacion.R` es un script que permite anonimizar la base de datos integrada, eliminando variables sensibles. Más detalles sobre este proceso se revisa en el @sec-abiertos
 
 <!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
 <!-- | Script              | Descripción General                                                                                    | Input                                            | Output                                           | Actualización y mantenimiento                                                                                                                   | -->

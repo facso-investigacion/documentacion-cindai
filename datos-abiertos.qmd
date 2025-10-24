@@ -1,8 +1,15 @@
+# Datos Abiertos CINDAI {#sec-abiertos}
+
+En esta sección se describe el repositorio de [Datos Abiertos de CINDAI](https://github.com/facso-investigacion/datos-abiertos-dip/tree/main). El propósito de este repositorio es poner a disposición de la comunidad datos relevantes sobre investigación en la Facultad de Ciencias Sociales de manera accesible y transparantes, respetando los datos personales de los investigadores. Así, a diferencia de los datos descritos en @sec-base, este repositorio se encuentra abierto para su descarga y utilización, bajo ciertas condiciones de uso. 
+
 ## Base de datos anonimizada
 
-Esta versión de la base se encuentra en el repositorio público [`datos-abiertos-dip`](https://github.com/facso-investigacion/datos-abiertos-dip/tree/main/Base%20Integrada). Contiene la misma información que la Base Integrada, con la diferencia de que se resguarda el RUT de los investigadores.
+Contiene la misma información que la Base Integrada, con la diferencia de que se resguarda el RUT de los investigadores. La construcción y actualización de estos datos sigue el mismo flujo que la base sin anonimizar. 
 
-Los fueron anonimizados mediante la función `xxhash32`del paquete `digest`[(Eddelbuettel, 2024)](https://dirk.eddelbuettel.com/code/digest.html). El resultado es que cada RUT se transformó en una cadena de 32-bits (o 8 caracteres) único y no reversible.
+Especificamente, el script `anonimizacion.R` aplica funciones para anonimizar la base y exportarla automáticamente a Datos Abiertos CINDAI. Es importante que para que este procedimiento funcione, es necesario tener clonado locamente tanto el repositorio [`base-datos-dip`](https://github.com/facso-investigacion/bases-datos-dip) como [`datos-abiertos-dip`]((https://github.com/facso-investigacion/datos-abiertos-dip). 
+
+
+Para la anonimización se utilizó la función `xxhash32`del paquete `digest`[(Eddelbuettel, 2024)](https://dirk.eddelbuettel.com/code/digest.html). El resultado es que cada RUT se transformó en una cadena de 32-bits (o 8 caracteres) único y no reversible.
 
 Además, para facilitar la identificación por Departamentos, se creo un ID númerico de 5 caracteres, donde los dos primeros representan el departamento al que está adscrito el académico, y los tres últimos son un correlativo. Los Departamentos fueron asignados como sigue:
 
@@ -13,7 +20,7 @@ Además, para facilitar la identificación por Departamentos, se creo un ID núm
 | Antropología   | 21     |
 | Trabajo Social | 22     |
 | Sociología     | 31     |
-| Psicoología    | 41     |
+| Psicología     | 41     |
 
 
 La siguiente tabla ejemplifica el proceso de anonimización realizado.
@@ -29,3 +36,15 @@ key <- read_csv("input/data/key.csv")
 kable(head(key, 10), caption= "Proceso de anonimización datos de investigadores")
 
 ```
+
+## Libros de Códigos
+
+Puede revisar el Libro de Código de las bases anonimizadas [aquí](https://facso-investigacion.github.io/datos-abiertos-dip/codebook.html)
+
+## Licencia
+
+Las bases de datos están protegidas por [Creative Commons Attribution-NonCommercial 4.0 International Public License](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC 4.0). CC BY-NC 4.0 es una licencia abierta que permite compartir y adaptar los datos bajos las siguientes condiciones:
+
+**Atribución**: Se debe dar crédito adecuado a la Dirección de Investigación y Publicaciones, de la siguiente forma. [**agregar cita**]
+
+**No comercial**: No se puede usar el material con fines comercial, incluyendo usos directos e inderictos cuyo objetivo principal sea obtener un beneficio económico. 

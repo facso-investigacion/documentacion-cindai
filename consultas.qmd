@@ -14,6 +14,9 @@ La app se encuentra en el repositorio `bases-datos-dip/app`, el cual tiene la si
 ├── consultas.html
 ├── consultas_files/
 ├── deploy.R
+├── www/
+│   ├── codebook.qmd
+│   ├── codebook.html
 ```
 
 Como se comentó en el @sec-base, el archivo `data-general.rdata` corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el `masterscript` del repositorio. Esta es una base *long* que tiene como unidad de análisis académicos-proyectos. 
@@ -22,7 +25,9 @@ Como se comentó en el @sec-base, el archivo `data-general.rdata` corresponde a 
 
 El archivo `consultas.qmd` contiene el código que crea la app. Ésta fue construida en [R Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/), un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra [integrado con Quarto](https://quarto.org/docs/interactive/shiny/). Al renderizar este documento se crea el archivo `consultas.html` y la carpeta `consultas_files/`, que permiten previsualizar la app.
 
-Por último, el archivo `deploy.R` permite la publicación de la app en la web. La app se encuentra alojada en los servidores de [shinyapps](https://www.shinyapps.io/). 
+En la carpeta `www/` se puede encontrar el archivo `codebook.qmd`, que crea un libro de códigos para las variables de la aplicación. 
+
+El archivo `deploy.R` permite la publicación de la app en la web. La app se encuentra alojada en los servidores de [shinyapps](https://www.shinyapps.io/). 
 
 ## Uso
 
@@ -41,6 +46,10 @@ En esta pestaña podrá ver los proyectos de investigación vinculados a cada ac
 En esta pestaña podrá acceder a la totalidad de los proyectos de investigación adjudicados por académicos de la Facultad, incluyendo información sobre investigadores responsables, coinvestigadores, financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.
 
 Para ello debe seleccionar los filtros deseados. De no seleccionar ninguno, se generará una tabla con la totalidad de los proyectos disponibles. Al igual que en la pestaña de académicos, esta tabla es exportable en formato excel y csv.
+
+### Libro de Códigos
+
+Puede consultar el libro de códigos de ambas pestañas [aquí](https://dip-facso.shinyapps.io/consultas/_w_13f4a94ea5194a07abbd823f4c5537d2/www/codebook.html)
 
 ### Reporte de Problemas y Sugerencias
 

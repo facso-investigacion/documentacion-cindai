@@ -1,6 +1,10 @@
 ---
 title: "Codebook"
-format: html
+format:
+  html:
+    number-sections: true
+  pdf:
+    number-sections: true
 editor: visual
 ---
 
@@ -20,8 +24,6 @@ load("input/data/colab_instituciones.rdata")
 load("input/data/cois.rdata")
 ```
 
-
-
 ```{r}
 view_df(data)
 ```
@@ -29,4 +31,3 @@ view_df(data)
 ```{r}
 frq(data)
 ```
-
