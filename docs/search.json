@@ -80,6 +80,26 @@
     ]
   },
   {
+    "objectID": "consultas.html#versionamiento",
+    "href": "consultas.html#versionamiento",
+    "title": "3  App de Consultas Internas",
+    "section": "3.3 Versionamiento",
+    "text": "3.3 Versionamiento\nSe llevará a cabo un control de versiones con Versionamiento Semántico 2.0.0. El versionamiento semántico sigue un estándar MAJOR.MENOR.PARCHE (o X.Y.Z), donde:\n\nMAJOR representa cambios en la compatibilidad entre versiones\nMINOR representa cambios en funcionalidades compatibles con versiones anteriores\nPARCHE representa correccione en errores compatibles con las versiones anteriores.\n\nEste versionamiento se puede hacer en el repositorio alojado en Github, con las funcionalidades tagsy release. O bien, directamente en la terminal con el siguiente código.\ngit tag -a vx.y.z -m \"Versión x.y.z: titulo\"",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>App de Consultas Internas</span>"
+    ]
+  },
+  {
+    "objectID": "consultas.html#licencia",
+    "href": "consultas.html#licencia",
+    "title": "3  App de Consultas Internas",
+    "section": "3.4 Licencia",
+    "text": "3.4 Licencia\nLas aplicación y su contenido está protegida bajo la Licencia Apache 2.0. Apache 2.0 es una licencia de software libre y de código abierto que permite el uso, modificación y distribución del código con fines tanto comerciales como no comerciales, siempre que se mantenga la atribución al autor original y se conserve una copia del texto de la licencia.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>App de Consultas Internas</span>"
+    ]
+  },
+  {
     "objectID": "datos-abiertos.html",
     "href": "datos-abiertos.html",
     "title": "4  Datos Abiertos CINDAI",
