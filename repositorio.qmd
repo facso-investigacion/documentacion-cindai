@@ -1,6 +1,6 @@
 ## Repositorios de la Dirección de Investigación y Publicaciones {#repo}
 
-Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la [Organización de la Dirección en Github](https://github.com/facso-investigacion). En concreto, CINDAI se compone de 4 repositorios:
+Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la [Organización de la Dirección en Github](https://github.com/facso-investigacion). En concreto, CINDAI se compone de 5 repositorios:
 
 [**1. CINDAI**](https://github.com/facso-investigacion/CINDAI) <i class="bi bi-link-45deg"></i>
 
@@ -16,6 +16,10 @@ En la carpeta `output`se encuentran las bases de datos procesadas en en formato 
 
 Este repositorio contendrá las bases anonimizadas en formato `.rdata` y `.csv`. El repositorio será público. Sin embargo, la branch principal se encontrará protegida, de modo que cualquier modificación se pueda realizar solo tras el visto bueno del Equipo DIP.
 
-[**4. documentacion-cindai**](https://github.com/facso-investigacion/documentacion-cindai) <i class="bi bi-link-45deg"></i>
+[**4. visualizador-cindai**](https://github.com/facso-investigacion/visualizador-cindai) <i class="bi bi-link-45deg"></i>
+
+Este repositorio contiene el código del [Visualizador de Datos Abiertos de CINDAI](https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/#inicio).
+
+[**5. documentacion-cindai**](https://github.com/facso-investigacion/documentacion-cindai) <i class="bi bi-link-45deg"></i>
 
 Este repositorio contendrá documentación para el uso correcto de los datos de la Dirección de Investigación, incluyendo libros de códigos y este manual de uso.

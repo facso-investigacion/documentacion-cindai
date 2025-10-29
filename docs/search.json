@@ -14,7 +14,7 @@
     "href": "repositorio.html",
     "title": "1  Repositorios de la Dirección de Investigación y Publicaciones",
     "section": "",
-    "text": "Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la Organización de la Dirección en Github. En concreto, CINDAI se compone de 4 repositorios:\n1. CINDAI \nEste repositorio está destinado al público externo y tiene como propósito dar a conocer de manera general el diagnóstico, los objetivos y productos de CINDAI. Esta información se puede encontrar en el siguiente Documento de Trabajo.\n2. bases-datos-dip \nEste es un repositorio privado que contiene el procesamiento de las bases originales de SEPA-VID, ANID, personal FACSO entre otras.\nEn la carpeta outputse encuentran las bases de datos procesadas en en formato .rdata y .csv. Estas bases no se encuentran anonimizadas, ya que contienen el rut de los investigadores. Por ello, este repositorio es exclusivamente para uso interno de equipo DIP\n3. datos-abiertos-dip \nEste repositorio contendrá las bases anonimizadas en formato .rdata y .csv. El repositorio será público. Sin embargo, la branch principal se encontrará protegida, de modo que cualquier modificación se pueda realizar solo tras el visto bueno del Equipo DIP.\n4. documentacion-cindai \nEste repositorio contendrá documentación para el uso correcto de los datos de la Dirección de Investigación, incluyendo libros de códigos y este manual de uso.",
+    "text": "Los repositorios vinculados a la gestión de datos DIP se encuentran alojados en la Organización de la Dirección en Github. En concreto, CINDAI se compone de 5 repositorios:\n1. CINDAI \nEste repositorio está destinado al público externo y tiene como propósito dar a conocer de manera general el diagnóstico, los objetivos y productos de CINDAI. Esta información se puede encontrar en el siguiente Documento de Trabajo.\n2. bases-datos-dip \nEste es un repositorio privado que contiene el procesamiento de las bases originales de SEPA-VID, ANID, personal FACSO entre otras.\nEn la carpeta outputse encuentran las bases de datos procesadas en en formato .rdata y .csv. Estas bases no se encuentran anonimizadas, ya que contienen el rut de los investigadores. Por ello, este repositorio es exclusivamente para uso interno de equipo DIP\n3. datos-abiertos-dip \nEste repositorio contendrá las bases anonimizadas en formato .rdata y .csv. El repositorio será público. Sin embargo, la branch principal se encontrará protegida, de modo que cualquier modificación se pueda realizar solo tras el visto bueno del Equipo DIP.\n4. visualizador-cindai \nEste repositorio contiene el código del Visualizador de Datos Abiertos de CINDAI.\n5. documentacion-cindai \nEste repositorio contendrá documentación para el uso correcto de los datos de la Dirección de Investigación, incluyendo libros de códigos y este manual de uso.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Repositorios de la Dirección de Investigación y Publicaciones</span>"
     ]
@@ -140,53 +140,103 @@
     ]
   },
   {
+    "objectID": "visualizador.html",
+    "href": "visualizador.html",
+    "title": "5  Visualizador Datos Abiertos",
+    "section": "",
+    "text": "5.1 Repositorio, Construcción y Publicación\nEl Visualizador de Datos Abiertos de CINDAI tiene el propósito de poner a disposición de la comunidad una herramienta interactiva que permita visualizar de manera rápida datos generales, históricos y actuales, de las investigaciones llevadas a cabo en la Facultad. El visualizador se puede encontrar en el siguiente enlace.\nLa app se encuentra en el repositorio bases-datos-dip/app, el cual tiene la siguiente estructura.\ndata-general-anon.rdata y data-proyectos-anon.rdata corresponden a las versiones anonimizadas de la Base Integrada y la Base de Proyectos, respectivamente. visualizador.qmd es el código que crea la aplicación en visualizador.html. Al igual que la App de Consultas, el Visualizador está construido con Shiny y alojado en ShinyApps.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizador Datos Abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "visualizador.html#repositorio-construcción-y-publicación",
+    "href": "visualizador.html#repositorio-construcción-y-publicación",
+    "title": "5  Visualizador Datos Abiertos",
+    "section": "",
+    "text": "├── input/\n│   ├── data-general-anon.rdata\n|   ├── data-proyectos-anon.rdata\n├── visualizador.qmd\n├── visualizador.html\n├── visualizador_files/",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizador Datos Abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "visualizador.html#uso",
+    "href": "visualizador.html#uso",
+    "title": "5  Visualizador Datos Abiertos",
+    "section": "5.2 Uso",
+    "text": "5.2 Uso\n[En construcción]",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizador Datos Abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "visualizador.html#versionamiento",
+    "href": "visualizador.html#versionamiento",
+    "title": "5  Visualizador Datos Abiertos",
+    "section": "5.3 Versionamiento",
+    "text": "5.3 Versionamiento\nAl igual que la App de Consultas, se utiliza versionamiento semántico, descrito en Capítulo 3.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizador Datos Abiertos</span>"
+    ]
+  },
+  {
+    "objectID": "visualizador.html#licencia",
+    "href": "visualizador.html#licencia",
+    "title": "5  Visualizador Datos Abiertos",
+    "section": "5.4 Licencia",
+    "text": "5.4 Licencia\nLas aplicación y su contenido está protegida bajo la Licencia Apache 2.0. Apache 2.0 es una licencia de software libre y de código abierto que permite el uso, modificación y distribución del código con fines tanto comerciales como no comerciales, siempre que se mantenga la atribución al autor original y se conserve una copia del texto de la licencia.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Visualizador Datos Abiertos</span>"
+    ]
+  },
+  {
     "objectID": "actualizacion.html",
     "href": "actualizacion.html",
-    "title": "5  Actualización y Mantenimiento",
+    "title": "6  Actualización y Mantenimiento",
     "section": "",
-    "text": "5.1 Actualizaciones Metadatos y control de versiones\nLas actualizaciones se llevaran a cabo periódicamente mediante commits a los repositorios bases-datos-dip y datos-abiertos-dip. Al ser una base pública, la branch principal de datos-abiertos-dip se mantendrá bajo protección y solo podrá ser actualizada por pull-requests revisados y aprobados por el Equipo DIP antes de ser fusionados con la rama principal.",
+    "text": "6.1 Actualizaciones Metadatos y control de versiones\nLas actualizaciones se llevaran a cabo periódicamente mediante commits a los repositorios bases-datos-dip y datos-abiertos-dip. Al ser una base pública, la branch principal de datos-abiertos-dip se mantendrá bajo protección y solo podrá ser actualizada por pull-requests revisados y aprobados por el Equipo DIP antes de ser fusionados con la rama principal.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
     ]
   },
   {
     "objectID": "actualizacion.html#metadatos-y-control-de-versiones",
     "href": "actualizacion.html#metadatos-y-control-de-versiones",
-    "title": "5  Actualización y Mantenimiento",
-    "section": "5.2 Metadatos y control de versiones",
-    "text": "5.2 Metadatos y control de versiones\nSe llevará un registro de los metadatos de las bases de datos en formato .yml. A continuación, se muestra un ejemplo básico de metadata contenida en los repositorios\ntitle: \"Datos de Investigación de la Facultad de Ciencias Sociales\"\ncreator: \"Dirección de Investigación y Publicaciones, Facultad de Ciencias Sociales, Universidad de Chile\"\ndate: \"2025\"\nidentifier: \"TBD\"\nurl: \"https://github.com/facso-investigacion/bases-datos-dip\"\ndescription: &gt;\n  Esta propuesta tiene como objetivo desarrollar un sistema local e integrado de gestión y visualización de información científica\n  en la Facultad de Ciencias Sociales. Este sistema permitirá consolidar, actualizar y utilizar estratégicamente los datos de los\n  proyectos de investigación, garantizando que sean encontrables, accesibles, interoperables y reutilizables. Con ello, se busca \n  mejorar la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.\nsubject: \"Gestión de Información Científica\"\nformat: \n - \".csv\"\n - \".rdata\"\nlicense: \"TBD\"\nlanguage: \"es\"\nrelationship:\n  - type: \"isPartOf\"\n    id: \"https://github.com/facso-investigacion\"\n    description: \"Parte de la Organización de la Dirección de Investigación en Github\"\nsource: \"Los datos fueron recopilados a partir de datos de SEPA-VID, ANID y FACSO\"\ncontact:\n  name: \"Dirección de Investigación FACSO\"\n  email: \"asistenteinvestigacion@facso.cl\"\n  phone: \"+56 2 2978 9728\"\n\n# Historial de versiones -- Cambiar antes de cada commit.\n\nversions: \n - id: \"0.1.0\"\n   last_updated: \"2025-08-04\"\n   updated_by: \"Gabriel Cortés\"\n   update_note: \"Crea documento YAML para el almacenamiento interoperable de metadatos\"\n - id: \"0.2.0\"\n   last_updated: \"2025-08-05\"\n   updated_by: \"Gabriel Cortés\"\n   update_note: \"Agrega postulaciones a proyectos FONDECYT 2026 de IR-FACSO\"\nParte importante del registro de metadatos es que permite llevar un seguimiento exhaustivo, accesible e interoperable del historial de versiones de las bases de datos y repositorios. Se propone que se debe registrar, antes de cada commit, los siguientes campos:\n\nid Número de versión siguiendo el estándar MAJOR.MINOR.PATCH, esto es:\n\n\n\n\n\n\n\n\nNúmero\nDescripción\n\n\n\n\nMAJOR\nCambios que rompen compatibilidad con versiones anteriores\n\n\nMINOR\nCabios que agregan funcionalidades o datos sin romper compatibilidad\n\n\nPATCH\nCorreciones menores y ajustes cosméticos\n\n\n\n\nlast_updated: fecha de modificación\nupdated_by: Autor de la modificación.\nupdate_note: Comentario explicativo de los cambios.",
+    "title": "6  Actualización y Mantenimiento",
+    "section": "6.2 Metadatos y control de versiones",
+    "text": "6.2 Metadatos y control de versiones\nSe llevará un registro de los metadatos de las bases de datos en formato .yml. A continuación, se muestra un ejemplo básico de metadata contenida en los repositorios\ntitle: \"Datos de Investigación de la Facultad de Ciencias Sociales\"\ncreator: \"Dirección de Investigación y Publicaciones, Facultad de Ciencias Sociales, Universidad de Chile\"\ndate: \"2025\"\nidentifier: \"TBD\"\nurl: \"https://github.com/facso-investigacion/bases-datos-dip\"\ndescription: &gt;\n  Esta propuesta tiene como objetivo desarrollar un sistema local e integrado de gestión y visualización de información científica\n  en la Facultad de Ciencias Sociales. Este sistema permitirá consolidar, actualizar y utilizar estratégicamente los datos de los\n  proyectos de investigación, garantizando que sean encontrables, accesibles, interoperables y reutilizables. Con ello, se busca \n  mejorar la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.\nsubject: \"Gestión de Información Científica\"\nformat: \n - \".csv\"\n - \".rdata\"\nlicense: \"TBD\"\nlanguage: \"es\"\nrelationship:\n  - type: \"isPartOf\"\n    id: \"https://github.com/facso-investigacion\"\n    description: \"Parte de la Organización de la Dirección de Investigación en Github\"\nsource: \"Los datos fueron recopilados a partir de datos de SEPA-VID, ANID y FACSO\"\ncontact:\n  name: \"Dirección de Investigación FACSO\"\n  email: \"asistenteinvestigacion@facso.cl\"\n  phone: \"+56 2 2978 9728\"\n\n# Historial de versiones -- Cambiar antes de cada commit.\n\nversions: \n - id: \"0.1.0\"\n   last_updated: \"2025-08-04\"\n   updated_by: \"Gabriel Cortés\"\n   update_note: \"Crea documento YAML para el almacenamiento interoperable de metadatos\"\n - id: \"0.2.0\"\n   last_updated: \"2025-08-05\"\n   updated_by: \"Gabriel Cortés\"\n   update_note: \"Agrega postulaciones a proyectos FONDECYT 2026 de IR-FACSO\"\nParte importante del registro de metadatos es que permite llevar un seguimiento exhaustivo, accesible e interoperable del historial de versiones de las bases de datos y repositorios. Se propone que se debe registrar, antes de cada commit, los siguientes campos:\n\nid Número de versión siguiendo el estándar MAJOR.MINOR.PATCH, esto es:\n\n\n\n\n\n\n\n\nNúmero\nDescripción\n\n\n\n\nMAJOR\nCambios que rompen compatibilidad con versiones anteriores\n\n\nMINOR\nCabios que agregan funcionalidades o datos sin romper compatibilidad\n\n\nPATCH\nCorreciones menores y ajustes cosméticos\n\n\n\n\nlast_updated: fecha de modificación\nupdated_by: Autor de la modificación.\nupdate_note: Comentario explicativo de los cambios.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
     ]
   },
   {
     "objectID": "actualizacion.html#ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento",
     "href": "actualizacion.html#ejemplo-de-flujo-de-trabajo-para-actualización-y-versionamiento",
-    "title": "5  Actualización y Mantenimiento",
-    "section": "5.3 Ejemplo de flujo de trabajo para actualización y versionamiento",
-    "text": "5.3 Ejemplo de flujo de trabajo para actualización y versionamiento\n(LA idea es ir incorporando nuevos flujos a medidas a que vayamos viendo nuevas necesidades)\n\n5.3.1 Flujo para actualización y versionamiento de postulaciones FONDECYT\n\nSubir base RPI y planilla VID de patrocinios a bases-datos-dip/input/data/original/\nCorrer el masterscript del repositorio (bases-datos-dip/master-script.R)\nModificar información de la versión en la bases-datos-dip/_metadata.yml\nHacer commit en la branch principal del repositorio base-datos-dip y hacer pull al repositorio en Github.\nCopiar las nuevas versiones de bases-datos-dip/output/data-general-anon.csv y base-datos-dip/output/data-general.rdata y reemplazar las bases en datos-abiertos-dip/Base Integrada\nModificar información en datos-abiertos-dip/Base Integrada/_metadata.yml.\nHacer commit en la branch actualizaciones y abrir un pull-request. El pull-request debe ser aceptado por… (definir roles)",
+    "title": "6  Actualización y Mantenimiento",
+    "section": "6.3 Ejemplo de flujo de trabajo para actualización y versionamiento",
+    "text": "6.3 Ejemplo de flujo de trabajo para actualización y versionamiento\n(LA idea es ir incorporando nuevos flujos a medidas a que vayamos viendo nuevas necesidades)\n\n6.3.1 Flujo para actualización y versionamiento de postulaciones FONDECYT\n\nSubir base RPI y planilla VID de patrocinios a bases-datos-dip/input/data/original/\nCorrer el masterscript del repositorio (bases-datos-dip/master-script.R)\nModificar información de la versión en la bases-datos-dip/_metadata.yml\nHacer commit en la branch principal del repositorio base-datos-dip y hacer pull al repositorio en Github.\nCopiar las nuevas versiones de bases-datos-dip/output/data-general-anon.csv y base-datos-dip/output/data-general.rdata y reemplazar las bases en datos-abiertos-dip/Base Integrada\nModificar información en datos-abiertos-dip/Base Integrada/_metadata.yml.\nHacer commit en la branch actualizaciones y abrir un pull-request. El pull-request debe ser aceptado por… (definir roles)",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
     ]
   },
   {
     "objectID": "actualizacion.html#flujo-para-actualización-de-_metadata.yml",
     "href": "actualizacion.html#flujo-para-actualización-de-_metadata.yml",
-    "title": "5  Actualización y Mantenimiento",
-    "section": "5.4 Flujo para actualización de _metadata.yml",
-    "text": "5.4 Flujo para actualización de _metadata.yml\n\nAsegurarse de haber realizado un commit\nExportar historial de commit",
+    "title": "6  Actualización y Mantenimiento",
+    "section": "6.4 Flujo para actualización de _metadata.yml",
+    "text": "6.4 Flujo para actualización de _metadata.yml\n\nAsegurarse de haber realizado un commit\nExportar historial de commit",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
     ]
   },
   {
     "objectID": "actualizacion.html#solución-de-problemas",
     "href": "actualizacion.html#solución-de-problemas",
-    "title": "5  Actualización y Mantenimiento",
-    "section": "5.5 Solución de problemas",
-    "text": "5.5 Solución de problemas\nSi encuentras un error en el procesamiento de las bases datos, o tienes ideas, comentarios y sugerencias, estos deben comentarse en los Issues del repositorios correspondiente.",
+    "title": "6  Actualización y Mantenimiento",
+    "section": "6.5 Solución de problemas",
+    "text": "6.5 Solución de problemas\nSi encuentras un error en el procesamiento de las bases datos, o tienes ideas, comentarios y sugerencias, estos deben comentarse en los Issues del repositorios correspondiente.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Actualización y Mantenimiento</span>"
     ]
   }
 ]

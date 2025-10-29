@@ -21,6 +21,7 @@ book:
     - base-integrada.qmd
     - consultas.qmd
     - datos-abiertos.qmd
+    - visualizador.qmd
     - actualizacion.qmd
 
     

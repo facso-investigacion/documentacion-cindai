@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; App de Consultas Internas – Ciencia de Datos en Investigación -- CINDAI</title>
+<title>5&nbsp; Visualizador Datos Abiertos – Ciencia de Datos en Investigación -- CINDAI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./datos-abiertos.html" rel="next">
-<link href="./base-integrada.html" rel="prev">
+<link href="./actualizacion.html" rel="next">
+<link href="./datos-abiertos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -118,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./consultas.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visualizador.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizador Datos Abiertos</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -170,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./consultas.html" class="sidebar-item-text sidebar-link active">
+  <a href="./consultas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span></a>
   </div>
 </li>
@@ -182,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./visualizador.html" class="sidebar-item-text sidebar-link">
+  <a href="./visualizador.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizador Datos Abiertos</span></span></a>
   </div>
 </li>
@@ -202,16 +167,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#repositorio-construcción-y-publicación" id="toc-repositorio-construcción-y-publicación" class="nav-link active" data-scroll-target="#repositorio-construcción-y-publicación"><span class="header-section-number">3.1</span> Repositorio, Construcción y Publicación</a></li>
-  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso"><span class="header-section-number">3.2</span> Uso</a>
-  <ul class="collapse">
-  <li><a href="#pestaña-de-académicos" id="toc-pestaña-de-académicos" class="nav-link" data-scroll-target="#pestaña-de-académicos"><span class="header-section-number">3.2.1</span> Pestaña de Académicos</a></li>
-  <li><a href="#pestaña-de-proyectos" id="toc-pestaña-de-proyectos" class="nav-link" data-scroll-target="#pestaña-de-proyectos"><span class="header-section-number">3.2.2</span> Pestaña de Proyectos</a></li>
-  <li><a href="#libro-de-códigos" id="toc-libro-de-códigos" class="nav-link" data-scroll-target="#libro-de-códigos"><span class="header-section-number">3.2.3</span> Libro de Códigos</a></li>
-  <li><a href="#reporte-de-problemas-y-sugerencias" id="toc-reporte-de-problemas-y-sugerencias" class="nav-link" data-scroll-target="#reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.4</span> Reporte de Problemas y Sugerencias</a></li>
-  </ul></li>
-  <li><a href="#versionamiento" id="toc-versionamiento" class="nav-link" data-scroll-target="#versionamiento"><span class="header-section-number">3.3</span> Versionamiento</a></li>
-  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia"><span class="header-section-number">3.4</span> Licencia</a></li>
+  <li><a href="#repositorio-construcción-y-publicación" id="toc-repositorio-construcción-y-publicación" class="nav-link active" data-scroll-target="#repositorio-construcción-y-publicación"><span class="header-section-number">5.1</span> Repositorio, Construcción y Publicación</a></li>
+  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso"><span class="header-section-number">5.2</span> Uso</a></li>
+  <li><a href="#versionamiento" id="toc-versionamiento" class="nav-link" data-scroll-target="#versionamiento"><span class="header-section-number">5.3</span> Versionamiento</a></li>
+  <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia"><span class="header-section-number">5.4</span> Licencia</a></li>
   </ul>
 </nav>
     </div>
@@ -220,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-consultas" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span></h1>
+<h1 class="title"><span id="sec-visualizador" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Visualizador Datos Abiertos</span></span></h1>
 </div>
 
 
@@ -237,68 +196,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Para facilitar la consulta y la generación de reportes sobre datos de investigación de la Facultad, CINDAI pone a disposición una app interna para realizar consultas de manera rápida y eficiente. La app está disponible en este <a href="https://dip-facso.shinyapps.io/consultas/#consulta-proyectos">enlace</a>.</p>
-<section id="repositorio-construcción-y-publicación" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="repositorio-construcción-y-publicación"><span class="header-section-number">3.1</span> Repositorio, Construcción y Publicación</h2>
+<p>El Visualizador de Datos Abiertos de CINDAI tiene el propósito de poner a disposición de la comunidad una herramienta interactiva que permita visualizar de manera rápida datos generales, históricos y actuales, de las investigaciones llevadas a cabo en la Facultad. El visualizador se puede encontrar en el siguiente <a href="https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/#inicio">enlace</a>.</p>
+<section id="repositorio-construcción-y-publicación" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="repositorio-construcción-y-publicación"><span class="header-section-number">5.1</span> Repositorio, Construcción y Publicación</h2>
 <p>La app se encuentra en el repositorio <code>bases-datos-dip/app</code>, el cual tiene la siguiente estructura.</p>
-<pre class="plaintext"><code>├── data/
-│   ├── data-general.rdata
-|   ├── data-proyectos.rdata
-├── consultas.qmd
-├── consultas.html
-├── consultas_files/
-├── deploy.R
-├── www/
-│   ├── codebook.qmd
-│   ├── codebook.html</code></pre>
-<p>Como se comentó en el <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>, el archivo <code>data-general.rdata</code> corresponde a la Base Integrada de Datos en Investigación, creada, actualizada e importada automáticamente al ejecutar el <code>masterscript</code> del repositorio. Esta es una base <em>long</em> que tiene como unidad de análisis académicos-proyectos.</p>
-<p><code>data-proyectos.rdata</code> se crea a partir de la Base Integrada con el script <code>base-wide.R</code>, como se detalla en <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 2</span></a>. Esta es una base <em>wide</em> que tiene como unidad de análisis los proyectos de investigación.</p>
-<p>El archivo <code>consultas.qmd</code> contiene el código que crea la app. Ésta fue construida en <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">R Shiny</a>, un paquete de R que permite la construcción de aplicaciones web directamente con lenguaje R, y que se encuentra <a href="https://quarto.org/docs/interactive/shiny/">integrado con Quarto</a>. Al renderizar este documento se crea el archivo <code>consultas.html</code> y la carpeta <code>consultas_files/</code>, que permiten previsualizar la app.</p>
-<p>En la carpeta <code>www/</code> se puede encontrar el archivo <code>codebook.qmd</code>, que crea un libro de códigos para las variables de la aplicación.</p>
-<p>El archivo <code>deploy.R</code> permite la publicación de la app en la web. La app se encuentra alojada en los servidores de <a href="https://www.shinyapps.io/">shinyapps</a>.</p>
+<pre class="plaintext"><code>├── input/
+│   ├── data-general-anon.rdata
+|   ├── data-proyectos-anon.rdata
+├── visualizador.qmd
+├── visualizador.html
+├── visualizador_files/</code></pre>
+<p><code>data-general-anon.rdata</code> y <code>data-proyectos-anon.rdata</code> corresponden a las versiones anonimizadas de la Base Integrada y la Base de Proyectos, respectivamente. <code>visualizador.qmd</code> es el código que crea la aplicación en <code>visualizador.html</code>. Al igual que la App de Consultas, el Visualizador está construido con Shiny y alojado en ShinyApps.</p>
 </section>
-<section id="uso" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="uso"><span class="header-section-number">3.2</span> Uso</h2>
-<section id="pestaña-de-académicos" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="pestaña-de-académicos"><span class="header-section-number">3.2.1</span> Pestaña de Académicos</h3>
-<p>En esta pestaña podrá ver los proyectos de investigación vinculados a cada académico de la Facultad, ya sea como Investigador Responsable o Coinvestigador. Para hacerlo, debe seguir los siguientes pasos:</p>
-<ol type="1">
-<li><p>Seleccionar a un académico o académica en la parte superior izquierda de la aplicación.</p></li>
-<li><p>Seleccionar los filtros deseados. Actualmente los filtros disponibles son: Año(s) del Concurso; Proyectos en que el académico participó como Investigador Responsable; Proyectos adjudicados; Proyectos en ejecución; proyectos asociativos; proyectos de investigación aplicada; institución, concurso e instrumento del proyecto; jerarquía del académico al adjudicarse el proyecto.</p></li>
-<li><p>Una vez realizados los pasos anteriores, se generará una tabla en la sección derecha de la aplicación. Esta tabla es exportable en formato excel o csv, según estime conveniente.</p></li>
-</ol>
+<section id="uso" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="uso"><span class="header-section-number">5.2</span> Uso</h2>
+<p>[En construcción]</p>
 </section>
-<section id="pestaña-de-proyectos" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="pestaña-de-proyectos"><span class="header-section-number">3.2.2</span> Pestaña de Proyectos</h3>
-<p>En esta pestaña podrá acceder a la totalidad de los proyectos de investigación adjudicados por académicos de la Facultad, incluyendo información sobre investigadores responsables, coinvestigadores, financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.</p>
-<p>Para ello debe seleccionar los filtros deseados. De no seleccionar ninguno, se generará una tabla con la totalidad de los proyectos disponibles. Al igual que en la pestaña de académicos, esta tabla es exportable en formato excel y csv.</p>
+<section id="versionamiento" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="versionamiento"><span class="header-section-number">5.3</span> Versionamiento</h2>
+<p>Al igual que la App de Consultas, se utiliza versionamiento semántico, descrito en <a href="consultas.html" class="quarto-xref"><span>Capítulo 3</span></a>.</p>
 </section>
-<section id="libro-de-códigos" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="libro-de-códigos"><span class="header-section-number">3.2.3</span> Libro de Códigos</h3>
-<p>Puede consultar el libro de códigos de ambas pestañas <a href="https://dip-facso.shinyapps.io/consultas/_w_13f4a94ea5194a07abbd823f4c5537d2/www/codebook.html">aquí</a></p>
-</section>
-<section id="reporte-de-problemas-y-sugerencias" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="reporte-de-problemas-y-sugerencias"><span class="header-section-number">3.2.4</span> Reporte de Problemas y Sugerencias</h3>
-<p>Para reportar algún problema, error en la información, o hacer sugerencias sobre funcionalidades de la app, existen dos alternativas:</p>
-<ol type="1">
-<li><p>Abrir un <a href="https://github.com/facso-investigacion/bases-datos-dip/issues">issue</a> en el repositorio de Github de la aplicación. Para hacerlo, necesita una cuenta en Github y acceso al repositorio.</p></li>
-<li><p>Por correo electrónico a <a href="mailto:asistenteinvestigacion@facso.cl">asistenteinvestigacion@facso.cl</a></p></li>
-</ol>
-</section>
-</section>
-<section id="versionamiento" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="versionamiento"><span class="header-section-number">3.3</span> Versionamiento</h2>
-<p>Se llevará a cabo un control de versiones con <a href="https://semver.org/lang/es/">Versionamiento Semántico 2.0.0</a>. El versionamiento semántico sigue un estándar MAJOR.MENOR.PARCHE (o X.Y.Z), donde:</p>
-<ul>
-<li>MAJOR representa cambios en la compatibilidad entre versiones</li>
-<li>MINOR representa cambios en funcionalidades compatibles con versiones anteriores</li>
-<li>PARCHE representa correccione en errores compatibles con las versiones anteriores.</li>
-</ul>
-<p>Este versionamiento se puede hacer en el repositorio alojado en Github, con las funcionalidades <code>tags</code>y <code>release</code>. O bien, directamente en la terminal con el siguiente código.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> vx.y.z <span class="at">-m</span> <span class="st">"Versión x.y.z: titulo"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="licencia" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="licencia"><span class="header-section-number">3.4</span> Licencia</h2>
+<section id="licencia" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="licencia"><span class="header-section-number">5.4</span> Licencia</h2>
 <p>Las aplicación y su contenido está protegida bajo la <a href="https://www.apache.org/licenses/LICENSE-2.0">Licencia Apache 2.0</a>. Apache 2.0 es una licencia de software libre y de código abierto que permite el uso, modificación y distribución del código con fines tanto comerciales como no comerciales, siempre que se mantenga la atribución al autor original y se conserve una copia del texto de la licencia.</p>
 
 
@@ -707,13 +626,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./base-integrada.html" class="pagination-link" aria-label="Base de datos Integrada">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Base de datos Integrada</span></span>
+      <a href="./datos-abiertos.html" class="pagination-link" aria-label="Datos Abiertos CINDAI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./datos-abiertos.html" class="pagination-link" aria-label="Datos Abiertos CINDAI">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./actualizacion.html" class="pagination-link" aria-label="Actualización y Mantenimiento">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Actualización y Mantenimiento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
