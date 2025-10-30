@@ -34,6 +34,7 @@ format:
       theme: neutral
 
 lang: es
+number-sections: true
 
   # pdf:
   #   documentclass: scrreprt

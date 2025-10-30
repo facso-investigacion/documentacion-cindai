@@ -1,0 +1,2054 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  spanish,
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Ciencia de Datos en Investigación -- CINDAI},
+  pdfauthor={Dirección de Investigación y Publicaciones},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Ciencia de Datos en Investigación -- CINDAI}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Manual de Uso}
+\author{Dirección de Investigación y Publicaciones}
+\date{2025-10-30}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Tabla de contenidos}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter{Introducción}\label{introducciuxf3n}
+
+Frente a la necesidad de contar con datos gobernados y actualizados
+sobre las actividades de investigación de la Facultad de Ciencias
+Sociales, que permitan trazar y analizar las trayectorias académicas y
+fortalecer la generación de reportes integrados sobre productividad
+científica, la Dirección de Investigación y Publicaciones (DIP) propone
+la creación \textbf{CINDAI}. Con CINDAI, buscamos desarrollar un sistema
+local e integrado de gestión, producción y visualización de información
+científica en la Facultad de Ciencias Sociales. Este sistema integrará,
+consolidará y mantenderá actualizados los datos relacionados con las
+postulaciones a proyectos de investigación de los académicos/as de la
+Facultad, transformándolos en información confiable y oportuna para la
+comunicación y la toma decisiones.
+
+La propuesta se basa en la aplicación de los \textbf{principios FAIR}
+(\emph{Findable, Accesible, Interoperable and Reusable}). Estos
+principios buscan crear un ecosistema de gestión del conocimiento más
+abierto y eficiente, facilitando que los datos sean fácilmente
+localizable, accesibles, integrables y reutilizables tanto por personas
+como por sistemas \href{https://zenodo.org/records/15856492}{(Hartley
+Belmar et al., 2025)}.
+
+La implementación de estos principios en la gestión de información no
+solo mejora el acceso y uso eficiente de los datos, sino que también
+impulsa una cultura institucional de apertura, colaboración y
+transparencia en la investigación. Al incorporar los principios FAIR en
+la estructura y gobernanza de datos de la Facultad, CINDAI busca
+transformar la manera en que se gestionan, actualizan y reutilizan los
+datos, garantizando su accesibilidad, reproducibilidad y valor público
+para la comunidad académica.
+
+En coherencia con estos principios, y con el propósito de asegurar la
+reusabilidad y correcta operación del sistema, se pone a disposición del
+equipo de la DIP este Manual de Uso de CINDAI. Su objetivo es presentar
+las principales características de la plataforma, explicar su
+arquitectura y flujos de trabajo, y detallar los procedimientos
+necesarios para mantener actualizada la información y asegurar su
+calidad.
+
+A continucación, en el Capítulo~\ref{sec-repo}, se presentará los
+repositorios y el entorno de trabajo que aloja CINDAI. Luego, en el
+Capítulo~\ref{sec-base}, se explica la estructura, construcción y flujo
+de trabajo del principal producto de CINDAI -- La Base Integrada de
+Datos de Investigación. En el Capítulo~\ref{sec-consultas}, se explica
+la construcción y las condiciones de uso de la
+\href{https://dip-facso.shinyapps.io/consultas/}{App de Consultas
+Internas de CINDAI}. En el Capítulo~\ref{sec-abiertos}, se presenta el
+proceso de anonimización de la Base Integrada, lo que permite la
+creación de Datos Abiertos CINDAI. Enel Capítulo~\ref{sec-visualizador},
+se explica la construcción del
+\href{https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/\#inicio}{Visualizador
+de Datos Abiertos de CINDAI}, una herramienta interactiva que permita
+visualizada de manera rápida datos generales, históricos y actuales de
+las investigaciones de la Facultad. Por último, en el
+Capítulo~\ref{sec-metadata}, se introduce el flujo de trabajo para
+actualizar los metadatos de CINDAI.
+
+\bookmarksetup{startatroot}
+
+\chapter{Repositorios de la Dirección de Investigación y
+Publicaciones}\label{sec-repo}
+
+Los repositorios vinculados a la gestión de datos DIP se encuentran
+alojados en la
+\href{https://github.com/facso-investigacion}{Organización de la
+Dirección en Github}. En concreto, CINDAI se compone de 5 repositorios:
+
+\href{https://github.com/facso-investigacion/CINDAI}{\textbf{1. CINDAI}}
+
+Este repositorio está destinado al público externo y tiene como
+propósito dar a conocer de manera general el diagnóstico, los objetivos
+y productos de CINDAI. Esta información se puede encontrar en el
+siguiente
+\href{https://facso-investigacion.github.io/CINDAI/index.html}{Documento
+de Trabajo}.
+
+\href{https://github.com/facso-investigacion/bases-datos-dip}{\textbf{2.
+bases-datos-dip}}
+
+Este es un repositorio privado que contiene el procesamiento de las
+bases originales de SEPA-VID, ANID, personal FACSO entre otras.
+
+En la carpeta \texttt{output}se encuentran las bases de datos procesadas
+en en formato \texttt{.rdata} y \texttt{.csv}. Estas bases no se
+encuentran anonimizadas, ya que contienen el rut de los investigadores.
+Por ello, este repositorio es \textbf{exclusivamente para uso interno de
+equipo DIP}
+
+\href{https://github.com/facso-investigacion/datos-abiertos-dip}{\textbf{3.
+datos-abiertos-dip}}
+
+Este repositorio contendrá las bases anonimizadas en formato
+\texttt{.rdata} y \texttt{.csv}. El repositorio será público. Sin
+embargo, la branch principal se encontrará protegida, de modo que
+cualquier modificación se pueda realizar solo tras el visto bueno del
+Equipo DIP.
+
+\href{https://github.com/facso-investigacion/visualizador-cindai}{\textbf{4.
+visualizador-cindai}}
+
+Este repositorio contiene el código del
+\href{https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/\#inicio}{Visualizador
+de Datos Abiertos de CINDAI}.
+
+\href{https://github.com/facso-investigacion/documentacion-cindai}{\textbf{5.
+documentacion-cindai}}
+
+Este repositorio contendrá documentación para el uso correcto de los
+datos de la Dirección de Investigación, incluyendo libros de códigos y
+este manual de uso.
+
+\bookmarksetup{startatroot}
+
+\chapter{Base de datos Integrada}\label{sec-base}
+
+\section{Estructura}\label{estructura}
+
+Es la base procesada sin anonimizar que se encuentra en el repositorio
+privado
+\href{https://github.com/facso-investigacion/bases-datos-dip}{\texttt{base-datos-dip}}.
+Recopila información sobre proyectos de investigación postulados y
+adjudicados por el cuerpo académico de la Facultad de Ciencias Sociales.
+Fue construida a partir de fuentes como SEPA-VID, ANID y la Oficina de
+Personal de la Facultad. Incluye proyectos en los que los académicos
+actualmente afiliados a la Facultad participan como investigadores
+principales o co-investigadores.
+
+Las variables contenidas en la base se organizan en tres grandes grupos:
+a) Información sobre los académicos; b) Información sobre los proyectos;
+y c) Datos sobre la trayectoria académica de los investigadores.
+
+\subsection{Información sobre los
+académicos}\label{informaciuxf3n-sobre-los-acaduxe9micos}
+
+\begin{itemize}
+\item
+  \textbf{Rut del Investigador}: Identificador único para investigadores
+\item
+  \textbf{Nombre del Investigador}: Nombre completo del investigador
+\item
+  \textbf{Género del investigador}
+\item
+  \textbf{Edad del investigador}
+\item
+  \textbf{Departamento del Investigador}
+\item
+  \textbf{Jornada del Investigador}, en horas.
+\item
+  \textbf{Jerarquía actual del investigador}, según información
+  actualizada a mayo del 2025.
+\end{itemize}
+
+\subsection{Información sobre el
+Proyecto:}\label{informaciuxf3n-sobre-el-proyecto}
+
+\begin{itemize}
+\item
+  \textbf{Código del proyecto}: Identificador único para el proyecto. En
+  casos de proyectos externos ANID, se mantiene el código de esa
+  institución para facilitar el cruce de datos
+\item
+  \textbf{Título del proyecto}
+\item
+  \textbf{Institución} que financia el proyecto
+\item
+  \textbf{Concurso}: Nombre del concurso al que se postula
+\item
+  \textbf{Instrumento}: Nombre del instrumento específico al que se
+  postula
+\item
+  \textbf{Proyecto Asociativo}: Indica si el proyecto corresponde a
+  concursos de la Subdirección de Centros e Investigación Asociativa de
+  ANID, incluyendo Anillos de Investigación, Centros de Investigación e
+  Iniciativas Milenio.
+\item
+  \textbf{Investigación Aplicada}: Indica si el proyecto corresponde a
+  concursos de la Subdirección de Investigación Aplicada e Innovación de
+  ANID, incluyendo instrumentos como el FONIS, el FONIDE y los IDeA.
+\item
+  \textbf{Rol del Investigador}: Rol del Investigador FACSO en el
+  proyecto (Investigador Responsable o Coinvestigador)
+\item
+  \textbf{Estado del Proyecto}: Se refiere a si el proyecto se encuentra
+  en estado de postulación, ejecución o finalización, o bien en otro
+  estado.
+\item
+  \textbf{Proyecto adjudicado}: Recodificado a partir de \textbf{Estado
+  del Proyecto}. Se considera que le proyecto fue adjudicado si se
+  encuentra \emph{en ejecución} o \emph{finalizado}
+\item
+  \textbf{Proyecto en ejecución}: Indica que si el proyecto ha sido
+  finalizado o si se encuentra actualmente en ejecución.
+\item
+  \textbf{Duración del proyecto}: Duración del proyecto en meses
+\item
+  \textbf{Año del concurso}: Año del concurso postulado
+\item
+  \textbf{Inicio del proyecto}: Fecha de inicio del proyecto
+\item
+  \textbf{Término del proyecto}: Fecha de término del proyecto
+\item
+  \textbf{Palabras claves}: Palabras claves del proyectos informadas a
+  ANID. Solo disponibles para proyectos posteriores a 2016.
+\item
+  \textbf{Monto adjudicado}: Monto adjudicado al proyecto, en miles de
+  pesos (M\$)
+\end{itemize}
+
+\subsection{Datos sobre la trayectoria académica del
+investigador}\label{datos-sobre-la-trayectoria-acaduxe9mica-del-investigador}
+
+\begin{itemize}
+\item
+  \textbf{Jerarquización: Instructor}: Año en que el académico accedió a
+  la jerarquía académica de Instructor.
+\item
+  \textbf{Jerarquización: Asistente}: Año en que el académico accedió a
+  la jerarquía académica de Asistente.
+\item
+  \textbf{Jerarquización: Asociado}: Año en que el académico accedió a
+  la jerarquía académica de Asociado.
+\item
+  \textbf{Jerarquización: Titular}: Año en que el académico accedió a la
+  jerarquía académica de Titular.
+\item
+  \textbf{Jerarquía en el Proyecto}: Jerarquía del acadadémico en el
+  momento en que postuló o se adjudicó el proyecto
+\end{itemize}
+
+\subsection{Resumen}\label{resumen}
+
+La siguiente tabla resume las variables, códigos y etiquetas de la base
+de datos.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{Variable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Label}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Stats / Values}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Freqs (\% of Valid)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Graph}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Valid}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Missing}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+rut\_investigador {[}character{]} & RUT Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. 009408038K \\
+2. 0099800682 \\
+3. 006599819K \\
+4. 0069728561 \\
+5. 0114769878 \\
+6. 0125558992 \\
+7. 0073412854 \\
+8. 0122318974 \\
+9. 0146301657 \\
+10. 0092153886 \\
+{[} 185 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+35 & ( & 2.4\% & ) \\
+33 & ( & 2.3\% & ) \\
+26 & ( & 1.8\% & ) \\
+25 & ( & 1.7\% & ) \\
+24 & ( & 1.7\% & ) \\
+24 & ( & 1.7\% & ) \\
+23 & ( & 1.6\% & ) \\
+23 & ( & 1.6\% & ) \\
+23 & ( & 1.6\% & ) \\
+22 & ( & 1.5\% & ) \\
+1184 & ( & 82.1\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/nhMMAAAAASUVORK5CYII.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+nombre\_completo {[}character{]} & &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. paulina isabel osorio par \\
+2. catalina arteaga aguirre \\
+3. sonia cristina montecino \\
+4. isabel piper shafir \\
+5. marisol yazmin ximena fac \\
+6. rodrigo anselmo asun inos \\
+7. andres alberto gomez segu \\
+8. emmanuelle barozet na \\
+9. manuel enrique canales ce \\
+10. bernardo francisco amigo \\
+{[} 185 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+35 & ( & 2.4\% & ) \\
+33 & ( & 2.3\% & ) \\
+26 & ( & 1.8\% & ) \\
+25 & ( & 1.7\% & ) \\
+24 & ( & 1.7\% & ) \\
+24 & ( & 1.7\% & ) \\
+23 & ( & 1.6\% & ) \\
+23 & ( & 1.6\% & ) \\
+23 & ( & 1.6\% & ) \\
+22 & ( & 1.5\% & ) \\
+1184 & ( & 82.1\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/nhMMAAAAASUVORK5CYII.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+sexo {[}character{]} & Género Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Femenino \\
+2. Masculino \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+756 & ( & 52.4\% & ) \\
+686 & ( & 47.6\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7GHRIEAAAACdFJOUwAAd.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+edad {[}numeric{]} & Edad del Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 56 (9.1) \\
+min ≤ med ≤ max: \\
+35 ≤ 54 ≤ 90 \\
+IQR (CV) : 9 (0.2) \\
+\end{longtable}
+\end{minipage} & 49 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/sFaz928eAleahAAOT5yv.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+reparticion {[}character{]} & Departamento Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Antropología \\
+2. Educación \\
+3. Postgrado \\
+4. Psicología \\
+5. Sociología \\
+6. Trabajo social \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+416 & ( & 28.8\% & ) \\
+131 & ( & 9.1\% & ) \\
+9 & ( & 0.6\% & ) \\
+427 & ( & 29.6\% & ) \\
+322 & ( & 22.3\% & ) \\
+137 & ( & 9.5\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/4U9e4PlULSmcVcTe860v.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+horas\_reales {[}numeric{]} & Jornada Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 37.6 (11.7) \\
+min ≤ med ≤ max: \\
+6 ≤ 44 ≤ 44 \\
+IQR (CV) : 0 (0.3) \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+6 & : & 49 & ( & 3.4\% & ) \\
+12 & : & 79 & ( & 5.5\% & ) \\
+21 & : & 29 & ( & 2.0\% & ) \\
+22 & : & 185 & ( & 12.8\% & ) \\
+24 & : & 1 & ( & 0.1\% & ) \\
+34 & : & 3 & ( & 0.2\% & ) \\
+42 & : & 1 & ( & 0.1\% & ) \\
+44 & : & 1095 & ( & 75.9\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/23865AalCjxiRecunAAA.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+jerarquia\_actual {[}character{]} & Jerarquía actual del Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Asistente \\
+2. Asociado \\
+3. Titular \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+302 & ( & 21.4\% & ) \\
+773 & ( & 54.8\% & ) \\
+336 & ( & 23.8\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7GHRIEAAAACdFJOUwAAd1.png}}
+& 1411 (97.9\%) & 31 (2.1\%) \\
+categoria {[}character{]} & Categoría académica del Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Docente \\
+2. Investigador(a) Postdocto \\
+3. Ordinaria \\
+4. Prof. Adjunto \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+227 & ( & 15.7\% & ) \\
+6 & ( & 0.4\% & ) \\
+1184 & ( & 82.1\% & ) \\
+25 & ( & 1.7\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/NxKEQCY5scEJzeS8cI8Q.png}}
+& 1442 (100.0\%) & 0 (0.0\%) \\
+codigo\_proyecto {[}character{]} & Codigo Proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. INTERD-1-2 \\
+2. 1090202 \\
+3. 1130331 \\
+4. 1170463 \\
+5. 1220701 \\
+6. 1230943 \\
+7. 1240832 \\
+8. 1240863 \\
+9. 1241306 \\
+10. 1251388 \\
+{[} 1046 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+5 & ( & 0.4\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+1375 & ( & 97.1\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/GiXvr36vcFTxumwoDB7K.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+titulo {[}character{]} & Título del Proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Terapia de exposición max \\
+2. Espacio y participación p \\
+3. La vejez avanzada en el c \\
+4. Procesos de afrontamiento \\
+5. Abordaje transdiagnóstico \\
+6. Movimientos sociales terr \\
+7. Políticas del sujeto: Mal \\
+8. Climate migrant children \\
+9. Educación intercultural. \\
+10. Educación Intercultural: \\
+{[} 1000 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+8 & ( & 0.6\% & ) \\
+6 & ( & 0.4\% & ) \\
+6 & ( & 0.4\% & ) \\
+6 & ( & 0.4\% & ) \\
+5 & ( & 0.4\% & ) \\
+5 & ( & 0.4\% & ) \\
+5 & ( & 0.4\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+4 & ( & 0.3\% & ) \\
+1363 & ( & 96.3\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/Hy3rp36vfF598pKB8ip6.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+institucion {[}factor{]} & Institución &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Agencia Nacional De Inves \\
+2. Chile \\
+3. Conicyt \\
+4. Consejo De Cultura \\
+5. Corfo \\
+6. Mideplan \\
+7. Ministerio De Ciencia, Te \\
+8. Ministerio de Educación \\
+9. Otras Instituciones \\
+10. Superintendencia De Segur \\
+{[} 2 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+445 & ( & 31.4\% & ) \\
+3 & ( & 0.2\% & ) \\
+711 & ( & 50.2\% & ) \\
+3 & ( & 0.2\% & ) \\
+1 & ( & 0.1\% & ) \\
+24 & ( & 1.7\% & ) \\
+2 & ( & 0.1\% & ) \\
+5 & ( & 0.4\% & ) \\
+3 & ( & 0.2\% & ) \\
+3 & ( & 0.2\% & ) \\
+216 & ( & 15.3\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/NKwzDR7hUq7vlA4NRUvG.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+concurso {[}factor{]} & Concurso &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Concursos De Ciencia Públ \\
+2. CONICYT/MINSAL \\
+3. Cooperación Internacional \\
+4. Cooperación Internacional \\
+5. Cooperación Internacional \\
+6. Desafío Global en Longevi \\
+7. Dirección de Innovación \\
+8. Explora \\
+9. FONDAP \\
+10. Fondecyt\_Anid \\
+{[} 22 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 & ( & 0.1\% & ) \\
+16 & ( & 1.1\% & ) \\
+1 & ( & 0.1\% & ) \\
+9 & ( & 0.6\% & ) \\
+7 & ( & 0.5\% & ) \\
+4 & ( & 0.3\% & ) \\
+6 & ( & 0.4\% & ) \\
+6 & ( & 0.4\% & ) \\
+7 & ( & 0.5\% & ) \\
+987 & ( & 69.7\% & ) \\
+371 & ( & 26.2\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/lX--FGL5Zl2W92ZXM65Q.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+instrumento {[}factor{]} & Instrumento &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Anillo de Investigación e \\
+2. Concurso Anillos en Cienc \\
+3. Concurso Apoyo a Centros \\
+4. Apoyo a la Formación de R \\
+5. Apoyo A La Formación De R \\
+6. Apoyo a la Infraestructur \\
+7. Ciencia Pública Para El D \\
+8. Ciencia Pública Para El D \\
+9. CIU-Tesis \\
+10. Colaboración Internaciona \\
+{[} 58 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & ( & 0.1\% & ) \\
+17 & ( & 1.2\% & ) \\
+0 & ( & 0.0\% & ) \\
+6 & ( & 0.4\% & ) \\
+3 & ( & 0.2\% & ) \\
+3 & ( & 0.2\% & ) \\
+1 & ( & 0.1\% & ) \\
+1 & ( & 0.1\% & ) \\
+1 & ( & 0.1\% & ) \\
+1 & ( & 0.1\% & ) \\
+1382 & ( & 97.6\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/oCeQW5movZ5dcAAAAASU.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+asociativo {[}factor{]} & Proyecto Asociativo &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. No \\
+2. Sí \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1402 & ( & 99.0\% & ) \\
+14 & ( & 1.0\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7GHRIEAAAACdFJOUwAAd12.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+inv\_aplicada {[}factor{]} & Investigación Aplicada &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. No \\
+2. Sí \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1367 & ( & 96.5\% & ) \\
+49 & ( & 3.5\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/Ed03AT1fs7LyoGY6AAAA.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+tipo\_investigador {[}character{]} & Rol Investigador &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Coinvestigador \\
+2. Investigador responsable \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+719 & ( & 50.8\% & ) \\
+697 & ( & 49.2\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7GHRIEAAAACdFJOUwAAd123.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+estado\_proyecto {[}character{]} & Estado del Proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Cancelado \\
+2. En ejecución \\
+3. Finalizado \\
+4. Fuera de Base \\
+5. Postulado \\
+6. Retirado \\
+7. Sin evaluación \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+761 & ( & 53.7\% & ) \\
+113 & ( & 8.0\% & ) \\
+474 & ( & 33.5\% & ) \\
+39 & ( & 2.8\% & ) \\
+16 & ( & 1.1\% & ) \\
+2 & ( & 0.1\% & ) \\
+11 & ( & 0.8\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7mXMAnFOA2lutD9gAAAA.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+adjudicado {[}factor{]} & Proyecto Adjudicado &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. No \\
+2. Sí \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+829 & ( & 58.5\% & ) \\
+587 & ( & 41.5\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/DRQkZxIUgCoKsWAs5XxK.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+en\_ejecucion {[}factor{]} & Proyecto en ejecución &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. No \\
+2. Sí \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1303 & ( & 92.0\% & ) \\
+113 & ( & 8.0\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/7GHRIEAAAACdFJOUwAAd1234.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+duracion {[}numeric{]} & Duración del proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 33.1 (11.7) \\
+min ≤ med ≤ max: \\
+1 ≤ 36 ≤ 144 \\
+IQR (CV) : 12 (0.4) \\
+\end{longtable}
+\end{minipage} & 22 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/XgUVgwwMDAwsJ9jWpYGA.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+anio\_concurso {[}numeric{]} & Año del Concurso &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 2016.4 (6.5) \\
+min ≤ med ≤ max: \\
+1991 ≤ 2017 ≤ 2025 \\
+IQR (CV) : 10 (0) \\
+\end{longtable}
+\end{minipage} & 34 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/TwI2iAq2K6YshBczCS9m.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+fecha\_inicio {[}character{]} & Inicio del proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. 08-2020 \\
+2. 03-2024 \\
+3. 06-2015 \\
+4. 03-2014 \\
+5. 04-2022 \\
+6. 08-2018 \\
+7. 09-2016 \\
+8. 03-2013 \\
+9. 07-2017 \\
+10. 03-2007 \\
+{[} 157 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+50 & ( & 3.5\% & ) \\
+42 & ( & 3.0\% & ) \\
+37 & ( & 2.6\% & ) \\
+31 & ( & 2.2\% & ) \\
+31 & ( & 2.2\% & ) \\
+29 & ( & 2.0\% & ) \\
+29 & ( & 2.0\% & ) \\
+27 & ( & 1.9\% & ) \\
+27 & ( & 1.9\% & ) \\
+26 & ( & 1.8\% & ) \\
+1087 & ( & 76.8\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/Xte1h2dcGIENs4AAAAAS.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+fecha\_termino {[}character{]} & Término del proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. 08-2020 \\
+2. 09-2016 \\
+3. 06-2015 \\
+4. 03-2028 \\
+5. 08-2018 \\
+6. 03-2027 \\
+7. 03-2013 \\
+8. 07-2017 \\
+9. 03-2009 \\
+10. 03-2010 \\
+{[} 176 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+49 & ( & 3.5\% & ) \\
+38 & ( & 2.7\% & ) \\
+37 & ( & 2.6\% & ) \\
+31 & ( & 2.2\% & ) \\
+30 & ( & 2.1\% & ) \\
+28 & ( & 2.0\% & ) \\
+27 & ( & 1.9\% & ) \\
+27 & ( & 1.9\% & ) \\
+26 & ( & 1.8\% & ) \\
+26 & ( & 1.8\% & ) \\
+1097 & ( & 77.5\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/bi2we82-ObAgEAuH3Qr3.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+disciplina\_principal {[}character{]} & Disciplina Principal del
+Proyecto & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Artes \\
+2. Ciencias exactas y natura \\
+3. Ciencias Juridicas, econ \\
+4. Ciencias sociales \\
+5. Humanidades \\
+6. Tecnologia y ciencias de \\
+7. Tecnologia y ciencias med \\
+8. Tecnologia y ciencias sil \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+10 & ( & 0.7\% & ) \\
+27 & ( & 1.9\% & ) \\
+27 & ( & 1.9\% & ) \\
+1277 & ( & 90.2\% & ) \\
+38 & ( & 2.7\% & ) \\
+2 & ( & 0.1\% & ) \\
+33 & ( & 2.3\% & ) \\
+2 & ( & 0.1\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/MjqqFQKBRqOCpBqk056q.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+area\_disciplina\_principal {[}character{]} & Área de la disciplina
+principal del Proyecto & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Sociología \\
+2. Antropología y arqueologí \\
+3. Sicología \\
+4. Pedagogía y educación \\
+5. Medicina \\
+6. Historia \\
+7. Ciencias de la comunicaci \\
+8. Biología \\
+9. Estudios internacionales \\
+10. Arquitectura \\
+{[} 16 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+390 & ( & 27.5\% & ) \\
+336 & ( & 23.7\% & ) \\
+323 & ( & 22.8\% & ) \\
+182 & ( & 12.9\% & ) \\
+33 & ( & 2.3\% & ) \\
+22 & ( & 1.6\% & ) \\
+19 & ( & 1.3\% & ) \\
+18 & ( & 1.3\% & ) \\
+14 & ( & 1.0\% & ) \\
+11 & ( & 0.8\% & ) \\
+68 & ( & 4.8\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/s8uoEW0qwmRLDGPmmtof.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+disciplina\_exacta\_principal {[}character{]} & Disciplina exacta
+principal del Proyecto & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Antropologia cultural y s \\
+2. Otras sociologicas \\
+3. Pedagogía y educación \\
+4. Otras sicologias \\
+5. Sicologia social \\
+6. Arqueologia \\
+7. Cambio social y desarroll \\
+8. Sociologia del trabajo \\
+9. Otras especialidades de l \\
+10. Sociologia urbana y rural \\
+{[} 58 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+188 & ( & 13.3\% & ) \\
+187 & ( & 13.2\% & ) \\
+182 & ( & 12.9\% & ) \\
+177 & ( & 12.5\% & ) \\
+117 & ( & 8.3\% & ) \\
+104 & ( & 7.3\% & ) \\
+86 & ( & 6.1\% & ) \\
+54 & ( & 3.8\% & ) \\
+31 & ( & 2.2\% & ) \\
+21 & ( & 1.5\% & ) \\
+269 & ( & 19.0\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/uT7GyP6qm4oRV3AeBKvZ.png}}
+& 1416 (98.2\%) & 26 (1.8\%) \\
+palabras\_claves {[}character{]} & Palabras Claves &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. SIN INFORMACION \\
+2. EDUCACION INTERCULTURAL P \\
+3. EFICACIA\textbar{} TERAPIA DE EXPO \\
+4. ACCION COLECTIVAEMOCIONES \\
+5. ARQUEOLOGIA DE LA ALIMENA \\
+6. CICLOS DE PROTESTAS RITU \\
+7. CUIDADOS Y SOSTENIBILIDAD \\
+8. ESPACIO\textbar{} PARTICIPACION PO \\
+9. ESTRATEGIAS DE MOVILIZACI \\
+10. ETNOGRAFIACULTURA ESCOLAR \\
+{[} 150 others {]} \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+152 & ( & 40.4\% & ) \\
+4 & ( & 1.1\% & ) \\
+4 & ( & 1.1\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+3 & ( & 0.8\% & ) \\
+195 & ( & 51.9\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/9r79aZp-qTXLu2OfQFkP.png}}
+& 376 (26.1\%) & 1066 (73.9\%) \\
+monto\_adjudicado {[}numeric{]} & Monto adjudicado al proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 132504.1 (225634.4) \\
+min ≤ med ≤ max: \\
+1658 ≤ 103638 ≤ 4250000 \\
+IQR (CV) : 112180.5 (1.7) \\
+\end{longtable}
+\end{minipage} & 267 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/WT4RnFiYLEnB8S7lVQAA.png}}
+& 372 (25.8\%) & 1070 (74.2\%) \\
+moneda {[}character{]} & Moneda del presupuesto adjudicado &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Miles de pesos (M\$) \\
+2. MILES DE PESOS (M\$) \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+340 & ( & 91.4\% & ) \\
+32 & ( & 8.6\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/yn4gAAAABJRU5ErkJggg.png}}
+& 372 (25.8\%) & 1070 (74.2\%) \\
+instructor {[}numeric{]} & Jeraquización: Instructor &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 2006 (2.9) \\
+min ≤ med ≤ max: \\
+2000 ≤ 2006 ≤ 2017 \\
+IQR (CV) : 3 (0) \\
+\end{longtable}
+\end{minipage} & 13 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/YX5JUzDbXcHAwMDAwMDA.png}}
+& 337 (23.4\%) & 1105 (76.6\%) \\
+asistente {[}numeric{]} & Jerarquización: Asistente &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 2009.1 (6.5) \\
+min ≤ med ≤ max: \\
+1985 ≤ 2008 ≤ 2024 \\
+IQR (CV) : 8 (0) \\
+\end{longtable}
+\end{minipage} & 33 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/BmhMngsl4CdgLWO1WTwQ.png}}
+& 1216 (84.3\%) & 226 (15.7\%) \\
+asociado {[}numeric{]} & Jerarquización: Asociado &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 2015 (6.8) \\
+min ≤ med ≤ max: \\
+1990 ≤ 2016 ≤ 2024 \\
+IQR (CV) : 9 (0) \\
+\end{longtable}
+\end{minipage} & 26 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/ARID1YDqUAZhGYGBgYHf.png}}
+& 1043 (72.3\%) & 399 (27.7\%) \\
+titular {[}numeric{]} & Jerarquización: Titular &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean (sd) : 2016.9 (6.9) \\
+min ≤ med ≤ max: \\
+1994 ≤ 2020 ≤ 2024 \\
+IQR (CV) : 10 (0) \\
+\end{longtable}
+\end{minipage} & 14 distinct values &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/OZ4NwNLRBoPBYDAYDAb7.png}}
+& 336 (23.3\%) & 1106 (76.7\%) \\
+jerarquia\_proyecto {[}character{]} & Jerarquía en el Proyecto &
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1. Asistente \\
+2. Asociado \\
+3. Instructor \\
+4. Titular \\
+\end{longtable}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+\begin{longtable}[]{@{}rlrl@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+685 & ( & 51.3\% & ) \\
+498 & ( & 37.3\% & ) \\
+23 & ( & 1.7\% & ) \\
+130 & ( & 9.7\% & ) \\
+\end{longtable}
+\end{minipage} &
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/dHCRqNXtNeL08pR4KeTf.png}}
+& 1336 (92.6\%) & 106 (7.4\%) \\
+\end{longtable}
+
+\section{Construcción y
+Actualización}\label{construcciuxf3n-y-actualizaciuxf3n}
+
+La construcción y actualización de la Base Integrada se hace a través de
+la ejecución del \textbf{Masterscript} ubicado en
+\texttt{bases-datos-dip/proc/master-script.R}. Este documento actúan com
+un guión que organiza y ejecuta, en el orden correcto, los distintos
+pases para producir la Base Integrada, de manera limpia, ordenada y
+reproducible.
+
+Los scripts que componen el Masterscript se resumen a continuación:
+
+\subsection{Procesamiento General de
+Proyectos}\label{procesamiento-general-de-proyectos}
+
+El script \texttt{proc/procesamiento.R} se encarga fundamentalmente de
+procesar y estandarizar la información de proyectos contenida en
+SEPA-VID.
+
+La base de datos de SEPA-VID es descargada y guardada en
+\texttt{input/data/proyectos.xlsx}. Para integrar actualizaciones
+contenidas en SEPA-VID, basta con reemplazar este archivo con datos más
+recientes.
+
+El output de este script se encuentra en
+\texttt{input/data/procesadas/proyectos.rdata}, Una base \emph{long} que
+tiene como unidad de análisis académicos-proyectos.
+
+\subsection{Procesamiento de Información sobre
+Académicos}\label{procesamiento-de-informaciuxf3n-sobre-acaduxe9micos}
+
+El script \texttt{proc/acads.R} permite procesar información sobre
+académicos de la Facultad. Esto se hace a partir de la base de datos de
+académicos gestionada por Dirección Académica, almacenada en
+\texttt{input/data/original/acad.xlsx}. La actualización de esta base,
+fundamental para integrar nuevos académicos y cambios de jerarquía, se
+hace reemplazando este archivo.
+
+Además, contiene una base histórica de académica, que permite tener
+acceso a académicos retirados y a cambios de jerarquía, almacenada en
+\texttt{input/data/original/retirados.xlsx}.
+
+Estos datos son unidos a \texttt{proyectos.rdata} para generar
+\texttt{input/data/procesadas/proyectos-merge.rdata}, que unifica datos
+de proyectos y datos de académicos en un único dataframe. Además, se
+puede consultar \texttt{input/data/procesadas/acads-historico.rdata} si
+se quiere solo información limpia de los académicos, sin datos de
+investigación.
+
+\subsection{Ingresar Nuevos Proyectos}\label{ingresar-nuevos-proyectos}
+
+Los script contenidos en \texttt{proc/nueva-data/} permiten ingresar
+nuevos proyectos patrocinados por la Facultad. En el caso de proyectos
+ANID o Universidad de Chile, esta información es temporal, a la espera
+de la actualización de SEPA-VID. La información de los nuevos proyecto
+patrocinados proviene fundamentalmente de la Ficha RPI de la Dirección
+de Investigación. A continuación, se muestra un ejemplo de como integrar
+nuevos proyectos patrocinados:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Se crea un dataframe vacio a partir de proyectos{-}merge.rdata}
+\FunctionTok{load}\NormalTok{(}\StringTok{"input/data/procesadas/proyectos{-}merge.rdata"}\NormalTok{)}
+\NormalTok{idea\_2026 }\OtherTok{\textless{}{-}}\NormalTok{ proyectos\_merge }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{slice}\NormalTok{(}\DecValTok{0}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{select}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{27}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{add\_row}\NormalTok{(}\AttributeTok{.rows=}\DecValTok{4}\NormalTok{)}
+
+
+
+\CommentTok{\# Se crean vectores con los ruts de los IR y los titulos de los proyectos}
+\NormalTok{ruts }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"009968190K"}\NormalTok{, }
+                       \StringTok{"0146199267"}\NormalTok{, }
+                       \StringTok{"0139050150"}\NormalTok{,}
+                       \StringTok{"0124547768"}
+\NormalTok{                       )}
+
+\NormalTok{titulos }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Desarrollo de un modelo de capacitación para la implementación de programas ambulatorios de intervención reparatoria para niños, niñas y adolescentes que han sido vulnerados en sus derechos"}\NormalTok{,}
+             \StringTok{"GARANTE: Herramienta participativa autoaplicada por las comunidades educativas (usuarios finales) de los Servicios Locales de Educación Pública (usuarios intermedios) para conocer los costos de un funcionamiento de los establecimientos educacionales que asegure una calidad adecuada a los derechos humanos educativos, conforme a las leyes nacionales e internacionales"}\NormalTok{,}
+             \StringTok{"Desarrollo de un sistema integrado de educación financiera para jóvenes de 18 a 29 años"}\NormalTok{,}
+             \StringTok{"Diseño del programa CRESCENDO para el Desarrollo Profesional de Educadoras/es de Orquestas Infantiles desde una perspectiva constructivista e inclusiva"}\NormalTok{)}
+
+
+\CommentTok{\# Se rellena la información disponible. Todo lo que no se complete se recodificara temporalmente como NA. }
+\NormalTok{idea\_2026 }\OtherTok{\textless{}{-}}\NormalTok{ idea\_2026 }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{rut\_investigador =}\NormalTok{ ruts,}
+         \AttributeTok{tipo\_investigador =} \StringTok{"Investigador responsable"}\NormalTok{,}
+         \AttributeTok{codigo\_proyecto =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"temp\_"}\NormalTok{, }\StringTok{"idea2026"}\NormalTok{, }\StringTok{"\_"}\NormalTok{, }\FunctionTok{row\_number}\NormalTok{()),}
+         \AttributeTok{titulo=}\NormalTok{ titulos,}
+         \AttributeTok{institucion =} \StringTok{"ANID"}\NormalTok{,}
+         \AttributeTok{concurso =} \StringTok{"Subdirección de Investigación Aplicada"}\NormalTok{,}
+         \AttributeTok{instrumento=} \StringTok{"Idea I+D"}\NormalTok{,}
+         \AttributeTok{asociativo =} \DecValTok{0}\NormalTok{,}
+         \AttributeTok{inv\_aplicada =} \DecValTok{1}\NormalTok{,}
+         \AttributeTok{anio\_concurso =} \DecValTok{2026}\NormalTok{,}
+         \AttributeTok{estado\_proyecto =} \StringTok{"Postulado"}\NormalTok{)}
+
+
+\NormalTok{act }\OtherTok{\textless{}{-}} \FunctionTok{left\_join}\NormalTok{(act, academicos\_historico, }\AttributeTok{by=}\StringTok{"rut\_investigador"}\NormalTok{)}
+
+\CommentTok{\# Se cruza con la información de los académicos y se hace en el bind a proyectos merge}
+\FunctionTok{load}\NormalTok{(}\StringTok{"input/data/procesadas/acads{-}historico.rdata"}\NormalTok{)}
+\NormalTok{act }\OtherTok{\textless{}{-}} \FunctionTok{left\_join}\NormalTok{(act, academicos\_historico, }\AttributeTok{by=}\StringTok{"rut\_investigador"}\NormalTok{)}
+\NormalTok{proyectos\_merge }\OtherTok{\textless{}{-}} \FunctionTok{bind\_rows}\NormalTok{(proyectos\_merge, act)}
+\end{Highlighting}
+\end{Shaded}
+
+Es importante que en este paso se asigne un código para la
+identificación del proyecto. Se sugiere que este se componga de un
+titulo corto del concurso (ej: idea para el Concurso IDEA I+D), el año
+del concurso y un número correlativo. En caso de ser un código temporal,
+que es lo que corresponde para proyectos ANID y U.Chile, se recomienda
+incluir la etiqueta \texttt{temp\_}.
+
+\subsection{Ingresar Núcleos de Asociatividad
+FACSO}\label{ingresar-nuxfacleos-de-asociatividad-facso}
+
+El script \texttt{núcleos.R} permite ingresar a la Base Integrada los
+proyectos amparados por la política de asociatividad FACSO. Esto se
+logra cruzando la información de la Dirección Académica sobre Núcleos de
+Investigación, contenida en en
+\texttt{input/data/original/asoc-facso.xlsx} con la información sobre
+académicos procesada en \texttt{acads-historico.rdata} y unida a
+\texttt{proyectos-merge.rdata}.
+
+\subsection{Trayectorias Académicas
+(Jerarquizaciones)}\label{trayectorias-acaduxe9micas-jerarquizaciones}
+
+El script \texttt{proc-jerarquias.R} integra a la base las trayectorias
+de jerarquizaciones de los académicos, permitiendo cruzar identificar la
+jerarquía de los investigadores al postular o adjudicarse un proyecto.
+Para esto, se procesa el archivo histórico de nombramiento,
+proporcionado por Dirección Académica, almacenado en
+\texttt{input/data/original/acad\_jerarq.xlsx}.
+
+El output de este script es \texttt{data-general-facso.rdata}, que ya
+contiene información integrada sobre proyectos, académicos y sus
+trayectorias.
+
+\subsection{Proyectos anteriores al
+nombramiento}\label{proyectos-anteriores-al-nombramiento}
+
+Para integrar información sobre proyectos académicos anteriores al
+nombramiento se debe ejecutar \texttt{proy-prefacso.R}. Esto se logra a
+través de \emph{fuzzy matchs} con las bases históricas de ANID. Estas
+bases están alojadas en
+\texttt{input/data/original/BDH\_HISTORICA.xlsx}, para el caso de
+proyectos FONDECYT, y en
+\texttt{input/data/original/BDH\_PROYECTOS\_MILENIO.xlsx}, para el caso
+de proyectos Milenio.
+
+\subsection{Actualización proyectos
+finalizados}\label{actualizaciuxf3n-proyectos-finalizados}
+
+\texttt{finalizados.R} es un script que recodifica como ``Finalizado''
+los proyectos que tengan registrados como fecha de término después del
+último día del mes pasado. Tras este paso, ya se tiene una base
+integrada y actualizada de los proyectos de investigación de la
+Facultad, lista para exportar al repositorio abierto y para la
+construcción de la app de consultas, como se describe en el
+Capítulo~\ref{sec-consultas}.
+
+La base integrada queda almacenada en \texttt{output/data-general.csv} y
+en \texttt{output/data-general.rdata}. Además, se exporta para la
+construcción de la App de Consultas Internas de CINDAI en
+\texttt{app/data/data-general.rdata}
+
+\subsection{Etiquetas}\label{etiquetas}
+
+El script \texttt{etiquetas.R} se encarga de asignar etiquetas a las
+variables y los valores de la Base Integrada.
+
+\subsection{Base de Proyectos}\label{base-de-proyectos}
+
+Al ejecutar \texttt{base-wide.R} se crea una base de proyectos, con la
+totalidad de los proyectos postulados registrados. Esta base se exporta
+a \texttt{app/data/base\_proyectos.rdata} y se utiliza en la App de
+Consultas Internas de CINDAI.
+
+\subsection{Anonimización}\label{anonimizaciuxf3n}
+
+\texttt{anonimizacion.R} es un script que permite anonimizar la base de
+datos integrada, eliminando variables sensibles. Más detalles sobre este
+proceso se revisa en el Capítulo~\ref{sec-abiertos}
+
+\bookmarksetup{startatroot}
+
+\chapter{App de Consultas Internas}\label{sec-consultas}
+
+Para facilitar la consulta y la generación de reportes sobre datos de
+investigación de la Facultad, CINDAI pone a disposición una app interna
+para realizar consultas de manera rápida y eficiente. La app está
+disponible en este
+\href{https://dip-facso.shinyapps.io/consultas/\#consulta-proyectos}{enlace}.
+
+\section{Repositorio, Construcción y
+Publicación}\label{repositorio-construcciuxf3n-y-publicaciuxf3n}
+
+La app se encuentra en el repositorio \texttt{bases-datos-dip/app}, el
+cual tiene la siguiente estructura.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{├── data/}
+\NormalTok{│   ├── data{-}general.rdata}
+\NormalTok{|   ├── data{-}proyectos.rdata}
+\NormalTok{├── consultas.qmd}
+\NormalTok{├── consultas.html}
+\NormalTok{├── consultas\_files/}
+\NormalTok{├── deploy.R}
+\NormalTok{├── www/}
+\NormalTok{│   ├── codebook.qmd}
+\NormalTok{│   ├── codebook.html}
+\end{Highlighting}
+\end{Shaded}
+
+Como se comentó en el Capítulo~\ref{sec-base}, el archivo
+\texttt{data-general.rdata} corresponde a la Base Integrada de Datos en
+Investigación, creada, actualizada e importada automáticamente al
+ejecutar el \texttt{masterscript} del repositorio. Esta es una base
+\emph{long} que tiene como unidad de análisis académicos-proyectos.
+
+\texttt{data-proyectos.rdata} se crea a partir de la Base Integrada con
+el script \texttt{base-wide.R}, como se detalla en
+Capítulo~\ref{sec-base}. Esta es una base \emph{wide} que tiene como
+unidad de análisis los proyectos de investigación.
+
+El archivo \texttt{consultas.qmd} contiene el código que crea la app.
+Ésta fue construida en
+\href{https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/}{R
+Shiny}, un paquete de R que permite la construcción de aplicaciones web
+directamente con lenguaje R, y que se encuentra
+\href{https://quarto.org/docs/interactive/shiny/}{integrado con Quarto}.
+Al renderizar este documento se crea el archivo \texttt{consultas.html}
+y la carpeta \texttt{consultas\_files/}, que permiten previsualizar la
+app.
+
+En la carpeta \texttt{www/} se puede encontrar el archivo
+\texttt{codebook.qmd}, que crea un libro de códigos para las variables
+de la aplicación.
+
+El archivo \texttt{deploy.R} permite la publicación de la app en la web.
+La app se encuentra alojada en los servidores de
+\href{https://www.shinyapps.io/}{shinyapps}.
+
+\section{Uso}\label{uso}
+
+\subsection{Pestaña de Académicos}\label{pestauxf1a-de-acaduxe9micos}
+
+En esta pestaña podrá ver los proyectos de investigación vinculados a
+cada académico de la Facultad, ya sea como Investigador Responsable o
+Coinvestigador. Para hacerlo, debe seguir los siguientes pasos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Seleccionar a un académico o académica en la parte superior izquierda
+  de la aplicación.
+\item
+  Seleccionar los filtros deseados. Actualmente los filtros disponibles
+  son: Año(s) del Concurso; Proyectos en que el académico participó como
+  Investigador Responsable; Proyectos adjudicados; Proyectos en
+  ejecución; proyectos asociativos; proyectos de investigación aplicada;
+  institución, concurso e instrumento del proyecto; jerarquía del
+  académico al adjudicarse el proyecto.
+\item
+  Una vez realizados los pasos anteriores, se generará una tabla en la
+  sección derecha de la aplicación. Esta tabla es exportable en formato
+  excel o csv, según estime conveniente.
+\end{enumerate}
+
+\subsection{Pestaña de Proyectos}\label{pestauxf1a-de-proyectos}
+
+En esta pestaña podrá acceder a la totalidad de los proyectos de
+investigación adjudicados por académicos de la Facultad, incluyendo
+información sobre investigadores responsables, coinvestigadores,
+financiamiento, etc. Para hacerlo debe seguir los siguientes pasos.
+
+Para ello debe seleccionar los filtros deseados. De no seleccionar
+ninguno, se generará una tabla con la totalidad de los proyectos
+disponibles. Al igual que en la pestaña de académicos, esta tabla es
+exportable en formato excel y csv.
+
+\subsection{Libro de Códigos}\label{libro-de-cuxf3digos}
+
+Puede consultar el libro de códigos de ambas pestañas
+\href{https://dip-facso.shinyapps.io/consultas/_w_13f4a94ea5194a07abbd823f4c5537d2/www/codebook.html}{aquí}
+
+\subsection{Reporte de Problemas y
+Sugerencias}\label{reporte-de-problemas-y-sugerencias}
+
+Para reportar algún problema, error en la información, o hacer
+sugerencias sobre funcionalidades de la app, existen dos alternativas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Abrir un
+  \href{https://github.com/facso-investigacion/bases-datos-dip/issues}{issue}
+  en el repositorio de Github de la aplicación. Para hacerlo, necesita
+  una cuenta en Github y acceso al repositorio.
+\item
+  Por correo electrónico a
+  \href{mailto:asistenteinvestigacion@facso.cl}{\nolinkurl{asistenteinvestigacion@facso.cl}}
+\end{enumerate}
+
+\section{Versionamiento}\label{versionamiento}
+
+Se llevará a cabo un control de versiones con
+\href{https://semver.org/lang/es/}{Versionamiento Semántico 2.0.0}. El
+versionamiento semántico sigue un estándar MAJOR.MENOR.PARCHE (o X.Y.Z),
+donde:
+
+\begin{itemize}
+\tightlist
+\item
+  MAJOR representa cambios en la compatibilidad entre versiones
+\item
+  MINOR representa cambios en funcionalidades compatibles con versiones
+  anteriores
+\item
+  PARCHE representa correccione en errores compatibles con las versiones
+  anteriores.
+\end{itemize}
+
+Este versionamiento se puede hacer en el repositorio alojado en Github,
+con las funcionalidades \texttt{tags}y \texttt{release}. O bien,
+directamente en la terminal con el siguiente código.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ tag }\AttributeTok{{-}a}\NormalTok{ vx.y.z }\AttributeTok{{-}m} \StringTok{"Versión x.y.z: titulo"}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Licencia}\label{licencia}
+
+Las aplicación y su contenido está protegida bajo la
+\href{https://www.apache.org/licenses/LICENSE-2.0}{Licencia Apache 2.0}.
+Apache 2.0 es una licencia de software libre y de código abierto que
+permite el uso, modificación y distribución del código con fines tanto
+comerciales como no comerciales, siempre que se mantenga la atribución
+al autor original y se conserve una copia del texto de la licencia.
+
+\bookmarksetup{startatroot}
+
+\chapter{Datos Abiertos CINDAI}\label{sec-abiertos}
+
+En esta sección se describe el repositorio de
+\href{https://github.com/facso-investigacion/datos-abiertos-dip/tree/main}{Datos
+Abiertos de CINDAI}. El propósito de este repositorio es poner a
+disposición de la comunidad datos relevantes sobre investigación en la
+Facultad de Ciencias Sociales de manera accesible y transparantes,
+respetando los datos personales de los investigadores. Así, a diferencia
+de los datos descritos en Capítulo~\ref{sec-base}, este repositorio se
+encuentra abierto para su descarga y utilización, bajo ciertas
+condiciones de uso.
+
+\section{Base de datos anonimizada}\label{base-de-datos-anonimizada}
+
+Contiene la misma información que la Base Integrada, con la diferencia
+de que se resguarda el RUT de los investigadores. La construcción y
+actualización de estos datos sigue el mismo flujo que la base sin
+anonimizar.
+
+Especificamente, el script \texttt{anonimizacion.R} aplica funciones
+para anonimizar la base y exportarla automáticamente a Datos Abiertos
+CINDAI. Es importante que para que este procedimiento funcione, es
+necesario tener clonado locamente tanto el repositorio
+\href{https://github.com/facso-investigacion/bases-datos-dip}{\texttt{base-datos-dip}}
+como
+{[}\texttt{datos-abiertos-dip}{]}((https://github.com/facso-investigacion/datos-abiertos-dip).
+
+Para la anonimización se utilizó la función \texttt{xxhash32}del paquete
+\texttt{digest}\href{https://dirk.eddelbuettel.com/code/digest.html}{(Eddelbuettel,
+2024)}. El resultado es que cada RUT se transformó en una cadena de
+32-bits (o 8 caracteres) único y no reversible.
+
+Además, para facilitar la identificación por Departamentos, se creo un
+ID númerico de 5 caracteres, donde los dos primeros representan el
+departamento al que está adscrito el académico, y los tres últimos son
+un correlativo. Los Departamentos fueron asignados como sigue:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Departamento & Código \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Postgrado & 11 \\
+Educación & 12 \\
+Antropología & 21 \\
+Trabajo Social & 22 \\
+Sociología & 31 \\
+Psicología & 41 \\
+\end{longtable}
+
+La siguiente tabla ejemplifica el proceso de anonimización realizado.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{Proceso de anonimización datos de
+investigadores}\tabularnewline
+\toprule\noalign{}
+rut\_investigador & rut\_hash & id \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+rut\_investigador & rut\_hash & id \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0029311803 & dd715a7b & 11001 \\
+0053990622 & 5778e5ce & 11002 \\
+0048548652 & ee9c94b7 & 11003 \\
+0117376184 & 33f09bb2 & 11004 \\
+0156399981 & b646c3f2 & 11005 \\
+0141201395 & 73b38133 & 11006 \\
+4865693 & 315b3e81 & 12001 \\
+0021327255 & 66e2a0e2 & 12002 \\
+0047489253 & b5e8aa87 & 12003 \\
+0085274600 & a7814360 & 12004 \\
+\end{longtable}
+
+\section{Libros de Códigos}\label{libros-de-cuxf3digos}
+
+Puede revisar el Libro de Código de las bases anonimizadas
+\href{https://facso-investigacion.github.io/datos-abiertos-dip/codebook.html}{aquí}
+
+\section{Licencia}\label{licencia-1}
+
+Las bases de datos están protegidas por
+\href{https://creativecommons.org/licenses/by-nc/4.0/}{Creative Commons
+Attribution-NonCommercial 4.0 International Public License} (CC BY-NC
+4.0). CC BY-NC 4.0 es una licencia abierta que permite compartir y
+adaptar los datos bajos las siguientes condiciones:
+
+\textbf{Atribución}: Se debe dar crédito adecuado a la Dirección de
+Investigación y Publicaciones, de la siguiente forma. {[}\textbf{agregar
+cita}{]}
+
+\textbf{No comercial}: No se puede usar el material con fines comercial,
+incluyendo usos directos e inderictos cuyo objetivo principal sea
+obtener un beneficio económico.
+
+\bookmarksetup{startatroot}
+
+\chapter{Visualizador Datos Abiertos}\label{sec-visualizador}
+
+El Visualizador de Datos Abiertos de CINDAI tiene el propósito de poner
+a disposición de la comunidad una herramienta interactiva que permita
+visualizar de manera rápida datos generales, históricos y actuales, de
+las investigaciones llevadas a cabo en la Facultad. El visualizador se
+puede encontrar en el siguiente
+\href{https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/\#inicio}{enlace}.
+
+\section{Repositorio, Construcción y
+Publicación}\label{repositorio-construcciuxf3n-y-publicaciuxf3n-1}
+
+La app se encuentra en el repositorio \texttt{bases-datos-dip/app}, el
+cual tiene la siguiente estructura.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{├── input/}
+\NormalTok{│   ├── data{-}general{-}anon.rdata}
+\NormalTok{|   ├── data{-}proyectos{-}anon.rdata}
+\NormalTok{├── visualizador.qmd}
+\NormalTok{├── visualizador.html}
+\NormalTok{├── visualizador\_files/}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{data-general-anon.rdata} y \texttt{data-proyectos-anon.rdata}
+corresponden a las versiones anonimizadas de la Base Integrada y la Base
+de Proyectos, respectivamente. \texttt{visualizador.qmd} es el código
+que crea la aplicación en \texttt{visualizador.html}. Al igual que la
+App de Consultas, el Visualizador está construido con Shiny y alojado en
+ShinyApps.
+
+\section{Uso}\label{uso-1}
+
+{[}En construcción{]}
+
+\section{Versionamiento}\label{versionamiento-1}
+
+Al igual que la App de Consultas, se utiliza versionamiento semántico,
+descrito en Capítulo~\ref{sec-consultas}.
+
+\section{Licencia}\label{licencia-2}
+
+Las aplicación y su contenido está protegida bajo la
+\href{https://www.apache.org/licenses/LICENSE-2.0}{Licencia Apache 2.0}.
+Apache 2.0 es una licencia de software libre y de código abierto que
+permite el uso, modificación y distribución del código con fines tanto
+comerciales como no comerciales, siempre que se mantenga la atribución
+al autor original y se conserve una copia del texto de la licencia.
+
+\bookmarksetup{startatroot}
+
+\chapter{Metadatos}\label{sec-metadata}
+
+Se llevará un registro de los metadatos de las bases de datos en formato
+\texttt{.yml}. A continuación, se muestra un ejemplo básico de metadata
+contenida en los repositorios
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"Datos de Investigación de la Facultad de Ciencias Sociales"}
+\FunctionTok{creator}\KeywordTok{:}\AttributeTok{ }\StringTok{"Dirección de Investigación y Publicaciones, Facultad de Ciencias Sociales, Universidad de Chile"}
+\FunctionTok{date}\KeywordTok{:}\AttributeTok{ }\StringTok{"2025"}
+\FunctionTok{identifier}\KeywordTok{:}\AttributeTok{ }\StringTok{"TBD"}
+\FunctionTok{url}\KeywordTok{:}\AttributeTok{ }\StringTok{"https://github.com/facso{-}investigacion/bases{-}datos{-}dip"}
+\FunctionTok{description}\KeywordTok{: }\CharTok{\textgreater{}}
+\NormalTok{  Esta propuesta tiene como objetivo desarrollar un sistema local e integrado de gestión y visualización de información científica}
+\NormalTok{  en la Facultad de Ciencias Sociales. Este sistema permitirá consolidar, actualizar y utilizar estratégicamente los datos de los}
+\NormalTok{  proyectos de investigación, garantizando que sean encontrables, accesibles, interoperables y reutilizables. Con ello, se busca }
+\NormalTok{  mejorar la transparencia, eficiencia y sostenibilidad en la gestión de la información científica de la Facultad.}
+\FunctionTok{subject}\KeywordTok{:}\AttributeTok{ }\StringTok{"Gestión de Información Científica"}
+\FunctionTok{format}\KeywordTok{:}\AttributeTok{ }
+\AttributeTok{ }\KeywordTok{{-}}\AttributeTok{ }\StringTok{".csv"}
+\AttributeTok{ }\KeywordTok{{-}}\AttributeTok{ }\StringTok{".rdata"}
+\FunctionTok{license}\KeywordTok{:}\AttributeTok{ }\StringTok{"TBD"}
+\FunctionTok{language}\KeywordTok{:}\AttributeTok{ }\StringTok{"es"}
+\FunctionTok{relationship}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{type}\KeywordTok{:}\AttributeTok{ }\StringTok{"isPartOf"}
+\AttributeTok{    }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ }\StringTok{"https://github.com/facso{-}investigacion"}
+\AttributeTok{    }\FunctionTok{description}\KeywordTok{:}\AttributeTok{ }\StringTok{"Parte de la Organización de la Dirección de Investigación en Github"}
+\FunctionTok{source}\KeywordTok{:}\AttributeTok{ }\StringTok{"Los datos fueron recopilados a partir de datos de SEPA{-}VID, ANID y FACSO"}
+\FunctionTok{contact}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{name}\KeywordTok{:}\AttributeTok{ }\StringTok{"Dirección de Investigación FACSO"}
+\AttributeTok{  }\FunctionTok{email}\KeywordTok{:}\AttributeTok{ }\StringTok{"asistenteinvestigacion@facso.cl"}
+\AttributeTok{  }\FunctionTok{phone}\KeywordTok{:}\AttributeTok{ }\StringTok{"+56 2 2978 9728"}
+
+\CommentTok{\# Historial de versiones {-}{-} Cambiar antes de cada commit.}
+
+\FunctionTok{versions}\KeywordTok{:}\AttributeTok{ }
+\AttributeTok{ }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ }\StringTok{"0.1.0"}
+\AttributeTok{   }\FunctionTok{last\_updated}\KeywordTok{:}\AttributeTok{ }\StringTok{"2025{-}08{-}04"}
+\AttributeTok{   }\FunctionTok{updated\_by}\KeywordTok{:}\AttributeTok{ }\StringTok{"Gabriel Cortés"}
+\AttributeTok{   }\FunctionTok{update\_note}\KeywordTok{:}\AttributeTok{ }\StringTok{"Crea documento YAML para el almacenamiento interoperable de metadatos"}
+\AttributeTok{ }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{id}\KeywordTok{:}\AttributeTok{ }\StringTok{"0.2.0"}
+\AttributeTok{   }\FunctionTok{last\_updated}\KeywordTok{:}\AttributeTok{ }\StringTok{"2025{-}08{-}05"}
+\AttributeTok{   }\FunctionTok{updated\_by}\KeywordTok{:}\AttributeTok{ }\StringTok{"Gabriel Cortés"}
+\AttributeTok{   }\FunctionTok{update\_note}\KeywordTok{:}\AttributeTok{ }\StringTok{"Agrega postulaciones a proyectos FONDECYT 2026 de IR{-}FACSO"}
+\end{Highlighting}
+\end{Shaded}
+
+Parte importante del registro de metadatos es que permite llevar un
+seguimiento exhaustivo, accesible e interoperable del historial de
+versiones de las bases de datos y repositorios. Se propone que se debe
+registrar, antes de cada commit, los siguientes campos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{id} Número de versión siguiendo el estándar del Versionamiento
+  Semántico introducido en el Capítulo~\ref{sec-consultas}
+\item
+  \texttt{last\_updated}: fecha de modificación
+\item
+  \texttt{updated\_by}: Autor de la modificación.
+\item
+  \texttt{update\_note}: Comentario explicativo de los cambios.
+\end{enumerate}
+
+\section{Actualización}\label{actualizaciuxf3n}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Asegurarse de haber realizado un commit
+\item
+  Exportar historial de commit con el siguiente código en la terminal.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ log }\AttributeTok{{-}{-}pretty}\OperatorTok{=}\NormalTok{format:}\StringTok{"\%ad | \%s\%d | \%an"} \AttributeTok{{-}{-}date}\OperatorTok{=}\NormalTok{short }\OperatorTok{\textgreater{}}\NormalTok{ input/data/procesadas/commits.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Esto genera un archivo \texttt{.txt}que es procesado en
+  \texttt{proc/proc-metadata.R}. Esto genera el archivo
+  \texttt{\_metadata.yml}
+\end{itemize}
+
+
+
+
+\end{document}

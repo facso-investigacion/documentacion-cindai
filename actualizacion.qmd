@@ -1,10 +1,4 @@
-## Actualización y Mantenimiento
-
-## Actualizaciones Metadatos y control de versiones
-
-Las actualizaciones se llevaran a cabo periódicamente mediante commits a los repositorios `bases-datos-dip` y `datos-abiertos-dip`. Al ser una base pública, la branch principal de `datos-abiertos-dip` se mantendrá bajo protección y solo podrá ser actualizada por pull-requests revisados y aprobados por el Equipo DIP antes de ser fusionados con la rama principal.
-
-## Metadatos y control de versiones
+## Metadatos {#sec-metadata} 
 
 Se llevará un registro de los metadatos de las bases de datos en formato `.yml`. A continuación, se muestra un ejemplo básico de metadata contenida en los repositorios
 
@@ -50,45 +44,19 @@ versions:
 
 Parte importante del registro de metadatos es que permite llevar un seguimiento exhaustivo, accesible e interoperable del historial de versiones de las bases de datos y repositorios. Se propone que se debe registrar, antes de cada commit, los siguientes campos:
 
-1.  `id` Número de versión siguiendo el estándar `MAJOR.MINOR.PATCH`, esto es:
-
-| Número | Descripción |
-|----|----|
-| MAJOR | Cambios que rompen compatibilidad con versiones anteriores |
-| MINOR | Cabios que agregan funcionalidades o datos sin romper compatibilidad |
-| PATCH | Correciones menores y ajustes cosméticos |
-
+1.  `id` Número de versión siguiendo el estándar del Versionamiento Semántico introducido en el @sec-consultas
 2. `last_updated`: fecha de modificación
 3.  `updated_by`: Autor de la modificación.
 4.  `update_note`: Comentario explicativo de los cambios.
 
-## Ejemplo de flujo de trabajo para actualización y versionamiento
-
-(LA idea es ir incorporando nuevos flujos a medidas a que vayamos viendo nuevas necesidades)
-
-### Flujo para actualización y versionamiento de postulaciones FONDECYT
-
-1.  Subir base RPI y planilla VID de patrocinios a `bases-datos-dip/input/data/original/`
-
-2.  Correr el masterscript del repositorio (`bases-datos-dip/master-script.R`)
-
-3.  Modificar información de la versión en la `bases-datos-dip/_metadata.yml`
-
-4.  Hacer commit en la branch principal del repositorio `base-datos-dip` y hacer pull al repositorio en Github.
-
-5.  Copiar las nuevas versiones de `bases-datos-dip/output/data-general-anon.csv` y `base-datos-dip/output/data-general.rdata` y reemplazar las bases en `datos-abiertos-dip/Base Integrada`
-
-6.  Modificar información en `datos-abiertos-dip/Base Integrada/_metadata.yml`.
-
-7.  Hacer commit en la branch `actualizaciones` y abrir un pull-request. El pull-request debe ser aceptado por... (**definir roles**)
-
-
-## Flujo para actualización de _metadata.yml
+## Actualización
 
 1. Asegurarse de haber realizado un commit
 
-2. Exportar historial de commit 
+2. Exportar historial de commit con el siguiente código en la terminal. 
 
-## Solución de problemas
+``` bash
+git log --pretty=format:"%ad | %s%d | %an" --date=short > input/data/procesadas/commits.txt
+```
 
-Si encuentras un error en el procesamiento de las bases datos, o tienes ideas, comentarios y sugerencias, estos deben comentarse en los `Issues` del repositorios correspondiente. 
+-  Esto genera un archivo `.txt`que es procesado en `proc/proc-metadata.R`. Esto genera el archivo `_metadata.yml`
