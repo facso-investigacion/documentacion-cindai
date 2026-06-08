@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,9 +21,8 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -67,17 +66,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <link href="./consultas.html" rel="next">
 <link href="./repositorio.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0ae80099085a0c62f8afb0bd4e0634f4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2db5a64a0f9238d29502e24e892d8c52.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,7 +89,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No se han encontrado resultados",
+    "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -109,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -133,8 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./input/images/logo-DIP-25.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Ciencia de Datos en Investigación – CINDAI</a> 
@@ -176,8 +172,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datos-abiertos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Datos Abiertos CINDAI</span></span></a>
+  <a href="./workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Github action Workflows</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -209,18 +205,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#datos-sobre-la-trayectoria-académica-del-investigador" id="toc-datos-sobre-la-trayectoria-académica-del-investigador" class="nav-link" data-scroll-target="#datos-sobre-la-trayectoria-académica-del-investigador"><span class="header-section-number">3.1.3</span> Datos sobre la trayectoria académica del investigador</a></li>
   <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen"><span class="header-section-number">3.1.4</span> Resumen</a></li>
   </ul></li>
-  <li><a href="#construcción-y-actualización" id="toc-construcción-y-actualización" class="nav-link" data-scroll-target="#construcción-y-actualización"><span class="header-section-number">3.2</span> Construcción y Actualización</a>
+  <li><a href="#construcción" id="toc-construcción" class="nav-link" data-scroll-target="#construcción"><span class="header-section-number">3.2</span> Construcción</a>
   <ul class="collapse">
-  <li><a href="#procesamiento-general-de-proyectos" id="toc-procesamiento-general-de-proyectos" class="nav-link" data-scroll-target="#procesamiento-general-de-proyectos"><span class="header-section-number">3.2.1</span> Procesamiento General de Proyectos</a></li>
-  <li><a href="#procesamiento-de-información-sobre-académicos" id="toc-procesamiento-de-información-sobre-académicos" class="nav-link" data-scroll-target="#procesamiento-de-información-sobre-académicos"><span class="header-section-number">3.2.2</span> Procesamiento de Información sobre Académicos</a></li>
-  <li><a href="#ingresar-nuevos-proyectos" id="toc-ingresar-nuevos-proyectos" class="nav-link" data-scroll-target="#ingresar-nuevos-proyectos"><span class="header-section-number">3.2.3</span> Ingresar Nuevos Proyectos</a></li>
-  <li><a href="#ingresar-núcleos-de-asociatividad-facso" id="toc-ingresar-núcleos-de-asociatividad-facso" class="nav-link" data-scroll-target="#ingresar-núcleos-de-asociatividad-facso"><span class="header-section-number">3.2.4</span> Ingresar Núcleos de Asociatividad FACSO</a></li>
-  <li><a href="#trayectorias-académicas-jerarquizaciones" id="toc-trayectorias-académicas-jerarquizaciones" class="nav-link" data-scroll-target="#trayectorias-académicas-jerarquizaciones"><span class="header-section-number">3.2.5</span> Trayectorias Académicas (Jerarquizaciones)</a></li>
-  <li><a href="#proyectos-anteriores-al-nombramiento" id="toc-proyectos-anteriores-al-nombramiento" class="nav-link" data-scroll-target="#proyectos-anteriores-al-nombramiento"><span class="header-section-number">3.2.6</span> Proyectos anteriores al nombramiento</a></li>
-  <li><a href="#actualización-proyectos-finalizados" id="toc-actualización-proyectos-finalizados" class="nav-link" data-scroll-target="#actualización-proyectos-finalizados"><span class="header-section-number">3.2.7</span> Actualización proyectos finalizados</a></li>
-  <li><a href="#etiquetas" id="toc-etiquetas" class="nav-link" data-scroll-target="#etiquetas"><span class="header-section-number">3.2.8</span> Etiquetas</a></li>
-  <li><a href="#base-de-proyectos" id="toc-base-de-proyectos" class="nav-link" data-scroll-target="#base-de-proyectos"><span class="header-section-number">3.2.9</span> Base de Proyectos</a></li>
-  <li><a href="#anonimización" id="toc-anonimización" class="nav-link" data-scroll-target="#anonimización"><span class="header-section-number">3.2.10</span> Anonimización</a></li>
+  <li><a href="#inputs-principales" id="toc-inputs-principales" class="nav-link" data-scroll-target="#inputs-principales"><span class="header-section-number">3.2.1</span> Inputs Principales</a></li>
+  <li><a href="#procesamiento-de-académicos" id="toc-procesamiento-de-académicos" class="nav-link" data-scroll-target="#procesamiento-de-académicos"><span class="header-section-number">3.2.2</span> Procesamiento de Académicos</a></li>
+  <li><a href="#procesamiento-de-proyectos" id="toc-procesamiento-de-proyectos" class="nav-link" data-scroll-target="#procesamiento-de-proyectos"><span class="header-section-number">3.2.3</span> Procesamiento de Proyectos</a></li>
+  <li><a href="#merge" id="toc-merge" class="nav-link" data-scroll-target="#merge"><span class="header-section-number">3.2.4</span> Merge</a></li>
+  <li><a href="#base-de-proyectos" id="toc-base-de-proyectos" class="nav-link" data-scroll-target="#base-de-proyectos"><span class="header-section-number">3.2.5</span> Base de Proyectos</a></li>
+  <li><a href="#actualización-proyectos-finalizados" id="toc-actualización-proyectos-finalizados" class="nav-link" data-scroll-target="#actualización-proyectos-finalizados"><span class="header-section-number">3.2.6</span> Actualización proyectos finalizados</a></li>
+  <li><a href="#etiquetas" id="toc-etiquetas" class="nav-link" data-scroll-target="#etiquetas"><span class="header-section-number">3.2.7</span> Etiquetas</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div class="container st-container"><div style="max-height:500px;overflow-y:scroll;margin:10px 2px">
   
-<table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-multiline caption-top table-sm small">
+<table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-multiline caption-top table-sm small" data-quarto-postprocess="true">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 14%">
@@ -327,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td style="text-align: left;">rut_investigador [character]</td>
 <td style="text-align: left;">RUT Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. 009408038K</td>
@@ -364,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">35</td>
@@ -434,14 +427,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAAEKBAMAAADKkFuLAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAs0lEQVR42u3VsQ3DQAwDQI+QbJC8N3D2382NUwRQlX8BhHEc4AoRELdNqozx/D+PC9kPCAQCuRuy5D1OELdF7A4EAoGUiN0pbvJegOwQCAQCqZAlP3aCSETsDgQCgfQhdqfpJjkVQyAQiMkIR+wOBAKBlIjdaULsDgQCgZSI3Wm6SU7FEAgEEoXYnaab5FQMgUAgUYjdabpJTsUQCARiMsKRMZPXt+LPRCAQCCQSWfIe5Tcn1Qvc8f/nhMMAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAAELCAQAAABZ612WAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAACaUlEQVR42u3ZwU3EMABFwQ1Kj1sE9UAPVAkXBH6rmCNeyTO3iIv1hLNS/vF549fL6gM8FzlCjjjHh/fvF8nrsfpY/2l8ez78d9xv99WnW8plCTlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag54uzjx+rzLHaMH063+mL8449Px7uTI/LueNtyZxnZWcJlCTlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag5ws4SdhY7y5wccbGz7LuyXOwse3NZQo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOeMhhZxkfVp9mCTvLlBxhZwk7S7gsIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHGFYCMOCYWFOjpAj7CxhZwmXJeQIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOkCPsLGFnsbPMyRGGhTAshMsScoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEnSXsLHaWOTnCzhJ2lnBZQo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOsLOEncXOMidH2FnCzhIuS8gRcoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXaWsLPYWebkCDtL2FnCZQk5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOcLOEnYWO8ucHGFnCTtLuCwhR8gRcoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcYVgIw4JhYU6OkCMudpbtDK/Ms3/Zb2fpb6nLEnKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHCFHyBEPX8PsLKtP8FRclpAj5IgvOv47CWMSK9YAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">nombre_completo [character]</td>
 <td style="text-align: left;"></td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. paulina isabel osorio par</td>
@@ -478,7 +471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">35</td>
@@ -548,14 +541,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAAEKBAMAAADKkFuLAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAs0lEQVR42u3VsQ3DQAwDQI+QbJC8N3D2382NUwRQlX8BhHEc4AoRELdNqozx/D+PC9kPCAQCuRuy5D1OELdF7A4EAoGUiN0pbvJegOwQCAQCqZAlP3aCSETsDgQCgfQhdqfpJjkVQyAQiMkIR+wOBAKBlIjdaULsDgQCgZSI3Wm6SU7FEAgEEoXYnaab5FQMgUAgUYjdabpJTsUQCARiMsKRMZPXt+LPRCAQCCQSWfIe5Tcn1Qvc8f/nhMMAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAAELCAQAAABZ612WAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAACaUlEQVR42u3ZwU3EMABFwQ1Kj1sE9UAPVAkXBH6rmCNeyTO3iIv1hLNS/vF549fL6gM8FzlCjjjHh/fvF8nrsfpY/2l8ez78d9xv99WnW8plCTlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag54uzjx+rzLHaMH063+mL8449Px7uTI/LueNtyZxnZWcJlCTlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag5ws4SdhY7y5wccbGz7LuyXOwse3NZQo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOeMhhZxkfVp9mCTvLlBxhZwk7S7gsIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHGFYCMOCYWFOjpAj7CxhZwmXJeQIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOkCPsLGFnsbPMyRGGhTAshMsScoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEnSXsLHaWOTnCzhJ2lnBZQo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOsLOEncXOMidH2FnCzhIuS8gRcoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXaWsLPYWebkCDtL2FnCZQk5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOcLOEnYWO8ucHGFnCTtLuCwhR8gRcoQcIUfIEXKEHCFHyBFyhBwhR8gRcoQcYVgIw4JhYU6OkCMudpbtDK/Ms3/Zb2fpb6nLEnKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHCFHyBEPX8PsLKtP8FRclpAj5IgvOv47CWMSK9YAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sexo [character]</td>
 <td style="text-align: left;">Género Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Femenino</td>
@@ -565,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">756</td>
@@ -581,14 +574,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFsAAAA3BAMAAACRLiuLAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAP0lEQVRIx2NgGNpAiTigAFWubEwUGFU+qnxU+QArJzFrCxIHBOiinBiHIyknImSMRpWPKh9VPvDKSczaQxUAABy0TLOAryH1AAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFsAAAA3CAQAAADJCf4zAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAAAlklEQVRo3u3YwQ2AIBBEUdbYoz1oPdoDVeoVTJCEwzJr/r9xIe8wMRG7U8SW2QDY+q3l4ZIe+m4NdkrbbFuzXJ2CjgQ2bNhSwYYNWyrYsGFLBRt2t9e/ZB67xT0rf9Zt+BqPSmnQkQRlV9s+xZ53juZqhZ93vj4PQUcCGzZsqWDDhi0VbNiwpYINu9sfnnfiFHQksD17AOKlC8flF30bAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">edad [numeric]</td>
 <td style="text-align: left;">Edad del Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 56 (9.1)</td>
@@ -605,14 +598,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">49 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAm0lEQVRo3u3ZUQqAIAzGca9gN1Bv0O5/t6j1YJSIcwTF/3tL2M89TCMKgVgS78maOJA2VmTPCgYGBgYGBgYGBgYGBgYGZsZGvtS72Eh/YD/HFh0tJ+yoFzAwMLAPY+e16IRV9VdMd0k+mC65Yr3+hrDS6Q/sFaz928eAleahAAOT5yvOjkk1wckH04evYLl6L01jzcqJziYTiCUbe37IT0uSC5EAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAABlklEQVR42u3cwVECMQBAUXHo0R60HuzBKvWKDhG+C+wG37vJAeFDQiZL2H0+UTyv/QBmI1gkWLQ//mN3xTs+/DI5vl3zH93B8VPZ//leznoZ3P6x9vNfxJCMBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBItueIR5bHQefIaz4KsEO30afI6z4IZkJFgkWCRYJFgkWLRwWXH4dz8/tngd9pi/sDNmSEaCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFF+6H/b+NwpGLNxDvcfF1/LJs55r4Kle+R2bYvd1UsLHtfBtjkmDb+TaGT8lIsEiwSLBokkl/5P4rt8mD3X/lZkhGgkWCRYJFgkWCRZMvK8ZutUJ72GDjFdqyraKHDTa2bKvIHBYJFn0bkq4NnfdjDpvhMsS6dsdvqnfvsJNejz4/dxo1Jv1IsEiw6AtygyO3p4vMpwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">reparticion [character]</td>
 <td style="text-align: left;">Departamento Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Antropología</td>
@@ -634,7 +627,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">416</td>
@@ -674,14 +667,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADkAAACVBAMAAAAQ6E8jAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAcUlEQVRYw+3VuRGAMAwFUZeAOuDoQPTfGwFK7BEynvGR7E9fgIL1kNK6ne420+t2piha07grcddD7UMf+t6sKNqocVfirkvPKDpdZZj6/4U9e4PlULSmcVcTe860vFlR9JfGXQ3v+fDVbkbRRo27WrEHgKyb8gwumrQAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADkAAACVCAQAAABIz5qbAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAAA40lEQVR42u3aTQ6CMBgEUGu4o4fgPHgHTonbwoJW7c/ie7MjJrzodDES0vEYnedwMQi55BfvTsWuKb/xcv7w1QHcL9cxukQikUgkElnOZYjsv93lq5yGUOrG5ErALrebHbs2+9Urd2zLYxWjSyQSiUQikeXYsZ0ym9yObcCj9tnfEolEIpFIJHJk7NhOqX4e+2eyzga8V3D9cxWjSyQSiUQikeV4Htsps7tssWPL7x803rE1xy9Gl0gkEolEIsuxYztldpf3O7bVG7LVO7bdwYrRJRKJRCKRyHJm79gxidHlBPIDclEjRdxb6ugAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">horas_reales [numeric]</td>
 <td style="text-align: left;">Jornada Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 37.6 (11.7)</td>
@@ -697,7 +690,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 2px 0 7px; margin: 0; border: 0;">6</td>
@@ -765,14 +758,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAH4AAADEBAMAAACrXIioAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBOlxIWJAAAAn0lEQVRo3u3YyQ3AIBBD0bSQEph0AP33lkWIO/YhLN/3dxiQPNIcB4mIU0r1V8l4PB4/pXf7T8Pj+Gf+SIa/Sil4PB4/o3f7T6EjeXX9tfcX1y8ej8e73u0vUS/jo0Xz7/790vuPeDweb3q3vzrVcj7h8Xj8pl7lq/iEx+Pxm3qVj+Ld+fF4PH5Xr/JRfKipvt3fOpPxeDz+Z+/23865AalCjxiRecunAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAH4AAADECAQAAADze10QAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAABlUlEQVR42u3cTU7CUABGUWvYI4twPboHV6kDBVqsPyGxDe/cMzGNk97wwOSTdHp7cD3ufQPFF7+9w/ziZfYB8DTtfWv/Y/4Zd1j+6vj583Xve9wEfeyLVxWvKl5VvKp4VfGq4lXFq+j4qxnLmK9OpvmgN+hmuTDvpY89Hb94zz9/+cfdqOv9Svxlt/8w+scffeyLVxWvKl5VvKp4VfGq4lXFq+j4dvvzxd53s4F2++K/2e3HXusvrl7549VyPzb62BevKl5VvKp4VfGq4lXFq4pXNV2fL/a+mw00XRePx//yfft1o+z6P37fft04fxHoY1+8qnhV8ariVcWrilcVrype1W5/vtj7bjbQbl988Rd/3e1H0SuvKl5VvKp4VfGq4lXFq4pXFa+i49vtVcWr2u1VxauKVxWvKl5VvKp4VfGq4lXFq9rtVcWfNF1DilcVrypeVbyqeFXxquJVxauKV9Hx7fYqOv6mR7zftdl7+4ZHvN+z5YPP6GNfvKp4VfGq4lXFq4pXFa8qXkXH93x7FX3si1e9AwiKKN9p6KPpAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">jerarquia_actual [character]</td>
 <td style="text-align: left;">Jerarquía actual del Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Asistente</td>
@@ -785,7 +778,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">302</td>
@@ -807,14 +800,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAF8AAABOBAMAAAC06Nf4AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAWUlEQVRIx2NgGB5ACQ0oCuIAAlANysaoYFTDqIZRDYNKA8l5WpBYMIg1KBELFHAEK04wqmFUw6gGKmggOYsOwmKGCuUSAQ0YwWo0qmFUw6iGQaSB5Dw91AEA3KKDyTUXcSIAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAF8AAABOCAQAAADszwJAAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAAAwUlEQVRo3u3awQ2DMAxAUYLYsUN0nnaHTlmuDuotid2P/r8hJPQOBikW7buR26sB8rkd8eI9/CI823pyRB79rcfQgz/r7ZfgwyNfvnxk8uXLRyZfvnxk8iu7HBbzj3tjtXjwTThnTyiK4cMD53ez/2IsPMOMT93zZNR/XODDI1++fGTy5ctHJl++fGTyK3PPk517nn8Jzl+ypsr4KekHf86aKvPrBR8e+fLlI5MvXz4y+fLlI5Nf2Z3WVLzgwyO/shMxVRI3aRZNJAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1411 (97.9%)</td>
 <td style="text-align: center;">31 (2.1%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">categoria [character]</td>
 <td style="text-align: left;">Categoría académica del Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Docente</td>
@@ -830,7 +823,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">227</td>
@@ -858,14 +851,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAABmBAMAAAAT0Z8eAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAa0lEQVRYw+3Wuw3AIBAEUUrAHfDpwO6/NxKEQCY5scEJzeS8cI8QaFeZeqzFjtRv9IKAgICADESyseaHvpEMAgICAuIbOTFuRcpJ6f+1sAcCAgJyLyLZWD8nQ3N3sgCpICAgICA7RLKxtNYATcJHotbyLVQAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIcAAABmCAQAAABL9kqmAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAABMUlEQVR42u3cQW6CUBRAUTHssYtwPbqHrrId9l8iA2wbDJwzMyYEbvgM/hOnrws/rnufwHuRI+SIefzw2PgguU17n/5fGC967lcfGw7zufd1/AOLJeQIOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOkCPkiMXm4BE3/LaYxo3TQ+wEbzYWsFhCjkiO++kHtu6OkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlCjpAj5Ag5wpzFnGWdHCFHZGR90rHT8Mj8xes9x9DfLFgsIUfIEXKEHCFHyBFyhBwhR8gRcoQcIUfIEXKEHCFHeL0njJ2MndbJEU/mLMf4c7TXLO6O881ZymIJOUKOkCPkCDlCjpAj5Ag5Qo6QI+QIOUKOkCPkCDlikcOcZe8zeCsWS8gRcsQ38JoVTKnNwoEAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1442 (100.0%)</td>
 <td style="text-align: center;">0 (0.0%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">codigo_proyecto [character]</td>
 <td style="text-align: left;">Codigo Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. INTERD-1-2</td>
@@ -902,7 +895,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">5</td>
@@ -972,14 +965,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ4AAAEKBAMAAAARK/GpAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAp0lEQVR42u3UMRXDUAwEQVMwBMUMEv7c0gSBcsXX0yyAKfe69G91h+LxeDzeKi/FbfWKx+PxeLyGl+KmeMXj8Xg83gFeipviFY/H4/F4B3gpbopXPB6Px+M1vBS31Ssej8fj8RpeitvqFY/H4/F4DS/FTfGKx+PxeLwDvBQ3xSsej8fj8Q7wUtwUr3g8Ho/Ha3gpbqv3SvXznk+mN4/H4/GiXvr36vcFTxumwoDB7KkAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ4AAAELCAQAAACCUPe0AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAACjUlEQVR42u3ZQUoDURRFQVuyR1fmIrLKOP3tRF/OhzZY5SgIoTm8GPAejzee9X71A7wy8QLxisfy8+kP4I/WXi4vEC8QLxAvEC8QLxAvEC8QLxAvEC8QLxAvEC8QLxAvEC8QLxAvEC841s3nuPppXsDay+UF4gWneHbbGZcXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBfYbYfstpuIF9htA5cXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBfYbYfstpuIF9htA5cXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXmB6HTI+biBeIF9htA5cXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gX2G2H7LabiBeYHgOXF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gX2G2H7LabiBfYbQOXF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gX2G2H7LabiBfYbQOXF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gX2G2H7LabiBfYbQOXF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gX2G2H7LabiBfYbQOXF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF4gXiBeIF5geh0yPm4gXiBfc1hd2219Yvhhu5998XP1of9z99MrHNhAvEC8QLxAvEC8QLxAvEC8QLxAvEC8QLxAvEC8QLxAv+Paf5Ptz7/JPHWaL5/nYBuIF4gVfMr42/ZSq/rgAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">titulo [character]</td>
 <td style="text-align: left;">Título del Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Terapia de exposición max</td>
@@ -1006,17 +999,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">8. Climate migrant children</td>
 </tr>
 <tr class="odd" style="background-color:transparent">
-<td style="text-align: left; padding: 0; margin: 0; border: 0;">9. Educación intercultural.</td>
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">9. Educación Intercultural:</td>
 </tr>
 <tr class="even" style="background-color:transparent">
-<td style="text-align: left; padding: 0; margin: 0; border: 0;">10. Educación Intercultural:</td>
+<td style="text-align: left; padding: 0; margin: 0; border: 0;">10. Educación intercultural.</td>
 </tr>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">[ 1000 others ]</td>
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">8</td>
@@ -1086,14 +1079,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ0AAAEKBAMAAAD6HEqqAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAqElEQVR42u3UQRUCUQwEwZUADsgiAf/euKAgzOHnpVpAHfu69G/3M9ODx+PxeKu8ELfWKx6Px+PxGl6IG+MVj8fj8XgHeCFujFc8Ho/H4x3ghbgxXvF4PB6P1/BC3FqveDwej8dreCFurVc8Ho/H4zW8EDfGKx6Px+PxDvBC3BiveDwej8c7wAtxY7zi8Xg8Hq/hhbi13h3q9fPen0w8Ho/Hy3rp36vfF598pKB8ip6CAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ0AAAELCAQAAABpZ0y3AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAACkklEQVR42u3awWnDQBRFUSmoRxeReuIeXKW9HWVj5jIgh5yzE4EgLt8Y8rI/N5qvq1/g75Iuky47xof7c9u+96tf6ZON3wyuLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMu28ehwqLzjllnCemyU7of/4AywdVl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mV22Cl22CWky+ywmavLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMvssFPssEtIl9lhM1eXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXGROnGBOXkC6TLrPDZq4uky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMus8NOscMuIV1mTMxcXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdZoedYoddQrrMDpu5uky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6zA47xQ67hHSZHTZzdZl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mR12ih12CekyO2zm6jLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMjvsFDvsEtJldtjM1WXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXGxCnGxCWky6TLjvHBDvvW8HVwnH9yu/rVPtrj9OQDm0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mX/for8aP9ln9pN0dUPrCZdJl02QsrEix50sqRNAAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">institucion [factor]</td>
 <td style="text-align: left;">Institución</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Agencia Nacional De Inves</td>
@@ -1130,7 +1123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">445</td>
@@ -1200,14 +1193,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFgAAAEKBAMAAABkio9PAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAoklEQVRo3u3asRGDMBAEQFqgBIsOcP+9OSGQPeC5DxgEsxdv8sFdIk3TPdMOMn9lw8t7NysMwz0u1WqOMhZ+wTB8KY7s+bhF+b+iP5sKw3ABlzo4yG6Utg6G4WtxZO0GDD8dR3Yw3KILN7zAMBzgUq0SOhqO7oNh+DQcWVMAw3CHI2s3YBjucGTtBgw/HUd2MHz85WwHdw/NKwzDR7hUq7vlA4NRUvGx5kZhAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFgAAAELCAQAAAD38YlSAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAABl0lEQVR42u3dwW2DQBBA0RC5xxSRepIeUmVyXZCNAmKYmdX7N8vCekJ72RGsl9+3Xr1nA4Cr9Rg/fAcv6M/l3HUj67H+6iOQ+3PJr7RbEsDAwMDAwMClAgYGBt5vs0W6ZhsT2TJu8E7uEcMbje2WRG/wV4NBW+873CFgYGBgYGDgUgEDAwNPBjaXiK4deDVbKzuXGNbqjc9LnG09oGy3JICBgYGBgYFLBQwMDLyf5yUiMpdIA5edS7wCdwgYGBgYGBi4VMDAwMCTgW3zowO+FWwuAQwMDAwMnB0wMDAwMPChzCWiawd+8lrE2cMe72lzhyu+FrELrh8wMDAwMDBwqYCBgYEPgb0WcUnmEmlgjx8AAwMDAwNnBwwMDAwMPDfYXCK63mBzCWBgYGBg4OyAgYGBgYHnBptLRNcbbC4BDAwMDAycHTAwMDAw8Nxgc4noeoPNJYCBgYGBgbMDBgYGBgY+lG1+dMDRPTn38v9lnJC5+a/bI+de5hwA025JAAMDAwMDA5cKGBj45jY7jmbHSHao3ZIAju4PV4Qxr45JgGQAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">concurso [factor]</td>
 <td style="text-align: left;">Concurso</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Concursos De Ciencia Públ</td>
@@ -1244,7 +1237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">2</td>
@@ -1314,14 +1307,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHUAAAEKBAMAAADeKQcvAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAApklEQVRo3u3YwQ3CMBAEwJQAHeDQAfTfWz55IoTPKKfTzf7nsyetJW9bv4z7fG4sy7IJNkBL251lWbaIDdB0O1iWZRvYAE23Fd9BlmXZWRug6bZizyzL9rQBWtoOlmXZIjZAS9uVrliWZa+0AZpus7piWZa90gZouq34j8SyLDtrAzTd7oE8Tvt8z4dl2d52ZXMqbuy/9/lX++FGL5Zl2W92ZXM65QDGAUu15hYXxQAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAHUAAAELCAQAAABNUgEyAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAABsUlEQVR42u3cTWrCYBhG0aa4xy6i63ERrjKdfhac+EP0vPc4CoLkksTBg7jtX1N8H30CpZb6kH15nbkHd60bdFVLFZUqKlVUqqhUUamiUkWlikoVDUrd1uVsO/psnm6tG3RVp6aed28JvpFqK1VUqqhUUamiUkWlikoVlSoqVTQotR1YNDVVXoHnXlVbqaJSRaWKShWVKipVVKqoVFGponZg0dTUfg+MKFVUqqhUUamiUkWlikoVlSoqVdQ4KipV1A4sKlVUqqhUUamiUkWlikoVlSoqVdQOLJqaKk+jc6+qrVRRqaJSRaWKShWVKipVVKqoVFE7sGhqajswolRRqaJSRaWKShWVKipVVKqoVNGg1HZg0dTUdmBEqaJSRaWKShWVKipVVKqoVFGpokGp7cCiqan9aS6iVFGpolJFpYpKFZUqKlVUqqhU0aDUdmDRoNTTegCuwMszebp+5+foU3uqy9XRoBu4VFGpolJFpYpKFZUqKlVUqujfCnG571M+QuOoqFTRS3fg37d6+F+4A7/bt/mgG7hUUamiUkWlikoVlSoqVVSqaOoObBt0A5cq+gMt5j9oI6bHDwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">instrumento [factor]</td>
 <td style="text-align: left;">Instrumento</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Anillo de Investigación e</td>
@@ -1358,7 +1351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">1</td>
@@ -1428,14 +1421,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ8AAAEKBAMAAAD+6ZqXAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAArUlEQVR42u3VQQ3DQBAEQUNwGGRsCOHPLZ8w8ES61VUDqG8fhxrlVeoEAoFA4O5gy9sZvFIGbyAQCAQOAesLKHGTwACBQCAQuCrY8gaBAQKBQCBwVbDlDQIDBAKBQGAJbHk7gwECgUAgsAS2vJ3BAIFAIBBYAlveIDBAIBAIBK4KtrxBYIBAIBAIXBVseYPAAIFAIBBYAlvezuDV6v0D708pIBAIBP4ZrC9Az/oCeQW5movZ5dcAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ8AAAELCAQAAABtkpyKAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAACo0lEQVR42u3bQUrDQACGUSO9Yw/heTxET1kXbiZZdfoNxOB7rkJBho+Jgj9uzw/e93n2Aa5NvkS+5jl8fftB+IKxmNuXyJfIl8iXyJfIl8iXyJfIl8iXyJfIl8iXyJfIl8iXyJfIl8iXyJds4zq0nX2aSxiLuX2JfMltfPjdeb+8wy873L772ee5GC9vIl8iXyJfIl8iXyJfIl8iXyJfIl8iXyJfIl8iXyJfIl8iX3LI9zj7PBdj551m511GvmSXz//zznL7EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkSO+80O+8y8iV23sTtS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkSwyV0wyVy8iXyJfYeRO3L5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL7HzTrPzLiNfYqhM3L5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvsTOO83Ou4x8iZ03cfsS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RI77zQ77zLyJXbexO1L5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvsvNPsvMvIl9h5E7cvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+x806z8y4jX2LnTdy+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+xFA5zVC5jHyJfMltfLDzvmT4FXHbf3I/+2h/3mP35OVN5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EvkS+RL5EsOf21+vPdd/q3NvFF4eRP5EvmSH32AOGtPTOPKAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">asociativo [factor]</td>
 <td style="text-align: left;">Proyecto Asociativo</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
@@ -1445,7 +1438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">1402</td>
@@ -1461,14 +1454,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAKEAAAA3BAMAAACWQDfbAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAQUlEQVRYw+3VMREAIQAEMSSAA4aXgH9vNHSUXMN8VkDaLUWpRqy+xW+mIhKJRCLxFPPnarHqQ+IgEolEIvHnou5bue258JLraU0AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAKEAAAA3CAQAAADOZ+JjAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQS3f0ORAAAAw0lEQVR42u3ZwQ2CQBRAQdfQoz3Yj/ZAlXgUPCnvQAwzJwjJZvOyy+WP5UJzPXoD/0/CTMJsWr88/Ri/dB/v52n76Xb03v7CvHlzkTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCbOP2cm8b5VTG+uh3di9zNmsq7nImYTZJuFjeRjG/8wpzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMwkzCTMJMyGkV3lFGYSZhJmLxC8C0BC3PrUAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">inv_aplicada [factor]</td>
 <td style="text-align: left;">Investigación Aplicada</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
@@ -1478,7 +1471,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">1367</td>
@@ -1494,14 +1487,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ0AAAA3BAMAAADkj1VtAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAS0lEQVRYw+3VQQ0AIAwEwUoAB4Q6oP69wQMDwH1IdwVMcq8zo9e6qLY9D014eHh4eLk89R9VUeUTb02Xeh4DDw8PDw/v2FP/Ed03AT1fs7LyoGY6AAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJ0AAAA3CAQAAAC8qIDVAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAAyklEQVR42u3bQQqCUBRA0X64x/ZQ66k9uMoapkEId2LhOSNFELn4voOP43miOe/9AP9Luky6bFqePCx8G67jfTytL132frafNq/ODGwmXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl0mXSZdJl32sTcxt7sc0lhugo18m6NY1jKwmXTZaq27L97Hm+nd8GUL2+dim4HNpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLpMuky6TLbGFnw3+clYHNpMuky15zuAvH8msyTgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">tipo_investigador [character]</td>
 <td style="text-align: left;">Rol Investigador</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Coinvestigador</td>
@@ -1511,7 +1504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">719</td>
@@ -1527,14 +1520,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFkAAAA3BAMAAACV2/u2AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAPklEQVRIx2NgGLpAiSigAFWtbEwMGFU9qnpUNT1Vk5aLBYkCAnRQTZSz4aqJCROjUdWjqkdV01U1abl4KAIAjcNJlA4rih8AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFkAAAA3CAQAAADN/C4OAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAAkklEQVRo3u3YsQ2AIBhEYX7jju6g8+gOTKktKjYkwl3yXkdDvuJiInEmt6bRAMiazeXhkB32Gh/klJbRtmr5djIcBmTIkCFD1goyZMiQIWsFuUePf7/cdkvXovypjuZr/q5UGg7DkHzb8i749LK91ir+9FL7HBgOAzJkyJAhawUZMmTIkLWC3CP3pxePDIcBuUcX7cMLx5TvYuAAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">estado_proyecto [character]</td>
 <td style="text-align: left;">Estado del Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Cancelado</td>
@@ -1559,7 +1552,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">761</td>
@@ -1605,14 +1598,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAF0AAACsBAMAAADrkb1MAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAg0lEQVRo3u3WwQ2AIBBEUUqQDlwswf5784AXE4mzUcgS/5zfgWwyE1KaP0XMevpt14LH4/t7b3+zmGWQr68z2df74PH4CN7b30c42DcH0+59c5/xePxr7+1jFhPVK9t5vScej+/lvX2UcGBf8Hj8tF7kw7zh8fjfeJHzn8Hj8Z/7mXMAnFOA2lutD9gAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAF0AAACsCAQAAACztmj0AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABQklEQVR42u3aUWqDUBRFUS2dY+bQjieZQ0aZfhU0YEiDefdcu/afP7IIz4AH59vUtY9qAHqvPpcXl/iD/zVv0KfpVG172HV11fjAoKOjx4eOjh4fOjp6fI3pd29J19fuUtK8fB2dX77NqJbaxgcGvaLVY3re3GG+Ax+Dp3aYzP+dxgcGHR09PnR09PjQ0dHja0y3w4zKDlPdk2PGnu01jAz/qGS/P4LGBwYdHT0+dHT0+NDR0eNDr8gOMyo7THUbO0ziRyQP6b87TI+HtfGBQUdHjw8dHT0+dHT0+NArssOMyg5T3Yp+vo35IuYN9F6ho6PHh46OHh86Onp86Oj/hW6Hqego9E4rzHF+9V6ho6PHh46OHh86Onp86Oh/yg5T0VHovodBR08MHR09PnR09PjQ0dHja0yfG71H39X4V0ev6AfYpSXp7mo8JgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">adjudicado [factor]</td>
 <td style="text-align: left;">Proyecto Adjudicado</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
@@ -1622,7 +1615,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">829</td>
@@ -1638,14 +1631,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGQAAAA3BAMAAAAI1vI+AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAPklEQVRIx2NgGF5AiQQA1aJsTDQwGtUyqmVUy/DRQkZxIUgCoKsWAs5XxKKFQIiNahnVMqplmGoho7gYLgAA3aZZXqkfM4MAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAGQAAAA3CAQAAABQ8SeGAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAAn0lEQVRo3u3YsQ2AIBQAUTDu6A46j+7glNqCiYVYcPzc62gIl3xMJF8phqn3AQyJGjKXi2OwC7Pml5CUlt5n++CsVmFGyxAaQ2gMoTGExhAaQ2gMoTGExhCaxz/72bYLQC4fTnLzNn2UZw8zWmFCqjuyd32g235NNuaB7u9nJsxoGUJjCI0hNIbQGEJjCI0hNIbQGEIT84FuZGFGyxCaG7CeC8f804cVAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">en_ejecucion [factor]</td>
 <td style="text-align: left;">Proyecto en ejecución</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. No</td>
@@ -1655,7 +1648,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">1303</td>
@@ -1671,14 +1664,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJYAAAA3BAMAAAAcb66aAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAS0lEQVRYw2NgGAWkAiVqAKhZysaUA6NRs0bNGjVr1KxRswa9WdSsOwSpAQa5WRAPK1LFLEg8jpo1ataoWaNmjZo13M2iZt0xCogHAKkDp2Usaf3yAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJYAAAA3CAQAAABESHsiAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAAz0lEQVR42u3bywnCQBRAUUfs0R60Hu3BKnXhwkQRct34O2eVEBjChTeLDBnnFUut3/0C30SsQKxgM7052sAe7MbtejN/tH33u32Y0+zOGAZiBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgV33+BPr63yJ8b0QGe8vMzvmvYxhoFYwWzPOjw9ZN2b0NXCQ1bb/pUxDMQKxArECsQKxArECsQKxArECsQKxArECsQKxArECsQKxArEChyyBsNfc8sZw0CsQKzgApqhC8cTS4s0AAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">duracion [numeric]</td>
 <td style="text-align: left;">Duración del proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 33.1 (11.7)</td>
@@ -1695,14 +1688,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">22 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAgElEQVRo3u3YPQ6AIAxA4V4Bb2C5gb3/3bQORBI0AevP8N7E9IUQllaERkpV6qX+mlg2swUMDAwMDAwMDAwMDOxrbPJJJwzbHAMDew3z3ztHYX4AAwMDAwMDO8P2/XgUVgwwMDAwsJ9jWpYGAViujGcw7ZsTr7Hcd73jm91OaKQV2H9nqod3CpYAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABb0lEQVR42u3dQU7CQABAUWu4I3fQ8+AdPKVuC0MCfyKi7Xu7JmRCP0zTTJmwfL1QvD77Dfw3gkWCRYf1wTI5yOnKhfB9drA/aH16h+lRzhwvjj+ffY4PY0pGgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkUTO0FOu94xOLV1Zj8bZUamZCRYJFgkWCRYJFgkWPRDW5hH4+3tNnaBPyzYVm9uTclIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsOjmc8l9/95wdMeD3K0+kp1jSkaCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFZ0vU1u9vu1jTPw4v2PcK/uhhu9lG2/hj2F8Mto1v77L+2D9cw656W82DRaPGbUUkWCRY9A0yfRerbYWzAgAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">anio_concurso [numeric]</td>
 <td style="text-align: left;">Año del Concurso</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2016.4 (6.5)</td>
@@ -1719,14 +1712,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">34 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAeUlEQVRo3u3WwQnAMAhAUVdoR0g3aPbfLackPYig2IbQ/wd4FwUVoUhHvLOMErDau8G+wx4zTMAmAQYGBgYGBvZnTP0wwphGgIGBgYGBgb2G2XfciV0mAQYGBgYGBga2HJu/TwI2iAq2K6YshBczCS9mEkuxkpJQpAaU64GaOEFaPAAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABcUlEQVR42u3dQU7CUBRAUWvYo3twP7IHV6nT4sC8S6y05ZxZE0jIDe+3yf+B5euF4vXRH+BoBIsEiy7ri+XRn+ZffYyX7/dVmMv0TWf0NnrV582VkYwEiwSLBItOuOjP7373OGGw++5+U0YyEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiw60FGBbc9MTB0o2LZnJqaMZCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFi0i43cfexpz+wi2GxPe9sd7SkjGQkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFm16GOVIp3KmNj69s4dfmvhbRjISLBIsEiwSLLrrLnnGx4Wpm2DzEOd7XJj68Q173hBT1rBoWU/h9YnXpt+s/1R40agxkpFgkWDRNxniGGnjtjAWAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">fecha_inicio [character]</td>
 <td style="text-align: left;">Inicio del proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. 08-2020</td>
@@ -1763,7 +1756,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">50</td>
@@ -1833,14 +1826,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAH8AAAEKBAMAAADJC5fmAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAArUlEQVR42u3XwQ3CMBAEwJQAHcC5g7j/3hASSOZ7l8fJzP5vHom0Kx+HvBMR91RuH2DMEwAAAJoA5UrLXe8FRDxrwJgAAADQBShXWu66FaDWAQAAwC78foMiMJKPNgAAAGgIlDsxed4JsAsAAGAjQK3bBQAAAFgBu2AXAAAAYAXsgloHAACAFbALdgEAAABWwC7YBQAAsBWg1i/ZhWQe3984kwEAAIDLgXKl/Xte1h2dcGIENs4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAH8AAAELCAQAAABacJH7AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAB/klEQVR42u3czU0kMRhF0W5EjgRBPJADUcKiAH3F3w5b6nvOBlmz8dV4Cukt5vp6KbvbfQH58ne5n4fn8SF4vO6+2n+ZX7v78x89vP982X3HReKPX36Z/DL5ZfLL5JfJL5NfJr8snv9l7KqMXB+uc/i72XXzZBbHH388//Rv/+nzXdzuyv9H/sfO3/kAxh+//DL5ZfLL5JfJL5NfJr9Mflk8384/Drtvs4SdX/7Bzj/Z+VPkl8kvk18mv0x+mfwy+WXyy+L5dv5x2H2bJez88g8/7vyVlf/b3/7D5//c0xB//PLL5JfJL5NfJr9Mfpn8Mvllhu5x2H2bJQzd8uVf7Pzno50/RX6Z/DL5ZfLL5JfJL5NfJr/Mzj8Ou2+zhJ1f/sHQPRm6U+SXyS+TXya/TH6Z/DL5ZfLL4vl2/nHYfZsl7PzyD3b+yc6fIr9Mfpn8Mvll8svkl8kvk18Wz7fzj8Pu2yxh55d/sPNPdv4U+WXyy+SXyS+TXya/TH6Z/LJ4vp1/HHbfZgk7v/yDnX+y86fIL5NfJr9Mfpn8Mvll8svkl8Xz7fzjsPs2S9j55R/s/JOdP0V+mfwy+WXyy+SXyS+TXya/zNA9Drtvs4ShW778yy87/40bn7gvX/7bX/nPv9vij19+mfwy+WXyy+SXyS+TXya/zM5fFn/88sveAEEKPs2G8dFvAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">fecha_termino [character]</td>
 <td style="text-align: left;">Término del proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. 08-2020</td>
@@ -1877,7 +1870,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">49</td>
@@ -1947,14 +1940,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIEAAAEKBAMAAADHjivMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAsElEQVR42u3XwQ3CMBAEQJcAHcC5A9x/b/ngL7LuQHLC7P/mkUi7cmsyExH3XG5voY8XgUAgbCvUWy55fjkh4lkU+iAQCIR9hXrLJc83E7Q9gUAgfBbsxfwOVaFnn3oEAoFwCqHek9n7vQR7QSAQri1oe3tBIBAIK4K9sBcEAoGwItgLbU8gEAgrgr2wFwQCgbAi2At7QSAQ/kHQ9t/bi2we82+ObAgEAuH3Qr3lpLUDXBqxGBNa1rgAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAIEAAAELCAQAAABU9S3RAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAB8ElEQVR42u3cTU4CQQCE0W8Md+QQnkfu4Cl1I2R+Gnc6Cf1qQwyb4YVqkq7E5avZ83b2A5wfBAjqsv7jtjoY3pezH+0vsz4BL9u3rj+vn2c/4z9GERAgQIAAAQIECBAgQIAAAQIECBAcs7s4m+nC7J5lfZH40jemm6w/tSIg2J0FH4/vx2uvCL8Q3HeEuQ5FRUCAAAECBAgQIECAAAECBAgQIEBwjB3BjqAICMqOkB0hRUCAAAECBAgQIECAAAECBAgQIEAwih3BjqAICOrJjjDTinD4Flwf/9lonigCAgQIECBAgAABAgQIECBAgADBIS7RXaIrAgIElR0hO0KKgAABAgQIECBAgAABAgQIECBAMIgdwY6gCAjKJXou0VMEBAgQIECAAAECBAgQIECAAAECBKPYEewIioCg7AjZEVIEBAgQIECAAAECBAgQIECAAAECBKPYEewIioCg7AjZEVIEBAgQIECAAAECBAgQIECAAAECBKPYEewIioCg7AjZEVIEBAgQIECAAAECBAgQIECAAAECBKPYEewIioCg7AjZEVIEBAgQIECAAAECBAgQIECAAAGCQVyiu0RXBAQIqic7wgRZHXu7X4Q5VoTt754iIECAAAECBAgQIECAAAECBAgQHGJH2O4Ic0YRECCovgHLlD7NbZ1I8wAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">disciplina_principal [character]</td>
 <td style="text-align: left;">Disciplina Principal del Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Artes</td>
@@ -1982,7 +1975,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">10</td>
@@ -2034,14 +2027,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJQAAADEBAMAAACLnBUQAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAmElEQVRo3u3ZsQ2AMAwAQVZghJgNYP/daKBEAmIJK9wPcEUU2YWnSU+KuT8UCoVCDUslSLWpSHisg1pWFAqFQpWgEmd7P1ScsgdRKBSqCGV5fUJFQudn2LpbUSgU6r9U4kCuuXFqUhEti1o2FAqFQr2nEgdyt/MjqqFQKBRqOCpBqk056qFQKNR4lPvgfaqhUCgUCnVN6V47eDIQqNxU4isAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJQAAADECAQAAADTu8CoAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAACE0lEQVR42u3dQWrCUABF0aS4RxfR9bR76CrtRGgS9XP5k1g4Z+YsXH5UfATX20LxcfYF/BdCRUJFl+2L79uyfK5nX9L72L5/O1GRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUNG6/QHdrrBnXJggVLTb9b7uZ8229+hwoq7L9ewrelNuvUioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKjosn/5c/b1vC273oBdb4JQkV0vsutFbr1IqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqMhcFZmrBsxVE4SKhIqe7nrcbd60D596Vr0/+28Abr1IqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqMiuF9n1Bux6E4SKhIpe7Hqe2Dt6uuv57Hvk1ouEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEiux6kV1vwK43QahIqGgXyvN6rzlRkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkV1vwK43QajI38ZF/jYucutFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRUJFQkVCRZ7Xi+x6A3a9CUJFHkOLnKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIqGi1JzROVCRUJFT0C4gAKKXImKgWAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">area_disciplina_principal [character]</td>
 <td style="text-align: left;">Área de la disciplina principal del Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Sociología</td>
@@ -2078,7 +2071,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">390</td>
@@ -2148,14 +2141,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADYAAAEKBAMAAACrpLuMAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAlUlEQVRYw+3YwQmAMAyF4a6QEbQb1P13E0SUNm1EMI9iXq7fJYGfHpoSftbenJY3PYX2e7OakN44ml7kNnVDoUUwqwlIg4uxJy28Wb349qnt2rPQaM+9+PQ5tlxoEc1qQgRrx/s8uoEW0qwmRLDGPmmtoftkg7Q3Bu+TRvvIxMFmuo82vwnYmt+AynL9i0ALYlYTyNkBiQomEdK8R80AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAADYAAAELCAQAAAA4372RAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABQUlEQVR42u3cQXKCQBAFUEjljt4hnMfcwVOaLUk5lGm7Qdv3d2zmFfYsfgHOfJ32y8eOVmPsc33xXTDAr3mATdMpmbr8uuo7MxgMBoPBOmB/asEltsqdmdcdZw4vM856/TeZ2TmpNy6DeRT0xvEm6zszGAwGg8E6YHpjSl69Ny7DaaT3xq0t1ndmMBgMBoN1wPTGlDx/b1yCv3egN8Y3Ud+ZwWAwGAxWFFUuJX2xm70x2gv/eWen9C8cN7DawGAwGAzWAdMbU3J0lasqcjeqXGX6zgwGg8FgsIaY3hiL3liB1QYGg8FgMNhjmN4Yi95YgdUGBoPBYDDYY5jeGMtx2PmadTjOs90ZDAaDwWCwd8b0xnxMb4TBYDAYDLZTVLnXwzaPxsl+Y71xNE7+w+m+M4PBYDAYrCjH/cW5On1ntiv2A8fuPRsVcV2kAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">disciplina_exacta_principal [character]</td>
 <td style="text-align: left;">Disciplina exacta principal del Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Antropologia cultural y s</td>
@@ -2192,7 +2185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">188</td>
@@ -2262,14 +2255,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAACkAAAEKBAMAAAB9AWHpAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAoklEQVRYw+3Uuw2AMAwE0IyANyDxBrD/bjRAPpxo4sguzuUropPulJTWXXkvi8h2q57PUb0VNyTd2Sn3EF1X7aG+KyjDQY2puDfDPWSYgRpUcW9We8iDag1AdVbc0Hzzf3sYVd//ieqtuKGle/iotsGoroobMmkeqDYJqBEV92axB6R6UGMr7s1gDxlmoIZR3NB881hLd/uT7GyP6qm4oRV3AeBKvZfYYbUAAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAACkAAAELCAQAAADuemf0AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABP0lEQVR42u3cQQ6CMBBAUWu4I4fgPHIHTqlLW9ra6TBCh/zZEeOLTEl+XGh4P6znaS46Iaf4YhUvdgnpdfzGKX1pFoHb2TcOCQkJCXkZuQvFplOSCXGIgpqJFYe7fKk7XiXpOCQkJCTkfui43ag6vvzckKLjrSP0sUtISEhISNnQcbtRdHxp7Ke74+0D9LFLSEhIyFuSRHdoUtjxVrurZK3jfc+Bj11CQkJC3pKk43Yjim5PckXR7T0yH7uEhISEhJQNHbebZsf7Gp6Recc1x+Vjl5CQkJCQsqHjdlPteH+/i+S340eOyccuISEhISFlQ8ftpthxfcMLn3IW/kzs5BuHhISEhLyMpON2U+j4sYoXOj7kjUNCQkJCqkiiOxap/NOWbKJjUP1py37S58THLiEhISFvSf77y/OwN+6D/ADC0EAYX2FWcQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1416 (98.2%)</td>
 <td style="text-align: center;">26 (1.8%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">palabras_claves [character]</td>
 <td style="text-align: left;">Palabras Claves</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. SIN INFORMACION</td>
@@ -2306,7 +2299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">152</td>
@@ -2376,14 +2369,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFoAAAEKBAMAAABgf19yAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBQ7oBAqAAAAjklEQVRo3u3asQ3DMBAEQbWgEkx1YPffmxM6EWDyCCh4QbPxRAT+Im7bfWvDXnuv6+Mziqbpf3rt0vascrrRNF1OZ9hC0DQ91xm2JzRNz3WG7QlNP1NnuJ6u84I0TddbiDVd5wVpmrYQNE1frTNsT2ianusM2xOafqbOcD3dsroe/9r79aZp+qTXLu2OfQFkP1WgSXxzwwAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFoAAAELCAQAAADzBFlvAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABgklEQVR42u3YQYrCQBRFUSPZo4vo9dh7yCrtaUWwgj349T6cOwsGOUg5qLe9bv26rwZAJ7ePD7/LDvjPdvXGSNvPHz2WkI8v3295PKChoQOChoYOCBoaOiDoqt6uW99efNa0jRfGy9vlwkZny+PRH/18PVtMe/1/6S5BQ0MHBA0NHRA0NHRA0NCT7B5V9UfbPaChoaHjgoaGDggaGjogaOhJdo+q+qPtHtDQ0NBxQUNDBwQNDR0QdFUmhKqgl6DtHtDQ0NBxQUNDBwQNDR0QdFV2j6r6o00I0NDQ0HFBQ0MHBA0NHRA09CS7R1X90XYPaGho6LigoaEDgoaGDggaepLdo6r+aLsHNDQ0dFzQ0NABQUNDBwQNPcnuUVV/tN0DGhoaOi5oaOiAoKGhA4KGnmT3qKo/2u4BDQ0NHRc0NHRA0NDQAUFXZUKoCrqqfXyIXj2GP9x+/uSxmvah4/TU8nhAQ0MHBA0NHRA0NHRALdFvN5fjf99S3JZ8LfxUy+MBXdUfDBI8WiIUuQsAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">376 (26.1%)</td>
 <td style="text-align: center;">1066 (73.9%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">monto_adjudicado [numeric]</td>
 <td style="text-align: left;">Monto adjudicado al proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 132504.1 (225634.4)</td>
@@ -2400,14 +2393,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">267 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAARklEQVRo3u3MQREAEBAAwKsgghNB/24eLgFeZjfARnAiS283Khtzk8lkMplMJpPJZDKZTCaTyWQymUwmk8lkMtl/WT4RnFiYLEnB8S7lVQAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABLUlEQVR42u3dsQ3CMBBAUYKyI0MwD9mBKaE1FESfxqC811lWpNOXnPaWx4niPHuAfyNYJFi0jodt94d2XWYPPMOYZX29unz88D578h/gSUaCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYJFbzty97bg3o65R31Ypbwcs8D3PMlIsEiw6AnOyQkdD7UAvwAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">372 (25.8%)</td>
 <td style="text-align: center;">1070 (74.2%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">moneda [character]</td>
 <td style="text-align: left;">Moneda del presupuesto adjudicado</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Miles de pesos (M$)</td>
@@ -2417,7 +2410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">340</td>
@@ -2433,14 +2426,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJUAAAA3BAMAAAD3WBWZAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAATElEQVRYw2NgGAWkAiUqAAWoWcrGlINRs0bNGjVr1KxRswa/WdSsOwSpAAQGuVlQL1PFLEg8Go2aNWrWqFmjZo2aNczNombdMQqIBwCXcqc2b/yn4gAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJUAAAA3CAQAAACvf8AhAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAAzElEQVR42u3byw2CQBRAUcfYoz1oPdoDVepSYGGubvBzzgpCMiE3ebNgwrjtaPZbv8D3kCqTKjvMb642rpXTeFwflo+OW7/bR5kWdwYwkyqTKpMqkyqTKpMqkyqTKpMqkyqTKpMqkyqTKpMqkyqTKpMqW31bn95b5S+M+SHNeHuZXzWvYwAzqbLFXnV5cmR6/vvpjEemtnsD+AKpMqkyqTKpMqkyqTKpMqkyqTKpMqkyqTKpMqkyqTKpMqkyqTJHptnwX1tlADOpMqmyO6AwC8fbp8HCAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">372 (25.8%)</td>
 <td style="text-align: center;">1070 (74.2%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">instructor [numeric]</td>
 <td style="text-align: left;">Jeraquización: Instructor</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2006 (2.9)</td>
@@ -2457,14 +2450,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">13 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAAgElEQVRo3u3YwQ2AIAxA0a6AG1g3wP1382B7sEFiKMbE/H+Gl8ABkorQSKWdWmt5VB/b9rO/YX5JUzDbXcHAwMDAwMDAwMDAwMDAwMD6mE0k5mCGOBbGHTksnB4MDAwMDOwG0+vflsPiLjAwMLA3MA2lsLC6fo8t7XfZMZ2S0EgHjyEQl+L8Hw4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABeUlEQVR42u3dUU7CQBRAUWvYo3vQ9egeXKX+jsa0ObaFFu75IySU3DDvY9oM09dTxPOtv8DZFAwVDF3GF9OOF3pfHJZve15+lfGrX/79Kexl9t3P27RgLUlUMERLcmkOHXcKbQdn2NwcOssUWqcliQqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGNj0ZZfm4mPPbNNi6Qxrmcx/lTIwrnr2z5BxnYjTDUMFQwVDBUMFQwVDBUMFQwVDBUMFQwVDBUMFQwVDBUMFQwVDBUMHQj5sgj3CbbK1fd43u418V9tSSRAVDBUMFQwVDBUMFQwVDBUMFQwVDBUMFQwd6xnU/q7ethgeSHyLY0gPHsqnVkkR38gu73l7xNF7poy3qP70OM2yqkWmGoYKhgqFvUwQaQHNAV54AAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">337 (23.4%)</td>
 <td style="text-align: center;">1105 (76.6%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">asistente [numeric]</td>
 <td style="text-align: left;">Jerarquización: Asistente</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2009.1 (6.5)</td>
@@ -2481,14 +2474,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">33 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAAiklEQVRo3u3ZzQ2AIAyGYVbQDaQb6P67ebE9SAimrQma9zsRfp4DSUmAUognyzBr1fTnPMeOKzsYGBgYGBgYGBgYGBgYGJgb07v6loFpAwwMDAwMbD6sfZ8OYKIdf8BsZzIwuRtgYJNi9meVgjVL+phVXAZmI9/BmhMngsl4CdgLWO1WTwQLpRBPTlHf4cX1aiXOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABf0lEQVR42u3dUWrCQBRA0aa4x+6hXY/dQ1fZ/qYgTI4kHWPv+RNBhivzjIbE5fsl4nX2As6mYKhg6LJ+sMxezcp1w3D9+KMFr5dyuftVDvc2eP5ryqrakqhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhg6IEvYR4bXxe+/1Xhpw4246rwtiQqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYKhgqGCoYOvVZo7H9T8Q9ebD9T8S1JVHB0JQtueXW749q0gwbzZZZN38fa0uigqGCoYKhgqGCoYKhgqEDDlzPfBw/dsiR/mP+hdNtm97e1U9AT/7zzph+SWuGoYIh3pLPPdLH7phhZxrp+2tLooKhgqGCoV9D/79/Am6xrBt9Fuym99VXo6VGphmGCoYKhn4AvNUb2OYP5hIAAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1216 (84.3%)</td>
 <td style="text-align: center;">226 (15.7%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">asociado [numeric]</td>
 <td style="text-align: left;">Jerarquización: Asociado</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2015 (6.8)</td>
@@ -2505,14 +2498,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">26 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAAfklEQVRo3u3WQQqAIBRFUbdQO6h20N//3hpEvgYfoaeNvHckggdBEUshp+Vr617TpI3F0wkGBgYGBgYGBgY2K/b6Yw/ARID1YDqUAZhGYGBgYHfZy29jR5MAAwMDAwMDAwObE9OXc3MxEXVh2JiIn7Bktz6WjMAiuxo9FXK6AJCxUIvCtmR1AAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABdklEQVR42u3dUU7CQBRAUWvYo3vQ9egeXKX+Vr/ebdrQwjl/JNCUm86UTAZYfl4oXu99AlcjWCRYdFs/WO59Nrv4HE/LH8M3vD7gbfaSa3kbPet707ENyUiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLDoQpuC57ujj3ShYMfujp4yJCPBIsGiS81hexvfRlZfsXnqYFtuIoZkJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYdIrVinOs1s+cIthsoeXYtfopQzISLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIs2rQDcf+/i7uOP8HmIc7wgwj38e8Ke94QUwdvCr7S/uiZg4M93hXrLhkJFgkWLetZ+evhpuh9vK8+TS4aNYZkJFgkWPQLlQEZ1s9N478AAAA9dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IDIwMDcgQXBwbGUgSW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC6eZtwpAAAAI3RFWHRpY2M6ZGVzY3JpcHRpb24AR2VuZXJpYyBSR0IgUHJvZmlsZRqnOI4AAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1043 (72.3%)</td>
 <td style="text-align: center;">399 (27.7%)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">titular [numeric]</td>
 <td style="text-align: left;">Jerarquización: Titular</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">Mean (sd) : 2016.9 (6.9)</td>
@@ -2529,14 +2522,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table></td>
 <td style="text-align: left; vertical-align: middle;">14 distinct values</td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAAdElEQVRo3u3WsQ2AIBBAUVbQDcQNZP/drBSNhASCjb7f38tVByGop6m/OZ4NwNLRBoPBYDAYDAb7Bnb5Lw7AMgGDwWAw2Hew4mvZjZUIGAwGexWrX7FGbK0SMBgM9iss39dGLA8uz31SI5YHYbAbFocU1NMOipgq+BJJ1cIAAAAASUVORK5CYII=" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAJgAAABuCAQAAABxABKuAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAABa0lEQVR42u3dUWqDQBRA0Vqyx+6hXU+7h66y/TX9ejdoo3LOn5CAXhyRmQGXnxeK12efwNkIFgkW3dYHy7PP5l99jh/f76swt+mfruht9KvvuyNDMhIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsuuCGuvnOwkdcMNhjOwunDMlIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLDoRMts+643Tp0o2L7rjVOGZCRYJFgkWCRYJFgkWCRYJFgkWCRYJFgkWCRYdIjpnWPMdM0cIthspmvfea4pQzISLBIsEiwSLBIsEiwSLBIsEiwSLBIsEiwSLBIsEizadQLxTDOpU3fB5hf4Mfzu3RH2DG7rzx12vQvcmmdYJFgkWCRYJFgkWLSsX72+LviiuYX1R4UXjRpDMhIsEiz6BcxBFj0rD0zyAAAAPXRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAyMDA3IEFwcGxlIEluYy4sIGFsbCByaWdodHMgcmVzZXJ2ZWQunmbcKQAAACN0RVh0aWNjOmRlc2NyaXB0aW9uAEdlbmVyaWMgUkdCIFByb2ZpbGUapziOAAAAAElFTkSuQmCC" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">336 (23.3%)</td>
 <td style="text-align: center;">1106 (76.7%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">jerarquia_proyecto [character]</td>
 <td style="text-align: left;">Jerarquía en el Proyecto</td>
-<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 8; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: left; padding: 0; margin: 0; border: 0;">1. Asistente</td>
@@ -2552,7 +2545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small">
+<td style="text-align: left; padding: 0; vertical-align: middle;"><table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd" style="background-color:transparent">
 <td style="text-align: right; padding: 0 5px 0 7px; margin: 0; border: 0;">685</td>
@@ -2580,7 +2573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table></td>
-<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFkAAABmBAMAAABSCSDkAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAPUExURf////3+/aampvDw8P///7GHRIEAAAACdFJOUwAAdpPNOAAAAAFiS0dEAIgFHUgAAAAHdElNRQfpCh4SLBVMpyC8AAAAZ0lEQVRYw+3WsQnAMAxEUY+QbBDbGyT775bGXcDc4Uhg+Fe/QghOqJR906RcQ/dHCRqNXtNeL08pR4KeTfvVk53caDT6L+31MvJCROpWHd3RaHSC9nqp2NRvpmp6XGQ0Gh2qvV7umBfXAbbRPK+VAAAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
+<td style="text-align: left; vertical-align: middle; padding: 0; background-color: transparent;"><img src="data:image/png;base64,%20iVBORw0KGgoAAAANSUhEUgAAAFkAAABmCAQAAAAKLvVcAAAAAmJLR0QA/4ePzL8AAAAHdElNRQfqBggVGQXAeHMHAAAA4klEQVR42u3aSw6CQBBFUTDu0T3oenQPrFKnYPDXkaZecu6MCTkhxaArPd6HtA57A5Brdpw/3MoO9nl8QR6G09621abFU+BgICMjIyPXChkZGRm5VoHkp4PU1PaWro3zE+rY/JqtmysDByOQvJjla+c9xqVpEnfcY7T+6oGDgYyMjIxcK2RkZGTkWgWS7TG2yh4D+WMrq5e2hUi/nr5yzSskb8kJISMjIyPXChkZGRm5Vvlkq5e/ZfXSux+ukFTZb3x9haTOjxk4GMjIyMjItUJGRkZGrlUgOf0KSUaBg4HcoweuwxbSlMEUPQAAAD10RVh0aWNjOmNvcHlyaWdodABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLp5m3CkAAAAjdEVYdGljYzpkZXNjcmlwdGlvbgBHZW5lcmljIFJHQiBQcm9maWxlGqc4jgAAAABJRU5ErkJggg==" class="img-fluid" style="border:none;background-color:transparent;padding:0;max-width:max-content;"></td>
 <td style="text-align: center;">1336 (92.6%)</td>
 <td style="text-align: center;">106 (7.4%)</td>
 </tr>
@@ -2592,99 +2585,154 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="construcción-y-actualización" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="construcción-y-actualización"><span class="header-section-number">3.2</span> Construcción y Actualización</h2>
-<p>La construcción y actualización de la Base Integrada se hace a través de la ejecución del <strong>Masterscript</strong> ubicado en <code>bases-datos-dip/proc/master-script.R</code>. Este documento actúan com un guión que organiza y ejecuta, en el orden correcto, los distintos pases para producir la Base Integrada, de manera limpia, ordenada y reproducible.</p>
-<p>Los scripts que componen el Masterscript se resumen a continuación:</p>
-<section id="procesamiento-general-de-proyectos" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="procesamiento-general-de-proyectos"><span class="header-section-number">3.2.1</span> Procesamiento General de Proyectos</h3>
-<p>El script <code>proc/procesamiento.R</code> se encarga fundamentalmente de procesar y estandarizar la información de proyectos contenida en SEPA-VID.</p>
-<p>La base de datos de SEPA-VID es descargada y guardada en <code>input/data/proyectos.xlsx</code>. Para integrar actualizaciones contenidas en SEPA-VID, basta con reemplazar este archivo con datos más recientes.</p>
-<p>El output de este script se encuentra en <code>input/data/procesadas/proyectos.rdata</code>, Una base <em>long</em> que tiene como unidad de análisis académicos-proyectos.</p>
+<section id="construcción" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="construcción"><span class="header-section-number">3.2</span> Construcción</h2>
+<p>La construcción y actualización de la Base Integrada se hace a través de la ejecución del <strong>Masterscript</strong> ubicado en <code>bases-datos-dip/proc/master-script.R</code>. Este documento actúa como un guión que organiza y ejecuta, en el orden correcto, los distintos pases para producir la Base Integrada, de manera limpia, ordenada y reproducible. A continuación se da un vistazo general a la estructura del Masterscript, para luego revisar en detalle cada uno de los pasos que lo componen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">#### CARGA DE PAQUETES GLOBAL ####</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Paquetes ---- Estos paquetes cargan las librerias para todos los scripts</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pacman)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  tidyverse,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  readxl,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  writexl,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  readr,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  janitor,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  labelled,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  stringi,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  stringr,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  stringdist,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  fuzzyjoin,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  lubridate,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  zoo,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  sjPlot,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  googlesheets4,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  httr</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># INPUT PRINCIPALES ----</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>academicos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"input/data/original/acad.xlsx"</span>) <span class="sc">|&gt;</span> <span class="fu">clean_names</span>()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>proyectos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"input/data/original/proyectos.xlsx"</span>) <span class="sc">%&gt;%</span> <span class="fu">clean_names</span>()</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"input/data/patches/proyectos_nuevos.rdata"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"input/data/patches/patch_simple.rdata"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"input/data/patches/patch_condicional.rdata"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>input_principales <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"academicos"</span>, <span class="st">"proyectos"</span>, <span class="st">"patch_condicional"</span>, <span class="st">"patch_simple"</span>, <span class="st">"proyectos"</span>, <span class="st">"rpi"</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"input_principales"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># PROCESAR ACADEMICOS ----</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proc-acads.R"</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># output: academicos_historico</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># PROCESAR PROYECTOS ----</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proc-proyectos.R"</span>) </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/milenios2025.R"</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proc-dip.R"</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/rpi.R"</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/concursos.R"</span>) <span class="co"># Racionaliza concursos</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proy-nuevos.R"</span>) <span class="co">#inclyye nuevas postulaciones</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co"># output: proyectos</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># MERGE ----</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/merge.R"</span>)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proc-jerarquias.R"</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/proy-prefacso.R"</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/export.R"</span>)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/patches.R"</span>) <span class="co"># Parches expost</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co"># output: data</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="do">##### CREA BASE WIDE #####</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/base-wide.R"</span>)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="do">##### ACTUALIZACIONES #####</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/finalizados.R"</span>) <span class="co"># actualiza proyectos terminados</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># agregar proyectos nuevos --- vincular al RPI</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="do">##### ETIQUETADO #####</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"proc/flujo_principal/etiquetas.R"</span>) <span class="co"># Pone etiquetas y exporta a app/</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="inputs-principales" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="inputs-principales"><span class="header-section-number">3.2.1</span> Inputs Principales</h3>
+<p>Los input principales se cargan al principio del script. Un cambio en cualquiera de estos archivos activará el workflow de actualización mediante una Github action, como se explicará en <span class="quarto-unresolved-ref">?sec-workflow</span> Los input principales son:</p>
+<p><strong>Base de datos con información sobre académicos con nombramiento vigente en FACSO</strong></p>
+<ul>
+<li><p><strong>Ubicación</strong>: <code>input/data/original/acad.xlsx</code></p></li>
+<li><p><strong>Fuente y Actualización</strong> Se puede solicitar directamente a Jorge Elizalde (jelizalde@uchile.cl). Se recomienda la actualización semestral</p></li>
+</ul>
+<p><strong>Base de datos con información de proyectos relacionados a la Facultad de Ciencias Sociales</strong></p>
+<ul>
+<li><p><strong>Ubicación</strong>: <code>input/data/original/proyectos.xlsx</code>:</p></li>
+<li><p><strong>Fuente y Actualización</strong>: SEPA-VID. Se recomienda la actualización mensual<br>
+</p></li>
+</ul>
+<p><strong>Ingresa proyectos nuevos que no se encuentran ingresados en SEPA-VID</strong></p>
+<ul>
+<li><p><strong>Ubicación</strong>: <code>input/data/patches/proyectos_nuevos.rdata</code></p></li>
+<li><p><strong>Fuente y Actualización</strong></p>
+<ul>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1s_U_RXhVSd_usS9QxLf-JirwPLnhWnG0Lckiva4-cls/edit?gid=1808129691#gid=1808129691">Ingreso Manual de Proyectos</a></p></li>
+<li><p>La base de datos se procesa en <code>proc/patches.R</code></p></li>
+</ul></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Parches menores a información sobre proyectos y académicos</strong></li>
+</ol>
+<ul>
+<li><p><strong>Ubicación</strong>: <code>input/data/patches/patch_simple.rdata</code> o <code>input/data/patches/patch_simple.rdata</code>:</p></li>
+<li><p><strong>Fuente y Actualización</strong></p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1s_U_RXhVSd_usS9QxLf-JirwPLnhWnG0Lckiva4-cls/edit?gid=1808129691#gid=1808129691">Ingreso Manual Parches</a><br>
+</li>
+<li>La base de datos se procesa en <code>proc/patches.R</code></li>
+</ul></li>
+</ul>
 </section>
-<section id="procesamiento-de-información-sobre-académicos" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="procesamiento-de-información-sobre-académicos"><span class="header-section-number">3.2.2</span> Procesamiento de Información sobre Académicos</h3>
+<section id="procesamiento-de-académicos" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="procesamiento-de-académicos"><span class="header-section-number">3.2.2</span> Procesamiento de Académicos</h3>
 <p>El script <code>proc/acads.R</code> permite procesar información sobre académicos de la Facultad. Esto se hace a partir de la base de datos de académicos gestionada por Dirección Académica, almacenada en <code>input/data/original/acad.xlsx</code>. La actualización de esta base, fundamental para integrar nuevos académicos y cambios de jerarquía, se hace reemplazando este archivo.</p>
 <p>Además, contiene una base histórica de académica, que permite tener acceso a académicos retirados y a cambios de jerarquía, almacenada en <code>input/data/original/retirados.xlsx</code>.</p>
-<p>Estos datos son unidos a <code>proyectos.rdata</code> para generar <code>input/data/procesadas/proyectos-merge.rdata</code>, que unifica datos de proyectos y datos de académicos en un único dataframe. Además, se puede consultar <code>input/data/procesadas/acads-historico.rdata</code> si se quiere solo información limpia de los académicos, sin datos de investigación.</p>
+<p><strong>Output</strong>: <code>output/academicos_historico.rdata</code></p>
 </section>
-<section id="ingresar-nuevos-proyectos" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="ingresar-nuevos-proyectos"><span class="header-section-number">3.2.3</span> Ingresar Nuevos Proyectos</h3>
-<p>Los script contenidos en <code>proc/nueva-data/</code> permiten ingresar nuevos proyectos patrocinados por la Facultad. En el caso de proyectos ANID o Universidad de Chile, esta información es temporal, a la espera de la actualización de SEPA-VID. La información de los nuevos proyecto patrocinados proviene fundamentalmente de la Ficha RPI de la Dirección de Investigación. A continuación, se muestra un ejemplo de como integrar nuevos proyectos patrocinados:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Se crea un dataframe vacio a partir de proyectos-merge.rdata</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"input/data/procesadas/proyectos-merge.rdata"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>idea_2026 <span class="ot">&lt;-</span> proyectos_merge <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">27</span>) <span class="sc">|&gt;</span> <span class="fu">add_row</span>(<span class="at">.rows=</span><span class="dv">4</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Se crean vectores con los ruts de los IR y los titulos de los proyectos</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ruts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"009968190K"</span>, </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"0146199267"</span>, </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"0139050150"</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"0124547768"</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                       )</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>titulos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Desarrollo de un modelo de capacitación para la implementación de programas ambulatorios de intervención reparatoria para niños, niñas y adolescentes que han sido vulnerados en sus derechos"</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">"GARANTE: Herramienta participativa autoaplicada por las comunidades educativas (usuarios finales) de los Servicios Locales de Educación Pública (usuarios intermedios) para conocer los costos de un funcionamiento de los establecimientos educacionales que asegure una calidad adecuada a los derechos humanos educativos, conforme a las leyes nacionales e internacionales"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Desarrollo de un sistema integrado de educación financiera para jóvenes de 18 a 29 años"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Diseño del programa CRESCENDO para el Desarrollo Profesional de Educadoras/es de Orquestas Infantiles desde una perspectiva constructivista e inclusiva"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Se rellena la información disponible. Todo lo que no se complete se recodificara temporalmente como NA. </span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>idea_2026 <span class="ot">&lt;-</span> idea_2026 <span class="sc">|&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rut_investigador =</span> ruts,</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>         <span class="at">tipo_investigador =</span> <span class="st">"Investigador responsable"</span>,</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>         <span class="at">codigo_proyecto =</span> <span class="fu">paste0</span>(<span class="st">"temp_"</span>, <span class="st">"idea2026"</span>, <span class="st">"_"</span>, <span class="fu">row_number</span>()),</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>         <span class="at">titulo=</span> titulos,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>         <span class="at">institucion =</span> <span class="st">"ANID"</span>,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>         <span class="at">concurso =</span> <span class="st">"Subdirección de Investigación Aplicada"</span>,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>         <span class="at">instrumento=</span> <span class="st">"Idea I+D"</span>,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>         <span class="at">asociativo =</span> <span class="dv">0</span>,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>         <span class="at">inv_aplicada =</span> <span class="dv">1</span>,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>         <span class="at">anio_concurso =</span> <span class="dv">2026</span>,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>         <span class="at">estado_proyecto =</span> <span class="st">"Postulado"</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>act <span class="ot">&lt;-</span> <span class="fu">left_join</span>(act, academicos_historico, <span class="at">by=</span><span class="st">"rut_investigador"</span>)</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Se cruza con la información de los académicos y se hace en el bind a proyectos merge</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"input/data/procesadas/acads-historico.rdata"</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>act <span class="ot">&lt;-</span> <span class="fu">left_join</span>(act, academicos_historico, <span class="at">by=</span><span class="st">"rut_investigador"</span>)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>proyectos_merge <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(proyectos_merge, act)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Es importante que en este paso se asigne un código para la identificación del proyecto. Se sugiere que este se componga de un titulo corto del concurso (ej: idea para el Concurso IDEA I+D), el año del concurso y un número correlativo. En caso de ser un código temporal, que es lo que corresponde para proyectos ANID y U.Chile, se recomienda incluir la etiqueta <code>temp_</code>.</p>
+<section id="procesamiento-de-proyectos" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="procesamiento-de-proyectos"><span class="header-section-number">3.2.3</span> Procesamiento de Proyectos</h3>
+<p>El script <code>proc/procesamiento.R</code> se encarga fundamentalmente de procesar y estandarizar la información de proyectos contenida en SEPA-VID.</p>
+<p>Los siguientes scripts complementan esta información recogiendo datos del formulario rpi (<code>proc/rpi.R</code>), iniciativas asociativas (<code>proc/milenios2025.R</code>) y concursos internos de la Dirección de Investigación (<code>proc/proc-dip.R</code>). <code>proc/concursos</code> estandariza las etiquetas de los concursos e instrumento. Finalmente, <code>proc/proy-nuevos.R</code> procesa la información cargada en <code>input/data/patches/proyectos_nuevos.rdata</code> y la integra a la base de proyectos</p>
+<p><strong>Output</strong>: <code>output/proyectos.rdata</code></p>
 </section>
-<section id="ingresar-núcleos-de-asociatividad-facso" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="ingresar-núcleos-de-asociatividad-facso"><span class="header-section-number">3.2.4</span> Ingresar Núcleos de Asociatividad FACSO</h3>
-<p>El script <code>núcleos.R</code> permite ingresar a la Base Integrada los proyectos amparados por la política de asociatividad FACSO. Esto se logra cruzando la información de la Dirección Académica sobre Núcleos de Investigación, contenida en en <code>input/data/original/asoc-facso.xlsx</code> con la información sobre académicos procesada en <code>acads-historico.rdata</code> y unida a <code>proyectos-merge.rdata</code>.</p>
-</section>
-<section id="trayectorias-académicas-jerarquizaciones" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="trayectorias-académicas-jerarquizaciones"><span class="header-section-number">3.2.5</span> Trayectorias Académicas (Jerarquizaciones)</h3>
-<p>El script <code>proc-jerarquias.R</code> integra a la base las trayectorias de jerarquizaciones de los académicos, permitiendo cruzar identificar la jerarquía de los investigadores al postular o adjudicarse un proyecto. Para esto, se procesa el archivo histórico de nombramiento, proporcionado por Dirección Académica, almacenado en <code>input/data/original/acad_jerarq.xlsx</code>.</p>
-<p>El output de este script es <code>data-general-facso.rdata</code>, que ya contiene información integrada sobre proyectos, académicos y sus trayectorias.</p>
-</section>
-<section id="proyectos-anteriores-al-nombramiento" class="level3" data-number="3.2.6">
-<h3 data-number="3.2.6" class="anchored" data-anchor-id="proyectos-anteriores-al-nombramiento"><span class="header-section-number">3.2.6</span> Proyectos anteriores al nombramiento</h3>
+<section id="merge" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="merge"><span class="header-section-number">3.2.4</span> Merge</h3>
+<p>Los siguientes script cruzan, armonizan y complementan la información de académicos y proyectos. <code>proc/merge.R</code> hace un primer merge entre académicos y proyectos, integrando información sobre los académicos a cada proyecto. El script <code>proc-jerarquias.R</code> integra a la base las trayectorias de jerarquizaciones de los académicos, permitiendo cruzar identificar la jerarquía de los investigadores al postular o adjudicarse un proyecto. Para esto, se procesa el archivo histórico de nombramiento, proporcionado por Dirección Académica, almacenado en <code>input/data/original/acad_jerarq.xlsx</code>.</p>
 <p>Para integrar información sobre proyectos académicos anteriores al nombramiento se debe ejecutar <code>proy-prefacso.R</code>. Esto se logra a través de <em>fuzzy matchs</em> con las bases históricas de ANID. Estas bases están alojadas en <code>input/data/original/BDH_HISTORICA.xlsx</code>, para el caso de proyectos FONDECYT, y en <code>input/data/original/BDH_PROYECTOS_MILENIO.xlsx</code>, para el caso de proyectos Milenio.</p>
+<p>Por último, <code>proc/patches.R</code> integra los parches menores a la información de académicos y proyectos, que se cargan en <code>input/data/patches/patch_simple.rdata</code> o <code>input/data/patches/patch_condicional.rdata</code>. Estos parches pueden incluir correcciones menores a la información de proyectos o académicos, o bien cambios más complejos que requieren condiciones específicas para su aplicación.</p>
+<p><strong>Output</strong>: <code>data-general-facso.rdata</code>. Base long de académicos-proyectos</p>
 </section>
-<section id="actualización-proyectos-finalizados" class="level3" data-number="3.2.7">
-<h3 data-number="3.2.7" class="anchored" data-anchor-id="actualización-proyectos-finalizados"><span class="header-section-number">3.2.7</span> Actualización proyectos finalizados</h3>
+<section id="base-de-proyectos" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="base-de-proyectos"><span class="header-section-number">3.2.5</span> Base de Proyectos</h3>
+<p>Al ejecutar <code>base-wide.R</code> se crea una base wide de proyectos, con la totalidad de los proyectos postulados registrados.</p>
+</section>
+<section id="actualización-proyectos-finalizados" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="actualización-proyectos-finalizados"><span class="header-section-number">3.2.6</span> Actualización proyectos finalizados</h3>
 <p><code>finalizados.R</code> es un script que recodifica como “Finalizado” los proyectos que tengan registrados como fecha de término después del último día del mes pasado. Tras este paso, ya se tiene una base integrada y actualizada de los proyectos de investigación de la Facultad, lista para exportar al repositorio abierto y para la construcción de la app de consultas, como se describe en el <a href="consultas.html" class="quarto-xref"><span>Capítulo 4</span></a>.</p>
-<p>La base integrada queda almacenada en <code>output/data-general.csv</code> y en <code>output/data-general.rdata</code>. Además, se exporta para la construcción de la App de Consultas Internas de CINDAI en <code>app/data/data-general.rdata</code></p>
 </section>
-<section id="etiquetas" class="level3" data-number="3.2.8">
-<h3 data-number="3.2.8" class="anchored" data-anchor-id="etiquetas"><span class="header-section-number">3.2.8</span> Etiquetas</h3>
+<section id="etiquetas" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="etiquetas"><span class="header-section-number">3.2.7</span> Etiquetas</h3>
 <p>El script <code>etiquetas.R</code> se encarga de asignar etiquetas a las variables y los valores de la Base Integrada.</p>
-</section>
-<section id="base-de-proyectos" class="level3" data-number="3.2.9">
-<h3 data-number="3.2.9" class="anchored" data-anchor-id="base-de-proyectos"><span class="header-section-number">3.2.9</span> Base de Proyectos</h3>
-<p>Al ejecutar <code>base-wide.R</code> se crea una base de proyectos, con la totalidad de los proyectos postulados registrados. Esta base se exporta a <code>app/data/base_proyectos.rdata</code> y se utiliza en la App de Consultas Internas de CINDAI.</p>
-</section>
-<section id="anonimización" class="level3" data-number="3.2.10">
-<h3 data-number="3.2.10" class="anchored" data-anchor-id="anonimización"><span class="header-section-number">3.2.10</span> Anonimización</h3>
-<p><code>anonimizacion.R</code> es un script que permite anonimizar la base de datos integrada, eliminando variables sensibles. Más detalles sobre este proceso se revisa en el <a href="datos-abiertos.html" class="quarto-xref"><span>Capítulo 5</span></a></p>
+<p>La base integrada queda almacenada en <code>output/data-general.csv</code> y en <code>output/data-general.rdata</code>. Además, se exporta para la construcción de la App de Consultas Internas de CINDAI en <code>app/data/data-general.rdata</code></p>
+<!-- ### Anonimización -->
+<!-- `anonimizacion.R` es un script que permite anonimizar la base de datos integrada, eliminando variables sensibles. Más detalles sobre este proceso se revisa en el @sec-abiertos -->
 <!-- +---------------------+--------------------------------------------------------------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+ -->
 <!-- | Script              | Descripción General                                                                                    | Input                                            | Output                                           | Actualización y mantenimiento                                                                                                                   | -->
 <!-- +=====================+========================================================================================================+==================================================+==================================================+=================================================================================================================================================+ -->
@@ -2724,243 +2772,236 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copiado");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/facso\.uchile\.cl\/facultad\/direcciones-y-coordinaciones\/direccion-de-investigacion-y-publicaciones");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/facso\.uchile\.cl\/facultad\/direcciones-y-coordinaciones\/direccion-de-investigacion-y-publicaciones");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -2968,161 +3009,185 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./repositorio.html" class="pagination-link" aria-label="Repositorios de la Dirección de Investigación y Publicaciones">

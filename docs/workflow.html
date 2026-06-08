@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dirección de Investigación y Publicaciones">
 
-<title>Ciencia de Datos en Investigación – CINDAI</title>
+<title>5&nbsp; Github action Workflows – Ciencia de Datos en Investigación -- CINDAI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./repositorio.html" rel="next">
+<link href="./visualizador.html" rel="next">
+<link href="./consultas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workflow.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Github action Workflows</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span></a>
   </div>
 </li>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./workflow.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Github action Workflows</span></span></a>
   </div>
 </li>
@@ -158,7 +158,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a></li>
+  <li><a href="#actualización-de-datos" id="toc-actualización-de-datos" class="nav-link active" data-scroll-target="#actualización-de-datos"><span class="header-section-number">5.1</span> Actualización de datos</a></li>
+  <li><a href="#actualización-de-la-app-de-consultas" id="toc-actualización-de-la-app-de-consultas" class="nav-link" data-scroll-target="#actualización-de-la-app-de-consultas"><span class="header-section-number">5.2</span> Actualización de la app de consultas</a></li>
   </ul>
 </nav>
     </div>
@@ -167,27 +168,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ciencia de Datos en Investigación – CINDAI</h1>
-<p class="subtitle lead">Manual de Uso</p>
+<h1 class="title"><span id="sec-workflow" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Github action Workflows</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dirección de Investigación y Publicaciones </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">8 de junio de 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -197,13 +185,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introducción" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
-<p>Frente a la necesidad de contar con datos gobernados y actualizados sobre las actividades de investigación de la Facultad de Ciencias Sociales, que permitan trazar y analizar las trayectorias académicas y fortalecer la generación de reportes integrados sobre productividad científica, la Dirección de Investigación y Publicaciones (DIP) propone la creación <strong>CINDAI</strong>. Con CINDAI, buscamos desarrollar un sistema local e integrado de gestión, producción y visualización de información científica en la Facultad de Ciencias Sociales. Este sistema integrará, consolidará y mantenderá actualizados los datos relacionados con las postulaciones a proyectos de investigación de los académicos/as de la Facultad, transformándolos en información confiable y oportuna para la comunicación y la toma decisiones.</p>
-<p>La propuesta se basa en la aplicación de los <strong>principios FAIR</strong> (<em>Findable, Accesible, Interoperable and Reusable</em>). Estos principios buscan crear un ecosistema de gestión del conocimiento más abierto y eficiente, facilitando que los datos sean fácilmente localizable, accesibles, integrables y reutilizables tanto por personas como por sistemas <a href="https://zenodo.org/records/15856492">(Hartley Belmar et al., 2025)</a>.</p>
-<p>La implementación de estos principios en la gestión de información no solo mejora el acceso y uso eficiente de los datos, sino que también impulsa una cultura institucional de apertura, colaboración y transparencia en la investigación. Al incorporar los principios FAIR en la estructura y gobernanza de datos de la Facultad, CINDAI busca transformar la manera en que se gestionan, actualizan y reutilizan los datos, garantizando su accesibilidad, reproducibilidad y valor público para la comunidad académica.</p>
-<p>En coherencia con estos principios, y con el propósito de asegurar la reusabilidad y correcta operación del sistema, se pone a disposición del equipo de la DIP este Manual de Uso de CINDAI. Su objetivo es presentar las principales características de la plataforma, explicar su arquitectura y flujos de trabajo, y detallar los procedimientos necesarios para mantener actualizada la información y asegurar su calidad.</p>
-<p>A continucación, en el <a href="repositorio.html" class="quarto-xref"><span>Capítulo 2</span></a>, se presentará los repositorios y el entorno de trabajo que aloja CINDAI. Luego, en el <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 3</span></a>, se explica la estructura, construcción y flujo de trabajo del principal producto de CINDAI – La Base Integrada de Datos de Investigación. En el <a href="consultas.html" class="quarto-xref"><span>Capítulo 4</span></a>, se explica la construcción y las condiciones de uso de la <a href="https://dip-facso.shinyapps.io/consultas/">App de Consultas Internas de CINDAI</a>. En el <a href="workflow.html" class="quarto-xref"><span>Capítulo 5</span></a>, se explica los workflows que se activan a través de Github Actions y permiten la automatización de parte del flujo de actualización. En el <a href="visualizador.html" class="quarto-xref"><span>Capítulo 6</span></a>, se explica la construcción del <a href="https://dip-facso.shinyapps.io/datos-abiertos-CINDAI/#inicio">Visualizador de Datos Abiertos de CINDAI</a>, una herramienta interactiva que permita visualizada de manera rápida datos generales, históricos y actuales de las investigaciones de la Facultad.</p>
+<p>Para automatizar el proceso de actualización de las bases de datos y la app de consultas, se construyeron dos workflows de Github Actions. El primero se encargar de actualizar las bases de datos, mientras que el segundo actualiza y despliega la app de consultas. Los workflows se programan desde el repositorio y se almacenan en <code>.github/workflows</code></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si se trabaja localmente, es posible que la carpeta <code>.github</code> se encuentre oculta, por lo que es necesario habilitar la opción de mostrar archivos ocultos para poder acceder a ella.</p>
+</div>
+</div>
+<section id="actualización-de-datos" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="actualización-de-datos"><span class="header-section-number">5.1</span> Actualización de datos</h2>
+<p>Este workflow (<code>.github/workflows/main-workflow.yml</code>) se encarga de actualizar las bases de datos. Se ejecuta al realizar un push a la rama ´main´ del repositorio que contenga cambios en inputs principales del repositorio. Como se explicó en <a href="base-integrada.html" class="quarto-xref"><span>Capítulo 3</span></a>, estos incluyen:</p>
+<pre><code>  - "input/data/original/acad.xlsx"
+  - "input/data/original/proyectos.xlsx"
+  - "input/data/patches/proyectos_nuevos.rdata"
+  - "input/data/patches/patch_simple.rdata"
+  - "input/data/patches/patch_condicional.rdata"
+  </code></pre>
+<p>Los cambios se pushean automáticamente en la branch <code>data-updates</code>. El pull-request y merge con la branch principal se debe hacer de manera manual. Se recomienda revisar los cambios realizados en el pull-request para asegurarse de que no se estén subiendo datos erróneos o con errores de formato.</p>
+</section>
+<section id="actualización-de-la-app-de-consultas" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="actualización-de-la-app-de-consultas"><span class="header-section-number">5.2</span> Actualización de la app de consultas</h2>
+<p>Este workflow (<code>.github/workflows/update_app.yml</code>) se encarga de actualizar y desplegar la app de consultas. Se ejecuta al realizar un push a la rama ´main´ del repositorio que contenga cambios cualquier archivo de la carpeta <code>app/</code>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ambos workflow se pueden activar manualmente desde la pestaña de Actions del repositorio.</p>
+</div>
+</div>
 
 
 </section>
@@ -628,10 +650,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./consultas.html" class="pagination-link" aria-label="App de Consultas Internas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">App de Consultas Internas</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./repositorio.html" class="pagination-link" aria-label="Repositorios de la Dirección de Investigación y Publicaciones">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Repositorios de la Dirección de Investigación y Publicaciones</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./visualizador.html" class="pagination-link" aria-label="Visualizador Datos Abiertos">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Visualizador Datos Abiertos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

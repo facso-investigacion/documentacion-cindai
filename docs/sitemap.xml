@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/index.html</loc>
-    <lastmod>2025-10-30T16:00:48.883Z</lastmod>
+    <lastmod>2026-06-08T21:06:40.927Z</lastmod>
   </url>
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/repositorio.html</loc>
-    <lastmod>2025-10-30T13:42:45.396Z</lastmod>
+    <lastmod>2026-06-08T19:40:56.890Z</lastmod>
   </url>
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/base-integrada.html</loc>
-    <lastmod>2025-10-15T19:43:52.923Z</lastmod>
+    <lastmod>2026-06-08T21:14:19.761Z</lastmod>
   </url>
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/consultas.html</loc>
@@ -22,10 +22,14 @@
   </url>
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/visualizador.html</loc>
-    <lastmod>2025-10-29T21:12:06.452Z</lastmod>
+    <lastmod>2026-06-08T19:35:06.474Z</lastmod>
   </url>
   <url>
     <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/actualizacion.html</loc>
     <lastmod>2025-10-30T13:58:01.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://facso.uchile.cl/facultad/direcciones-y-coordinaciones/direccion-de-investigacion-y-publicaciones/workflow.html</loc>
+    <lastmod>2026-06-08T21:26:03.288Z</lastmod>
   </url>
 </urlset>

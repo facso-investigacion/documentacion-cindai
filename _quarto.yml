@@ -20,10 +20,8 @@ book:
     - repositorio.qmd
     - base-integrada.qmd
     - consultas.qmd
-    - datos-abiertos.qmd
+    - workflow.qmd
     - visualizador.qmd
-    - actualizacion.qmd
-
     
 # bibliography: ocs.bib
 

@@ -1,0 +1,27 @@
+# Github action Workflows {#sec-workflow}
+
+Para automatizar el proceso de actualización de las bases de datos y la app de consultas, se construyeron dos workflows de Github Actions. El primero se encargar de actualizar las bases de datos, mientras que el segundo actualiza y despliega la app de consultas. Los workflows se programan desde el repositorio y se almacenan en `.github/workflows`
+
+::: {.callout-note}
+Si se trabaja localmente, es posible que la carpeta `.github` se encuentre oculta, por lo que es necesario habilitar la opción de mostrar archivos ocultos para poder acceder a ella.
+:::
+
+## Actualización de datos
+
+Este workflow (`.github/workflows/main-workflow.yml`) se encarga de actualizar las bases de datos. Se ejecuta al realizar un push a la rama ´main´ del repositorio que contenga cambios en inputs principales del repositorio. Como se explicó en @sec-base, estos incluyen:
+
+      - "input/data/original/acad.xlsx"
+      - "input/data/original/proyectos.xlsx"
+      - "input/data/patches/proyectos_nuevos.rdata"
+      - "input/data/patches/patch_simple.rdata"
+      - "input/data/patches/patch_condicional.rdata"
+      
+Los cambios se pushean automáticamente en la branch `data-updates`. El pull-request y merge con la branch principal se debe hacer de manera manual. Se recomienda revisar los cambios realizados en el pull-request para asegurarse de que no se estén subiendo datos erróneos o con errores de formato.
+
+## Actualización de la app de consultas
+
+Este workflow (`.github/workflows/update_app.yml`) se encarga de actualizar y desplegar la app de consultas. Se ejecuta al realizar un push a la rama ´main´ del repositorio que contenga cambios cualquier archivo de la carpeta `app/`.
+
+::: {.callout-important}
+Ambos workflow se pueden activar manualmente desde la pestaña de Actions del repositorio.
+:::
